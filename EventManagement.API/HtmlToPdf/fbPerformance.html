@@ -1,0 +1,132 @@
+﻿
+<body>
+
+    <div class="row a4-page">
+
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3" style="background-color:_themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left:10px;">Facebook: Performance Summary</h2>
+            </div>
+        </div>
+
+        <div class="col-md-12 flex-style p-0">
+            <div class="col-md-4">
+                <div class="card">
+                    <div style="height : 190px;" class="card-body text-center card-border-radius">
+                        <iconify-icon style="float:right; padding:5px;" icon="mdi:poll"></iconify-icon>
+                        <h5 class="card-title fl-1">Page Profile Views</h5>
+                        <h1 class="card-text  fontxxlrge">_1fbPageProfileMainTotal1_</h1>
+
+                        <h6 id="profileViewCard" class="card-text p-3 f-3 "><iconify-icon id="profileViewIcon" class="fas" icon=""></iconify-icon>_1fbPageProfileDiff1_<span>%</span></h6>
+                        <h6 class="fontsizesmall f-7">Avg. per day : _1fbPageProfileAvgTotal1_</h6>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div style="height : 190px;" class="card-body text-center card-border-radius">
+                        <iconify-icon style="float:right; padding:5px;" icon="mdi:poll"></iconify-icon>
+                        <h5 class="card-title fl-1">Total Page Likes</h5>
+                        <h1 class="card-text  fontxxlrge">_1fbPageLikesMainTotal1_</h1>
+                        <!--<h6 class="card-text  pt-5">-22.92%</h6>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div style="height : 190px;" class="card-body text-center card-border-radius">
+                        <iconify-icon style="float:right; padding:5px;" icon="mdi:poll"></iconify-icon>
+                        <h5 class="card-title fl-1">New Likes</h5>
+                        <h1 class="card-text  fontxxlrge">_1fbPageNewLikesMainTotal1_</h1>
+                        <div class="card-footer card-flex-style-sub border-0" style="border: 0;background: white;">
+                            <h6 class="fontsizesmall pt-4-cust f-10">Avg. per day : -12</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row a4-page mt-3">
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px">
+                <h4 class="card-title pt-2" style="display: flex;justify-content: space-between;">
+                    <span style="font-weight:bold;">Organic Vs Paid Likes</span>
+                </h4>
+                <div style="display: flex; justify-content:center;">
+                    <canvas id="chartJSFbPer1"
+                            style="display: block; box-sizing:border-box; height: 300px;"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+   
+
+    <script>
+
+
+        var pageProfileDiff = _1fbPageProfileDiff1_;
+     
+        var likesData = [_1fbPieChartLikesData1_];    
+
+        if (pageProfileDiff > 0) {
+            document.getElementById("profileViewCard").classList.add("text-success");
+            document.getElementById("profileViewIcon").classList.add("fa-arrow-up");
+        }
+        else if (pageProfileDiff < 0) {
+            document.getElementById("profileViewCard").classList.add("text-danger");
+            document.getElementById("profileViewIcon").classList.add("fa-arrow-down");
+        }
+        else {
+            document.getElementById("profileViewCard").classList.add("text-secondary");
+        }
+
+
+        var options3 = {
+            type: 'pie',
+            data: {
+                labels: ["Organic " + likesData[0], " Paid: " + likesData[1]],
+                datasets: [{
+
+                    data: [_1fbPieChartLikesData1_],
+                    legend: false,
+                    fill: true,
+
+                    backgroundColor: ['#9a55ff', '#ffa096'],
+                    pointHoverBackgroundColor: '#2D9EE2',
+                    pointHoverBorderColor: 'white',
+
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14,
+                        usePointStyle: true
+                    }
+                },
+                responsive: true,
+            }
+        }
+
+        var ctx = document.getElementById('chartJSFbPer1').getContext('2d');
+        new Chart(ctx, options3);
+        function getRandomColorHex() {
+            var hex = "0123456789ABCDEF",
+                color = "#";
+            for (var i = 1; i <= 6; i++) {
+                color += hex[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+
+</body>

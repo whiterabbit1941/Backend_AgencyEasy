@@ -1,0 +1,250 @@
+﻿@model Marvin.IDP.Model.EnableAuthenticatorViewModel
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<!-- BEGIN : Head-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Apex admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Apex admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="PIXINVENT">
+    <title>Authntication - Target A &amp; M</title>
+    <link rel="apple-touch-icon" sizes="60x60" href="~/app-assets/img/ico/apple-icon-60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/app-assets/img/ico/apple-icon-76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/app-assets/img/ico/apple-icon-120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/app-assets/img/ico/apple-icon-152.png">
+    <link rel="shortcut icon" type="image/x-icon" href="~/app-assets/img/ico/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="~/app-assets/img/ico/favicon-32.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900|Montserrat:300,400,500,600,700,800,900" rel="stylesheet">
+    <!-- BEGIN VENDOR CSS-->
+    <!-- font icons-->
+    <link rel="stylesheet" type="text/css" href="~/app-assets/fonts/feather/style.min.css">
+    <link rel="stylesheet" type="text/css" href="~/app-assets/fonts/simple-line-icons/style.css">
+    <link rel="stylesheet" type="text/css" href="~/app-assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/app-assets/vendors/css/perfect-scrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="~/app-assets/vendors/css/prism.min.css">
+    <!-- END VENDOR CSS-->
+    <!-- BEGIN APEX CSS-->
+    <link rel="stylesheet" type="text/css" href="~/app-assets/css/app.css">
+    <!-- END APEX CSS-->
+    <!-- BEGIN Page Level CSS-->
+    <!-- END Page Level CSS-->
+</head>
+<!-- END : Head-->
+<!-- BEGIN : Body-->
+<body data-col="1-column" class=" 1-column  blank-page">
+    <div class="wrapper">
+        <div class="main-panel">
+            <!-- BEGIN : Main Content-->
+            <div class="main-content">
+                <div class="content-wrapper">
+                    <!--Login Page Starts-->
+                    <section id="login">
+                        <div class="container">
+                            <div class="text-left">
+                                <img src="~/ei-logo.png" style="padding-top:20px" />
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row m-0">
+                                <div class="col-12 d-flex align-items-center justify-content-center">
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <div class="card-body">
+                                                <div class="row m-0" style="min-width: 300px; min-height:450px">
+
+                                                    <div class="col-lg-12 col-md-12  px-4 pt-3" style="">
+                                                        <div style="margin-bottom: 55px">
+                                                            <div class="d-flex flex-column" style="padding-top: 22.5px">
+                                                                <p class="row d-flex align-items-center justify-content-center" style=" font-size:25px; font-weight:500">Authentication</p>
+                                                                <p class="row d-flex align-items-center justify-content-center" style=" font-size: 18px;">
+                                                                    To Your Incredible Insights
+                                                                </p>
+                                                            </div>
+                                                            <div>
+                                                                <p>To use an authenticator app go through the following steps:</p>
+                                                                <ol class="list">
+                                                                    <li>
+                                                                        <p>
+                                                                            Download a two-factor authenticator app like <b>Microsoft Authenticator</b> for
+                                                                            <a href="https://go.microsoft.com/fwlink/?Linkid=825071"><code>Windows Phone</code></a>,
+                                                                            <a href="https://go.microsoft.com/fwlink/?Linkid=825072"><code>Android</code></a> and
+                                                                            <a href="https://go.microsoft.com/fwlink/?Linkid=825073"><code>iOS</code></a> or
+                                                                            <b>Google Authenticator</b> for
+                                                                            <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&amp;hl=en"><code>Android</code></a> and
+                                                                            <a href="https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8"><code>iOS</code></a>.
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>Scan the <b>QR Code</b> or enter this <b>key</b> <kbd>@Model.SharedKey</kbd> into your two factor authenticator app. Spaces and casing do not matter.</p>
+                                                                        <div id="qrCode" style="background-color:cornflowerblue; height:110px;width:110px; padding:5px;"></div>
+                                                                        <div id="qrCodeData" data-url="@Model.AuthenticatorUri"></div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>
+                                                                            Once you have scanned the QR code or input the key above, your two factor authentication app will provide you
+                                                                            with a unique code. Enter the code in the confirmation box below.
+                                                                        </p>
+                                                                        <div class="row">
+                                                                            <div class="col-md-4">
+                                                                                <form method="post">
+                                                                                    <div class="form-group">
+                                                                                        <label asp-for="Code">Verification Code</label>
+                                                                                        <input asp-for="Code" class="form-control" autocomplete="off" placeholder="Verification Code" />
+                                                                                        <span asp-validation-for="Code"></span>
+                                                                                    </div>
+                                                                                    <button type="submit" class="btn btn-primary">Verify</button>
+                                                                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                                                                </form>
+                                                                            </div>
+
+                                                                        </div>
+
+                                                                    </li>
+                                                                </ol>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!--Login Page Ends-->
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    @*<section id="login" class="gradient-shdow-night" style="background-image: url(/back1.png) !important;">
+        <div class="container-fluid">
+            <div class="row m-0">
+                <div class="col-12 d-flex align-items-center justify-content-center">
+                    <div class="card" style="background:#0000003d !important;">
+                        <div class="card-content white">
+                            <div class="card-body login-img" style="background:#0000003d !important; border-radius: 10px">
+                                <div class="row m-0" style="min-width: 300px; min-height:450px">
+
+                                    <div class="col-lg-12 col-md-12  px-4 pt-3" style="">
+                                        <div style="margin-bottom: 55px">
+                                            <div class="d-flex flex-column" style="padding-top: 22.5px">
+                                                <p class="row d-flex align-items-center justify-content-center" style=" color:white; font-size:25px; font-weight:500">Authentication</p>
+                                                <p class="row d-flex align-items-center justify-content-center" style="color:white; font-size: 18px;">
+                                                    To Your Incredible Insights
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p>To use an authenticator app go through the following steps:</p>
+                                                <ol class="list">
+                                                    <li>
+                                                        <p>
+                                                            Download a two-factor authenticator app like <b>Microsoft Authenticator</b> for
+                                                            <a href="https://go.microsoft.com/fwlink/?Linkid=825071"><code>Windows Phone</code></a>,
+                                                            <a href="https://go.microsoft.com/fwlink/?Linkid=825072"><code>Android</code></a> and
+                                                            <a href="https://go.microsoft.com/fwlink/?Linkid=825073"><code>iOS</code></a> or
+                                                            <b>Google Authenticator</b> for
+                                                            <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&amp;hl=en"><code>Android</code></a> and
+                                                            <a href="https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8"><code>iOS</code></a>.
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Scan the <b>QR Code</b> or enter this <b>key</b> <kbd>@Model.SharedKey</kbd> into your two factor authenticator app. Spaces and casing do not matter.</p>*@
+    @*<div class="alert alert-info">To enable QR code generation please read our <a href="https://go.microsoft.com/fwlink/?Linkid=852423">documentation</a>.</div>*@
+    @*<div id="qrCode" style="background-color:white; height:110px;width:110px; padding:5px;"></div>
+            <div id="qrCodeData" data-url="@Model.AuthenticatorUri"></div>
+        </li>
+        <li>
+            <p>
+                Once you have scanned the QR code or input the key above, your two factor authentication app will provide you
+                with a unique code. Enter the code in the confirmation box below.
+            </p>
+            <div class="row">
+                <div class="col-md-4">
+                    <form method="post">
+                        <div class="form-group">
+                            <label asp-for="Code" class="control-label white">Verification Code</label>
+                            <input asp-for="Code" class="form-control" autocomplete="off" placeholder="Verification Code" />
+                            <span asp-validation-for="Code" class="text-danger white"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary text-decoration-none text-white" style="background:linear-gradient(45deg, #060606, #8a8a8a);">Verify</button>
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    </form>
+                </div>
+
+            </div>*@
+    @*<div class="text-center">*@
+    @*<img src="~/LincolnGroup.png" style="width: 200px; height: 90px" />*@
+    @*<img src="~/ei-logo.png" style="width: 200px; height: 90px" />
+                                                            </div>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>*@
+
+
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+    <!-- BEGIN VENDOR JS-->
+    <script src="~/app-assets/vendors/js/core/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="~/app-assets/vendors/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="~/app-assets/vendors/js/core/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/app-assets/vendors/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+    <script src="~/app-assets/vendors/js/prism.min.js" type="text/javascript"></script>
+    <script src="~/app-assets/vendors/js/jquery.matchHeight-min.js" type="text/javascript"></script>
+    <script src="~/app-assets/vendors/js/screenfull.min.js" type="text/javascript"></script>
+    <script src="~/app-assets/vendors/js/pace/pace.min.js" type="text/javascript"></script>
+    <!-- BEGIN VENDOR JS-->
+    <!-- BEGIN PAGE VENDOR JS-->
+    <!-- END PAGE VENDOR JS-->
+    <!-- BEGIN APEX JS-->
+    <script src="~/app-assets/js/app-sidebar.js" type="text/javascript"></script>
+    <script src="~/app-assets/js/notification-sidebar.js" type="text/javascript"></script>
+    <script src="~/app-assets/js/customizer.js" type="text/javascript"></script>
+    <!-- END APEX JS-->
+    <!-- BEGIN PAGE LEVEL JS-->
+    <!-- END PAGE LEVEL JS-->
+</body>
+</html>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script type="text/javascript" src="~/lib/qrcodejs/qrcode.js"></script>
+    <script type="text/javascript">
+        new QRCode(document.getElementById("qrCode"),
+            {
+                text: "@Html.Raw(Model.AuthenticatorUri)",
+                width: 100,
+                height: 100,
+                colorDark: "#000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+    </script>
+}

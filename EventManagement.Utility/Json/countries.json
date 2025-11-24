@@ -1,0 +1,2644 @@
+{
+  "countries_name": [
+    {
+      "name": "Afghanistan",
+      "code": "AF"
+    },
+    {
+      "name": "Åland Islands",
+      "code": "AX"
+    },
+    {
+      "name": "Albania",
+      "code": "AL"
+    },
+    {
+      "name": "Algeria",
+      "code": "DZ"
+    },
+    {
+      "name": "American Samoa",
+      "code": "AS"
+    },
+    {
+      "name": "AndorrA",
+      "code": "AD"
+    },
+    {
+      "name": "Angola",
+      "code": "AO"
+    },
+    {
+      "name": "Anguilla",
+      "code": "AI"
+    },
+    {
+      "name": "Antarctica",
+      "code": "AQ"
+    },
+    {
+      "name": "Antigua and Barbuda",
+      "code": "AG"
+    },
+    {
+      "name": "Argentina",
+      "code": "AR"
+    },
+    {
+      "name": "Armenia",
+      "code": "AM"
+    },
+    {
+      "name": "Aruba",
+      "code": "AW"
+    },
+    {
+      "name": "Australia",
+      "code": "AU"
+    },
+    {
+      "name": "Austria",
+      "code": "AT"
+    },
+    {
+      "name": "Azerbaijan",
+      "code": "AZ"
+    },
+    {
+      "name": "Bahamas",
+      "code": "BS"
+    },
+    {
+      "name": "Bahrain",
+      "code": "BH"
+    },
+    {
+      "name": "Bangladesh",
+      "code": "BD"
+    },
+    {
+      "name": "Barbados",
+      "code": "BB"
+    },
+    {
+      "name": "Belarus",
+      "code": "BY"
+    },
+    {
+      "name": "Belgium",
+      "code": "BE"
+    },
+    {
+      "name": "Belize",
+      "code": "BZ"
+    },
+    {
+      "name": "Benin",
+      "code": "BJ"
+    },
+    {
+      "name": "Bermuda",
+      "code": "BM"
+    },
+    {
+      "name": "Bhutan",
+      "code": "BT"
+    },
+    {
+      "name": "Bolivia",
+      "code": "BO"
+    },
+    {
+      "name": "Bosnia and Herzegovina",
+      "code": "BA"
+    },
+    {
+      "name": "Botswana",
+      "code": "BW"
+    },
+    {
+      "name": "Bouvet Island",
+      "code": "BV"
+    },
+    {
+      "name": "Brazil",
+      "code": "BR"
+    },
+    {
+      "name": "British Indian Ocean Territory",
+      "code": "IO"
+    },
+    {
+      "name": "Brunei Darussalam",
+      "code": "BN"
+    },
+    {
+      "name": "Bulgaria",
+      "code": "BG"
+    },
+    {
+      "name": "Burkina Faso",
+      "code": "BF"
+    },
+    {
+      "name": "Burundi",
+      "code": "BI"
+    },
+    {
+      "name": "Cambodia",
+      "code": "KH"
+    },
+    {
+      "name": "Cameroon",
+      "code": "CM"
+    },
+    {
+      "name": "Canada",
+      "code": "CA"
+    },
+    {
+      "name": "Cape Verde",
+      "code": "CV"
+    },
+    {
+      "name": "Cayman Islands",
+      "code": "KY"
+    },
+    {
+      "name": "Central African Republic",
+      "code": "CF"
+    },
+    {
+      "name": "Chad",
+      "code": "TD"
+    },
+    {
+      "name": "Chile",
+      "code": "CL"
+    },
+    {
+      "name": "China",
+      "code": "CN"
+    },
+    {
+      "name": "Christmas Island",
+      "code": "CX"
+    },
+    {
+      "name": "Cocos (Keeling) Islands",
+      "code": "CC"
+    },
+    {
+      "name": "Colombia",
+      "code": "CO"
+    },
+    {
+      "name": "Comoros",
+      "code": "KM"
+    },
+    {
+      "name": "Congo",
+      "code": "CG"
+    },
+    {
+      "name": "Congo, The Democratic Republic of the",
+      "code": "CD"
+    },
+    {
+      "name": "Cook Islands",
+      "code": "CK"
+    },
+    {
+      "name": "Costa Rica",
+      "code": "CR"
+    },
+    {
+      "name": "Cote D'Ivoire",
+      "code": "CI"
+    },
+    {
+      "name": "Croatia",
+      "code": "HR"
+    },
+    {
+      "name": "Cuba",
+      "code": "CU"
+    },
+    {
+      "name": "Cyprus",
+      "code": "CY"
+    },
+    {
+      "name": "Czech Republic",
+      "code": "CZ"
+    },
+    {
+      "name": "Denmark",
+      "code": "DK"
+    },
+    {
+      "name": "Djibouti",
+      "code": "DJ"
+    },
+    {
+      "name": "Dominica",
+      "code": "DM"
+    },
+    {
+      "name": "Dominican Republic",
+      "code": "DO"
+    },
+    {
+      "name": "Ecuador",
+      "code": "EC"
+    },
+    {
+      "name": "Egypt",
+      "code": "EG"
+    },
+    {
+      "name": "El Salvador",
+      "code": "SV"
+    },
+    {
+      "name": "Equatorial Guinea",
+      "code": "GQ"
+    },
+    {
+      "name": "Eritrea",
+      "code": "ER"
+    },
+    {
+      "name": "Estonia",
+      "code": "EE"
+    },
+    {
+      "name": "Ethiopia",
+      "code": "ET"
+    },
+    {
+      "name": "Falkland Islands (Malvinas)",
+      "code": "FK"
+    },
+    {
+      "name": "Faroe Islands",
+      "code": "FO"
+    },
+    {
+      "name": "Fiji",
+      "code": "FJ"
+    },
+    {
+      "name": "Finland",
+      "code": "FI"
+    },
+    {
+      "name": "France",
+      "code": "FR"
+    },
+    {
+      "name": "French Guiana",
+      "code": "GF"
+    },
+    {
+      "name": "French Polynesia",
+      "code": "PF"
+    },
+    {
+      "name": "French Southern Territories",
+      "code": "TF"
+    },
+    {
+      "name": "Gabon",
+      "code": "GA"
+    },
+    {
+      "name": "Gambia",
+      "code": "GM"
+    },
+    {
+      "name": "Georgia",
+      "code": "GE"
+    },
+    {
+      "name": "Germany",
+      "code": "DE"
+    },
+    {
+      "name": "Ghana",
+      "code": "GH"
+    },
+    {
+      "name": "Gibraltar",
+      "code": "GI"
+    },
+    {
+      "name": "Greece",
+      "code": "GR"
+    },
+    {
+      "name": "Greenland",
+      "code": "GL"
+    },
+    {
+      "name": "Grenada",
+      "code": "GD"
+    },
+    {
+      "name": "Guadeloupe",
+      "code": "GP"
+    },
+    {
+      "name": "Guam",
+      "code": "GU"
+    },
+    {
+      "name": "Guatemala",
+      "code": "GT"
+    },
+    {
+      "name": "Guernsey",
+      "code": "GG"
+    },
+    {
+      "name": "Guinea",
+      "code": "GN"
+    },
+    {
+      "name": "Guinea-Bissau",
+      "code": "GW"
+    },
+    {
+      "name": "Guyana",
+      "code": "GY"
+    },
+    {
+      "name": "Haiti",
+      "code": "HT"
+    },
+    {
+      "name": "Heard Island and Mcdonald Islands",
+      "code": "HM"
+    },
+    {
+      "name": "Holy See (Vatican City State)",
+      "code": "VA"
+    },
+    {
+      "name": "Honduras",
+      "code": "HN"
+    },
+    {
+      "name": "Hong Kong",
+      "code": "HK"
+    },
+    {
+      "name": "Hungary",
+      "code": "HU"
+    },
+    {
+      "name": "Iceland",
+      "code": "IS"
+    },
+    {
+      "name": "India",
+      "code": "IN"
+    },
+    {
+      "name": "Indonesia",
+      "code": "ID"
+    },
+    {
+      "name": "Iran, Islamic Republic Of",
+      "code": "IR"
+    },
+    {
+      "name": "Iraq",
+      "code": "IQ"
+    },
+    {
+      "name": "Ireland",
+      "code": "IE"
+    },
+    {
+      "name": "Isle of Man",
+      "code": "IM"
+    },
+    {
+      "name": "Israel",
+      "code": "IL"
+    },
+    {
+      "name": "Italy",
+      "code": "IT"
+    },
+    {
+      "name": "Jamaica",
+      "code": "JM"
+    },
+    {
+      "name": "Japan",
+      "code": "JP"
+    },
+    {
+      "name": "Jersey",
+      "code": "JE"
+    },
+    {
+      "name": "Jordan",
+      "code": "JO"
+    },
+    {
+      "name": "Kazakhstan",
+      "code": "KZ"
+    },
+    {
+      "name": "Kenya",
+      "code": "KE"
+    },
+    {
+      "name": "Kiribati",
+      "code": "KI"
+    },
+    {
+      "name": "Korea, Democratic People'S Republic of",
+      "code": "KP"
+    },
+    {
+      "name": "Korea, Republic of",
+      "code": "KR"
+    },
+    {
+      "name": "Kuwait",
+      "code": "KW"
+    },
+    {
+      "name": "Kyrgyzstan",
+      "code": "KG"
+    },
+    {
+      "name": "Lao People'S Democratic Republic",
+      "code": "LA"
+    },
+    {
+      "name": "Latvia",
+      "code": "LV"
+    },
+    {
+      "name": "Lebanon",
+      "code": "LB"
+    },
+    {
+      "name": "Lesotho",
+      "code": "LS"
+    },
+    {
+      "name": "Liberia",
+      "code": "LR"
+    },
+    {
+      "name": "Libyan Arab Jamahiriya",
+      "code": "LY"
+    },
+    {
+      "name": "Liechtenstein",
+      "code": "LI"
+    },
+    {
+      "name": "Lithuania",
+      "code": "LT"
+    },
+    {
+      "name": "Luxembourg",
+      "code": "LU"
+    },
+    {
+      "name": "Macao",
+      "code": "MO"
+    },
+    {
+      "name": "Macedonia, The Former Yugoslav Republic of",
+      "code": "MK"
+    },
+    {
+      "name": "Madagascar",
+      "code": "MG"
+    },
+    {
+      "name": "Malawi",
+      "code": "MW"
+    },
+    {
+      "name": "Malaysia",
+      "code": "MY"
+    },
+    {
+      "name": "Maldives",
+      "code": "MV"
+    },
+    {
+      "name": "Mali",
+      "code": "ML"
+    },
+    {
+      "name": "Malta",
+      "code": "MT"
+    },
+    {
+      "name": "Marshall Islands",
+      "code": "MH"
+    },
+    {
+      "name": "Martinique",
+      "code": "MQ"
+    },
+    {
+      "name": "Mauritania",
+      "code": "MR"
+    },
+    {
+      "name": "Mauritius",
+      "code": "MU"
+    },
+    {
+      "name": "Mayotte",
+      "code": "YT"
+    },
+    {
+      "name": "Mexico",
+      "code": "MX"
+    },
+    {
+      "name": "Micronesia, Federated States of",
+      "code": "FM"
+    },
+    {
+      "name": "Moldova, Republic of",
+      "code": "MD"
+    },
+    {
+      "name": "Monaco",
+      "code": "MC"
+    },
+    {
+      "name": "Mongolia",
+      "code": "MN"
+    },
+    {
+      "name": "Montserrat",
+      "code": "MS"
+    },
+    {
+      "name": "Morocco",
+      "code": "MA"
+    },
+    {
+      "name": "Mozambique",
+      "code": "MZ"
+    },
+    {
+      "name": "Myanmar",
+      "code": "MM"
+    },
+    {
+      "name": "Namibia",
+      "code": "NA"
+    },
+    {
+      "name": "Nauru",
+      "code": "NR"
+    },
+    {
+      "name": "Nepal",
+      "code": "NP"
+    },
+    {
+      "name": "Netherlands",
+      "code": "NL"
+    },
+    {
+      "name": "Netherlands Antilles",
+      "code": "AN"
+    },
+    {
+      "name": "New Caledonia",
+      "code": "NC"
+    },
+    {
+      "name": "New Zealand",
+      "code": "NZ"
+    },
+    {
+      "name": "Nicaragua",
+      "code": "NI"
+    },
+    {
+      "name": "Niger",
+      "code": "NE"
+    },
+    {
+      "name": "Nigeria",
+      "code": "NG"
+    },
+    {
+      "name": "Niue",
+      "code": "NU"
+    },
+    {
+      "name": "Norfolk Island",
+      "code": "NF"
+    },
+    {
+      "name": "Northern Mariana Islands",
+      "code": "MP"
+    },
+    {
+      "name": "Norway",
+      "code": "NO"
+    },
+    {
+      "name": "Oman",
+      "code": "OM"
+    },
+    {
+      "name": "Pakistan",
+      "code": "PK"
+    },
+    {
+      "name": "Palau",
+      "code": "PW"
+    },
+    {
+      "name": "Palestinian Territory, Occupied",
+      "code": "PS"
+    },
+    {
+      "name": "Panama",
+      "code": "PA"
+    },
+    {
+      "name": "Papua New Guinea",
+      "code": "PG"
+    },
+    {
+      "name": "Paraguay",
+      "code": "PY"
+    },
+    {
+      "name": "Peru",
+      "code": "PE"
+    },
+    {
+      "name": "Philippines",
+      "code": "PH"
+    },
+    {
+      "name": "Pitcairn",
+      "code": "PN"
+    },
+    {
+      "name": "Poland",
+      "code": "PL"
+    },
+    {
+      "name": "Portugal",
+      "code": "PT"
+    },
+    {
+      "name": "Puerto Rico",
+      "code": "PR"
+    },
+    {
+      "name": "Qatar",
+      "code": "QA"
+    },
+    {
+      "name": "Reunion",
+      "code": "RE"
+    },
+    {
+      "name": "Romania",
+      "code": "RO"
+    },
+    {
+      "name": "Russian Federation",
+      "code": "RU"
+    },
+    {
+      "name": "RWANDA",
+      "code": "RW"
+    },
+    {
+      "name": "Saint Helena",
+      "code": "SH"
+    },
+    {
+      "name": "Saint Kitts and Nevis",
+      "code": "KN"
+    },
+    {
+      "name": "Saint Lucia",
+      "code": "LC"
+    },
+    {
+      "name": "Saint Pierre and Miquelon",
+      "code": "PM"
+    },
+    {
+      "name": "Saint Vincent and the Grenadines",
+      "code": "VC"
+    },
+    {
+      "name": "Samoa",
+      "code": "WS"
+    },
+    {
+      "name": "San Marino",
+      "code": "SM"
+    },
+    {
+      "name": "Sao Tome and Principe",
+      "code": "ST"
+    },
+    {
+      "name": "Saudi Arabia",
+      "code": "SA"
+    },
+    {
+      "name": "Senegal",
+      "code": "SN"
+    },
+    {
+      "name": "Serbia and Montenegro",
+      "code": "CS"
+    },
+    {
+      "name": "Seychelles",
+      "code": "SC"
+    },
+    {
+      "name": "Sierra Leone",
+      "code": "SL"
+    },
+    {
+      "name": "Singapore",
+      "code": "SG"
+    },
+    {
+      "name": "Slovakia",
+      "code": "SK"
+    },
+    {
+      "name": "Slovenia",
+      "code": "SI"
+    },
+    {
+      "name": "Solomon Islands",
+      "code": "SB"
+    },
+    {
+      "name": "Somalia",
+      "code": "SO"
+    },
+    {
+      "name": "South Africa",
+      "code": "ZA"
+    },
+    {
+      "name": "South Georgia and the South Sandwich Islands",
+      "code": "GS"
+    },
+    {
+      "name": "Spain",
+      "code": "ES"
+    },
+    {
+      "name": "Sri Lanka",
+      "code": "LK"
+    },
+    {
+      "name": "Sudan",
+      "code": "SD"
+    },
+    {
+      "name": "Suriname",
+      "code": "SR"
+    },
+    {
+      "name": "Svalbard and Jan Mayen",
+      "code": "SJ"
+    },
+    {
+      "name": "Swaziland",
+      "code": "SZ"
+    },
+    {
+      "name": "Sweden",
+      "code": "SE"
+    },
+    {
+      "name": "Switzerland",
+      "code": "CH"
+    },
+    {
+      "name": "Syrian Arab Republic",
+      "code": "SY"
+    },
+    {
+      "name": "Taiwan, Province of China",
+      "code": "TW"
+    },
+    {
+      "name": "Tajikistan",
+      "code": "TJ"
+    },
+    {
+      "name": "Tanzania, United Republic of",
+      "code": "TZ"
+    },
+    {
+      "name": "Thailand",
+      "code": "TH"
+    },
+    {
+      "name": "Timor-Leste",
+      "code": "TL"
+    },
+    {
+      "name": "Togo",
+      "code": "TG"
+    },
+    {
+      "name": "Tokelau",
+      "code": "TK"
+    },
+    {
+      "name": "Tonga",
+      "code": "TO"
+    },
+    {
+      "name": "Trinidad and Tobago",
+      "code": "TT"
+    },
+    {
+      "name": "Tunisia",
+      "code": "TN"
+    },
+    {
+      "name": "Turkey",
+      "code": "TR"
+    },
+    {
+      "name": "Turkmenistan",
+      "code": "TM"
+    },
+    {
+      "name": "Turks and Caicos Islands",
+      "code": "TC"
+    },
+    {
+      "name": "Tuvalu",
+      "code": "TV"
+    },
+    {
+      "name": "Uganda",
+      "code": "UG"
+    },
+    {
+      "name": "Ukraine",
+      "code": "UA"
+    },
+    {
+      "name": "United Arab Emirates",
+      "code": "AE"
+    },
+    {
+      "name": "United Kingdom",
+      "code": "GB"
+    },
+    {
+      "name": "United States",
+      "code": "US"
+    },
+    {
+      "name": "United States Minor Outlying Islands",
+      "code": "UM"
+    },
+    {
+      "name": "Uruguay",
+      "code": "UY"
+    },
+    {
+      "name": "Uzbekistan",
+      "code": "UZ"
+    },
+    {
+      "name": "Vanuatu",
+      "code": "VU"
+    },
+    {
+      "name": "Venezuela",
+      "code": "VE"
+    },
+    {
+      "name": "Viet Nam",
+      "code": "VN"
+    },
+    {
+      "name": "Virgin Islands, British",
+      "code": "VG"
+    },
+    {
+      "name": "Virgin Islands, U.S.",
+      "code": "VI"
+    },
+    {
+      "name": "Wallis and Futuna",
+      "code": "WF"
+    },
+    {
+      "name": "Western Sahara",
+      "code": "EH"
+    },
+    {
+      "name": "Yemen",
+      "code": "YE"
+    },
+    {
+      "name": "Zambia",
+      "code": "ZM"
+    },
+    {
+      "name": "Zimbabwe",
+      "code": "ZW"
+    },
+    {
+      "name": "Serbia",
+      "code": "rs"
+    }
+  ],
+  "seniority": [
+    {
+      "code": "urn:li:seniority:1",
+      "name": "Unpaid"
+    },
+    {
+      "code": "urn:li:seniority:2",
+      "name": "Training"
+    },
+    {
+      "code": "Virgin Islands, U.S.",
+      "name": "VI"
+    },
+    {
+      "code": "urn:li:seniority:3",
+      "name": "Entry"
+    },
+    {
+      "code": "urn:li:seniority:4",
+      "name": "Senior"
+    },
+    {
+      "code": "urn:li:seniority:5",
+      "name": "Manager"
+    },
+    {
+      "code": "urn:li:seniority:6",
+      "name": "Director"
+    },
+    {
+      "code": "urn:li:seniority:7",
+      "name": "VP"
+    },
+    {
+      "code": "urn:li:seniority:8",
+      "name": "CXO"
+    },
+    {
+      "code": "urn:li:seniority:9",
+      "name": "Partner"
+    },
+    {
+      "code": "urn:li:seniority:10",
+      "name": "Owner"
+    }
+  ],
+
+  "industries": [
+    {
+      "$URN": "urn:li:industry:1",
+      "name": {
+        "localized": {
+          "en_US": "Defense & Space"
+        }
+      },
+      "id": 1
+    },
+    {
+      "$URN": "urn:li:industry:3",
+      "name": {
+        "localized": {
+          "en_US": "Computer Hardware"
+        }
+      },
+      "id": 3
+    },
+    {
+      "$URN": "urn:li:industry:4",
+      "name": {
+        "localized": {
+          "en_US": "Computer Software"
+        }
+      },
+      "id": 4
+    },
+    {
+      "$URN": "urn:li:industry:5",
+      "name": {
+        "localized": {
+          "en_US": "Computer Networking"
+        }
+      },
+      "id": 5
+    },
+    {
+      "$URN": "urn:li:industry:6",
+      "name": {
+        "localized": {
+          "en_US": "Internet"
+        }
+      },
+      "id": 6
+    },
+    {
+      "$URN": "urn:li:industry:7",
+      "name": {
+        "localized": {
+          "en_US": "Semiconductors"
+        }
+      },
+      "id": 7
+    },
+    {
+      "$URN": "urn:li:industry:8",
+      "name": {
+        "localized": {
+          "en_US": "Telecommunications"
+        }
+      },
+      "id": 8
+    },
+    {
+      "$URN": "urn:li:industry:9",
+      "name": {
+        "localized": {
+          "en_US": "Law Practice"
+        }
+      },
+      "id": 9
+    },
+    {
+      "$URN": "urn:li:industry:10",
+      "name": {
+        "localized": {
+          "en_US": "Legal Services"
+        }
+      },
+      "id": 10
+    },
+    {
+      "$URN": "urn:li:industry:11",
+      "name": {
+        "localized": {
+          "en_US": "Management Consulting"
+        }
+      },
+      "id": 11
+    },
+    {
+      "$URN": "urn:li:industry:12",
+      "name": {
+        "localized": {
+          "en_US": "Biotechnology"
+        }
+      },
+      "id": 12
+    },
+    {
+      "$URN": "urn:li:industry:13",
+      "name": {
+        "localized": {
+          "en_US": "Medical Practice"
+        }
+      },
+      "id": 13
+    },
+    {
+      "$URN": "urn:li:industry:14",
+      "name": {
+        "localized": {
+          "en_US": "Hospital & Health Care"
+        }
+      },
+      "id": 14
+    },
+    {
+      "$URN": "urn:li:industry:15",
+      "name": {
+        "localized": {
+          "en_US": "Pharmaceuticals"
+        }
+      },
+      "id": 15
+    },
+    {
+      "$URN": "urn:li:industry:16",
+      "name": {
+        "localized": {
+          "en_US": "Veterinary"
+        }
+      },
+      "id": 16
+    },
+    {
+      "$URN": "urn:li:industry:17",
+      "name": {
+        "localized": {
+          "en_US": "Medical Device"
+        }
+      },
+      "id": 17
+    },
+    {
+      "$URN": "urn:li:industry:18",
+      "name": {
+        "localized": {
+          "en_US": "Cosmetics"
+        }
+      },
+      "id": 18
+    },
+    {
+      "$URN": "urn:li:industry:19",
+      "name": {
+        "localized": {
+          "en_US": "Apparel & Fashion"
+        }
+      },
+      "id": 19
+    },
+    {
+      "$URN": "urn:li:industry:20",
+      "name": {
+        "localized": {
+          "en_US": "Sporting Goods"
+        }
+      },
+      "id": 20
+    },
+    {
+      "$URN": "urn:li:industry:21",
+      "name": {
+        "localized": {
+          "en_US": "Tobacco"
+        }
+      },
+      "id": 21
+    },
+    {
+      "$URN": "urn:li:industry:22",
+      "name": {
+        "localized": {
+          "en_US": "Supermarkets"
+        }
+      },
+      "id": 22
+    },
+    {
+      "$URN": "urn:li:industry:23",
+      "name": {
+        "localized": {
+          "en_US": "Food Production"
+        }
+      },
+      "id": 23
+    },
+    {
+      "$URN": "urn:li:industry:24",
+      "name": {
+        "localized": {
+          "en_US": "Consumer Electronics"
+        }
+      },
+      "id": 24
+    },
+    {
+      "$URN": "urn:li:industry:25",
+      "name": {
+        "localized": {
+          "en_US": "Consumer Goods"
+        }
+      },
+      "id": 25
+    },
+    {
+      "$URN": "urn:li:industry:26",
+      "name": {
+        "localized": {
+          "en_US": "Furniture"
+        }
+      },
+      "id": 26
+    },
+    {
+      "$URN": "urn:li:industry:27",
+      "name": {
+        "localized": {
+          "en_US": "Retail"
+        }
+      },
+      "id": 27
+    },
+    {
+      "$URN": "urn:li:industry:28",
+      "name": {
+        "localized": {
+          "en_US": "Entertainment"
+        }
+      },
+      "id": 28
+    },
+    {
+      "$URN": "urn:li:industry:29",
+      "name": {
+        "localized": {
+          "en_US": "Gambling & Casinos"
+        }
+      },
+      "id": 29
+    },
+    {
+      "$URN": "urn:li:industry:30",
+      "name": {
+        "localized": {
+          "en_US": "Leisure, Travel & Tourism"
+        }
+      },
+      "id": 30
+    },
+    {
+      "$URN": "urn:li:industry:31",
+      "name": {
+        "localized": {
+          "en_US": "Hospitality"
+        }
+      },
+      "id": 31
+    },
+    {
+      "$URN": "urn:li:industry:32",
+      "name": {
+        "localized": {
+          "en_US": "Restaurants"
+        }
+      },
+      "id": 32
+    },
+    {
+      "$URN": "urn:li:industry:33",
+      "name": {
+        "localized": {
+          "en_US": "Sports"
+        }
+      },
+      "id": 33
+    },
+    {
+      "$URN": "urn:li:industry:34",
+      "name": {
+        "localized": {
+          "en_US": "Food & Beverages"
+        }
+      },
+      "id": 34
+    },
+    {
+      "$URN": "urn:li:industry:35",
+      "name": {
+        "localized": {
+          "en_US": "Motion Pictures & Film"
+        }
+      },
+      "id": 35
+    },
+    {
+      "$URN": "urn:li:industry:36",
+      "name": {
+        "localized": {
+          "en_US": "Broadcast Media"
+        }
+      },
+      "id": 36
+    },
+    {
+      "$URN": "urn:li:industry:37",
+      "name": {
+        "localized": {
+          "en_US": "Museums & Institutions"
+        }
+      },
+      "id": 37
+    },
+    {
+      "$URN": "urn:li:industry:38",
+      "name": {
+        "localized": {
+          "en_US": "Fine Art"
+        }
+      },
+      "id": 38
+    },
+    {
+      "$URN": "urn:li:industry:39",
+      "name": {
+        "localized": {
+          "en_US": "Performing Arts"
+        }
+      },
+      "id": 39
+    },
+    {
+      "$URN": "urn:li:industry:40",
+      "name": {
+        "localized": {
+          "en_US": "Recreational Facilities & Services"
+        }
+      },
+      "id": 40
+    },
+    {
+      "$URN": "urn:li:industry:41",
+      "name": {
+        "localized": {
+          "en_US": "Banking"
+        }
+      },
+      "id": 41
+    },
+    {
+      "$URN": "urn:li:industry:42",
+      "name": {
+        "localized": {
+          "en_US": "Insurance"
+        }
+      },
+      "id": 42
+    },
+    {
+      "$URN": "urn:li:industry:43",
+      "name": {
+        "localized": {
+          "en_US": "Financial Services"
+        }
+      },
+      "id": 43
+    },
+    {
+      "$URN": "urn:li:industry:44",
+      "name": {
+        "localized": {
+          "en_US": "Real Estate"
+        }
+      },
+      "id": 44
+    },
+    {
+      "$URN": "urn:li:industry:45",
+      "name": {
+        "localized": {
+          "en_US": "Investment Banking"
+        }
+      },
+      "id": 45
+    },
+    {
+      "$URN": "urn:li:industry:46",
+      "name": {
+        "localized": {
+          "en_US": "Investment Management"
+        }
+      },
+      "id": 46
+    },
+    {
+      "$URN": "urn:li:industry:47",
+      "name": {
+        "localized": {
+          "en_US": "Accounting"
+        }
+      },
+      "id": 47
+    },
+    {
+      "$URN": "urn:li:industry:48",
+      "name": {
+        "localized": {
+          "en_US": "Construction"
+        }
+      },
+      "id": 48
+    },
+    {
+      "$URN": "urn:li:industry:49",
+      "name": {
+        "localized": {
+          "en_US": "Building Materials"
+        }
+      },
+      "id": 49
+    },
+    {
+      "$URN": "urn:li:industry:50",
+      "name": {
+        "localized": {
+          "en_US": "Architecture & Planning"
+        }
+      },
+      "id": 50
+    },
+    {
+      "$URN": "urn:li:industry:51",
+      "name": {
+        "localized": {
+          "en_US": "Civil Engineering"
+        }
+      },
+      "id": 51
+    },
+    {
+      "$URN": "urn:li:industry:52",
+      "name": {
+        "localized": {
+          "en_US": "Aviation & Aerospace"
+        }
+      },
+      "id": 52
+    },
+    {
+      "$URN": "urn:li:industry:53",
+      "name": {
+        "localized": {
+          "en_US": "Automotive"
+        }
+      },
+      "id": 53
+    },
+    {
+      "$URN": "urn:li:industry:54",
+      "name": {
+        "localized": {
+          "en_US": "Chemicals"
+        }
+      },
+      "id": 54
+    },
+    {
+      "$URN": "urn:li:industry:55",
+      "name": {
+        "localized": {
+          "en_US": "Machinery"
+        }
+      },
+      "id": 55
+    },
+    {
+      "$URN": "urn:li:industry:56",
+      "name": {
+        "localized": {
+          "en_US": "Mining & Metals"
+        }
+      },
+      "id": 56
+    },
+    {
+      "$URN": "urn:li:industry:57",
+      "name": {
+        "localized": {
+          "en_US": "Oil & Energy"
+        }
+      },
+      "id": 57
+    },
+    {
+      "$URN": "urn:li:industry:58",
+      "name": {
+        "localized": {
+          "en_US": "Shipbuilding"
+        }
+      },
+      "id": 58
+    },
+    {
+      "$URN": "urn:li:industry:59",
+      "name": {
+        "localized": {
+          "en_US": "Utilities"
+        }
+      },
+      "id": 59
+    },
+    {
+      "$URN": "urn:li:industry:3131",
+      "name": {
+        "localized": {
+          "en_US": "Mobile Games"
+        }
+      },
+      "id": 3131
+    },
+    {
+      "$URN": "urn:li:industry:60",
+      "name": {
+        "localized": {
+          "en_US": "Textiles"
+        }
+      },
+      "id": 60
+    },
+    {
+      "$URN": "urn:li:industry:61",
+      "name": {
+        "localized": {
+          "en_US": "Paper & Forest Products"
+        }
+      },
+      "id": 61
+    },
+    {
+      "$URN": "urn:li:industry:62",
+      "name": {
+        "localized": {
+          "en_US": "Railroad Manufacture"
+        }
+      },
+      "id": 62
+    },
+    {
+      "$URN": "urn:li:industry:63",
+      "name": {
+        "localized": {
+          "en_US": "Farming"
+        }
+      },
+      "id": 63
+    },
+    {
+      "$URN": "urn:li:industry:64",
+      "name": {
+        "localized": {
+          "en_US": "Ranching"
+        }
+      },
+      "id": 64
+    },
+    {
+      "$URN": "urn:li:industry:65",
+      "name": {
+        "localized": {
+          "en_US": "Dairy"
+        }
+      },
+      "id": 65
+    },
+    {
+      "$URN": "urn:li:industry:66",
+      "name": {
+        "localized": {
+          "en_US": "Fishery"
+        }
+      },
+      "id": 66
+    },
+    {
+      "$URN": "urn:li:industry:67",
+      "name": {
+        "localized": {
+          "en_US": "Primary/Secondary Education"
+        }
+      },
+      "id": 67
+    },
+    {
+      "$URN": "urn:li:industry:68",
+      "name": {
+        "localized": {
+          "en_US": "Higher Education"
+        }
+      },
+      "id": 68
+    },
+    {
+      "$URN": "urn:li:industry:69",
+      "name": {
+        "localized": {
+          "en_US": "Education Management"
+        }
+      },
+      "id": 69
+    },
+    {
+      "$URN": "urn:li:industry:70",
+      "name": {
+        "localized": {
+          "en_US": "Research"
+        }
+      },
+      "id": 70
+    },
+    {
+      "$URN": "urn:li:industry:71",
+      "name": {
+        "localized": {
+          "en_US": "Military"
+        }
+      },
+      "id": 71
+    },
+    {
+      "$URN": "urn:li:industry:72",
+      "name": {
+        "localized": {
+          "en_US": "Legislative Office"
+        }
+      },
+      "id": 72
+    },
+    {
+      "$URN": "urn:li:industry:73",
+      "name": {
+        "localized": {
+          "en_US": "Judiciary"
+        }
+      },
+      "id": 73
+    },
+    {
+      "$URN": "urn:li:industry:74",
+      "name": {
+        "localized": {
+          "en_US": "International Affairs"
+        }
+      },
+      "id": 74
+    },
+    {
+      "$URN": "urn:li:industry:75",
+      "name": {
+        "localized": {
+          "en_US": "Government Administration"
+        }
+      },
+      "id": 75
+    },
+    {
+      "$URN": "urn:li:industry:76",
+      "name": {
+        "localized": {
+          "en_US": "Executive Office"
+        }
+      },
+      "id": 76
+    },
+    {
+      "$URN": "urn:li:industry:77",
+      "name": {
+        "localized": {
+          "en_US": "Law Enforcement"
+        }
+      },
+      "id": 77
+    },
+    {
+      "$URN": "urn:li:industry:78",
+      "name": {
+        "localized": {
+          "en_US": "Public Safety"
+        }
+      },
+      "id": 78
+    },
+    {
+      "$URN": "urn:li:industry:79",
+      "name": {
+        "localized": {
+          "en_US": "Public Policy"
+        }
+      },
+      "id": 79
+    },
+    {
+      "$URN": "urn:li:industry:80",
+      "name": {
+        "localized": {
+          "en_US": "Marketing & Advertising"
+        }
+      },
+      "id": 80
+    },
+    {
+      "$URN": "urn:li:industry:81",
+      "name": {
+        "localized": {
+          "en_US": "Newspapers"
+        }
+      },
+      "id": 81
+    },
+    {
+      "$URN": "urn:li:industry:82",
+      "name": {
+        "localized": {
+          "en_US": "Publishing"
+        }
+      },
+      "id": 82
+    },
+    {
+      "$URN": "urn:li:industry:83",
+      "name": {
+        "localized": {
+          "en_US": "Printing"
+        }
+      },
+      "id": 83
+    },
+    {
+      "$URN": "urn:li:industry:84",
+      "name": {
+        "localized": {
+          "en_US": "Information Services"
+        }
+      },
+      "id": 84
+    },
+    {
+      "$URN": "urn:li:industry:85",
+      "name": {
+        "localized": {
+          "en_US": "Libraries"
+        }
+      },
+      "id": 85
+    },
+    {
+      "$URN": "urn:li:industry:86",
+      "name": {
+        "localized": {
+          "en_US": "Environmental Services"
+        }
+      },
+      "id": 86
+    },
+    {
+      "$URN": "urn:li:industry:87",
+      "name": {
+        "localized": {
+          "en_US": "Package/Freight Delivery"
+        }
+      },
+      "id": 87
+    },
+    {
+      "$URN": "urn:li:industry:88",
+      "name": {
+        "localized": {
+          "en_US": "Individual & Family Services"
+        }
+      },
+      "id": 88
+    },
+    {
+      "$URN": "urn:li:industry:89",
+      "name": {
+        "localized": {
+          "en_US": "Religious Institutions"
+        }
+      },
+      "id": 89
+    },
+    {
+      "$URN": "urn:li:industry:90",
+      "name": {
+        "localized": {
+          "en_US": "Civic & Social Organization"
+        }
+      },
+      "id": 90
+    },
+    {
+      "$URN": "urn:li:industry:91",
+      "name": {
+        "localized": {
+          "en_US": "Consumer Services"
+        }
+      },
+      "id": 91
+    },
+    {
+      "$URN": "urn:li:industry:92",
+      "name": {
+        "localized": {
+          "en_US": "Transportation/Trucking/Railroad"
+        }
+      },
+      "id": 92
+    },
+    {
+      "$URN": "urn:li:industry:93",
+      "name": {
+        "localized": {
+          "en_US": "Warehousing"
+        }
+      },
+      "id": 93
+    },
+    {
+      "$URN": "urn:li:industry:94",
+      "name": {
+        "localized": {
+          "en_US": "Airlines/Aviation"
+        }
+      },
+      "id": 94
+    },
+    {
+      "$URN": "urn:li:industry:95",
+      "name": {
+        "localized": {
+          "en_US": "Maritime"
+        }
+      },
+      "id": 95
+    },
+    {
+      "$URN": "urn:li:industry:96",
+      "name": {
+        "localized": {
+          "en_US": "Information Technology & Services"
+        }
+      },
+      "id": 96
+    },
+    {
+      "$URN": "urn:li:industry:97",
+      "name": {
+        "localized": {
+          "en_US": "Market Research"
+        }
+      },
+      "id": 97
+    },
+    {
+      "$URN": "urn:li:industry:98",
+      "name": {
+        "localized": {
+          "en_US": "Public Relations & Communications"
+        }
+      },
+      "id": 98
+    },
+    {
+      "$URN": "urn:li:industry:99",
+      "name": {
+        "localized": {
+          "en_US": "Design"
+        }
+      },
+      "id": 99
+    },
+    {
+      "$URN": "urn:li:industry:100",
+      "name": {
+        "localized": {
+          "en_US": "Non-profit Organization Management"
+        }
+      },
+      "id": 100
+    },
+    {
+      "$URN": "urn:li:industry:101",
+      "name": {
+        "localized": {
+          "en_US": "Fundraising"
+        }
+      },
+      "id": 101
+    },
+    {
+      "$URN": "urn:li:industry:102",
+      "name": {
+        "localized": {
+          "en_US": "Program Development"
+        }
+      },
+      "id": 102
+    },
+    {
+      "$URN": "urn:li:industry:103",
+      "name": {
+        "localized": {
+          "en_US": "Writing & Editing"
+        }
+      },
+      "id": 103
+    },
+    {
+      "$URN": "urn:li:industry:104",
+      "name": {
+        "localized": {
+          "en_US": "Staffing & Recruiting"
+        }
+      },
+      "id": 104
+    },
+    {
+      "$URN": "urn:li:industry:105",
+      "name": {
+        "localized": {
+          "en_US": "Professional Training & Coaching"
+        }
+      },
+      "id": 105
+    },
+    {
+      "$URN": "urn:li:industry:106",
+      "name": {
+        "localized": {
+          "en_US": "Venture Capital & Private Equity"
+        }
+      },
+      "id": 106
+    },
+    {
+      "$URN": "urn:li:industry:107",
+      "name": {
+        "localized": {
+          "en_US": "Political Organization"
+        }
+      },
+      "id": 107
+    },
+    {
+      "$URN": "urn:li:industry:108",
+      "name": {
+        "localized": {
+          "en_US": "Translation & Localization"
+        }
+      },
+      "id": 108
+    },
+    {
+      "$URN": "urn:li:industry:109",
+      "name": {
+        "localized": {
+          "en_US": "Computer Games"
+        }
+      },
+      "id": 109
+    },
+    {
+      "$URN": "urn:li:industry:110",
+      "name": {
+        "localized": {
+          "en_US": "Events Services"
+        }
+      },
+      "id": 110
+    },
+    {
+      "$URN": "urn:li:industry:111",
+      "name": {
+        "localized": {
+          "en_US": "Arts & Crafts"
+        }
+      },
+      "id": 111
+    },
+    {
+      "$URN": "urn:li:industry:112",
+      "name": {
+        "localized": {
+          "en_US": "Electrical & Electronic Manufacturing"
+        }
+      },
+      "id": 112
+    },
+    {
+      "$URN": "urn:li:industry:113",
+      "name": {
+        "localized": {
+          "en_US": "Online Media"
+        }
+      },
+      "id": 113
+    },
+    {
+      "$URN": "urn:li:industry:114",
+      "name": {
+        "localized": {
+          "en_US": "Nanotechnology"
+        }
+      },
+      "id": 114
+    },
+    {
+      "$URN": "urn:li:industry:115",
+      "name": {
+        "localized": {
+          "en_US": "Music"
+        }
+      },
+      "id": 115
+    },
+    {
+      "$URN": "urn:li:industry:116",
+      "name": {
+        "localized": {
+          "en_US": "Logistics & Supply Chain"
+        }
+      },
+      "id": 116
+    },
+    {
+      "$URN": "urn:li:industry:117",
+      "name": {
+        "localized": {
+          "en_US": "Plastics"
+        }
+      },
+      "id": 117
+    },
+    {
+      "$URN": "urn:li:industry:118",
+      "name": {
+        "localized": {
+          "en_US": "Computer & Network Security"
+        }
+      },
+      "id": 118
+    },
+    {
+      "$URN": "urn:li:industry:119",
+      "name": {
+        "localized": {
+          "en_US": "Wireless"
+        }
+      },
+      "id": 119
+    },
+    {
+      "$URN": "urn:li:industry:120",
+      "name": {
+        "localized": {
+          "en_US": "Alternative Dispute Resolution"
+        }
+      },
+      "id": 120
+    },
+    {
+      "$URN": "urn:li:industry:121",
+      "name": {
+        "localized": {
+          "en_US": "Security & Investigations"
+        }
+      },
+      "id": 121
+    },
+    {
+      "$URN": "urn:li:industry:122",
+      "name": {
+        "localized": {
+          "en_US": "Facilities Services"
+        }
+      },
+      "id": 122
+    },
+    {
+      "$URN": "urn:li:industry:123",
+      "name": {
+        "localized": {
+          "en_US": "Outsourcing/Offshoring"
+        }
+      },
+      "id": 123
+    },
+    {
+      "$URN": "urn:li:industry:124",
+      "name": {
+        "localized": {
+          "en_US": "Health, Wellness & Fitness"
+        }
+      },
+      "id": 124
+    },
+    {
+      "$URN": "urn:li:industry:125",
+      "name": {
+        "localized": {
+          "en_US": "Alternative Medicine"
+        }
+      },
+      "id": 125
+    },
+    {
+      "$URN": "urn:li:industry:126",
+      "name": {
+        "localized": {
+          "en_US": "Media Production"
+        }
+      },
+      "id": 126
+    },
+    {
+      "$URN": "urn:li:industry:127",
+      "name": {
+        "localized": {
+          "en_US": "Animation"
+        }
+      },
+      "id": 127
+    },
+    {
+      "$URN": "urn:li:industry:128",
+      "name": {
+        "localized": {
+          "en_US": "Commercial Real Estate"
+        }
+      },
+      "id": 128
+    },
+    {
+      "$URN": "urn:li:industry:129",
+      "name": {
+        "localized": {
+          "en_US": "Capital Markets"
+        }
+      },
+      "id": 129
+    },
+    {
+      "$URN": "urn:li:industry:130",
+      "name": {
+        "localized": {
+          "en_US": "Think Tanks"
+        }
+      },
+      "id": 130
+    },
+    {
+      "$URN": "urn:li:industry:131",
+      "name": {
+        "localized": {
+          "en_US": "Philanthropy"
+        }
+      },
+      "id": 131
+    },
+    {
+      "$URN": "urn:li:industry:132",
+      "name": {
+        "localized": {
+          "en_US": "E-learning"
+        }
+      },
+      "id": 132
+    },
+    {
+      "$URN": "urn:li:industry:133",
+      "name": {
+        "localized": {
+          "en_US": "Wholesale"
+        }
+      },
+      "id": 133
+    },
+    {
+      "$URN": "urn:li:industry:134",
+      "name": {
+        "localized": {
+          "en_US": "Import & Export"
+        }
+      },
+      "id": 134
+    },
+    {
+      "$URN": "urn:li:industry:135",
+      "name": {
+        "localized": {
+          "en_US": "Mechanical Or Industrial Engineering"
+        }
+      },
+      "id": 135
+    },
+    {
+      "$URN": "urn:li:industry:136",
+      "name": {
+        "localized": {
+          "en_US": "Photography"
+        }
+      },
+      "id": 136
+    },
+    {
+      "$URN": "urn:li:industry:137",
+      "name": {
+        "localized": {
+          "en_US": "Human Resources"
+        }
+      },
+      "id": 137
+    },
+    {
+      "$URN": "urn:li:industry:138",
+      "name": {
+        "localized": {
+          "en_US": "Business Supplies & Equipment"
+        }
+      },
+      "id": 138
+    },
+    {
+      "$URN": "urn:li:industry:139",
+      "name": {
+        "localized": {
+          "en_US": "Mental Health Care"
+        }
+      },
+      "id": 139
+    },
+    {
+      "$URN": "urn:li:industry:140",
+      "name": {
+        "localized": {
+          "en_US": "Graphic Design"
+        }
+      },
+      "id": 140
+    },
+    {
+      "$URN": "urn:li:industry:141",
+      "name": {
+        "localized": {
+          "en_US": "International Trade & Development"
+        }
+      },
+      "id": 141
+    },
+    {
+      "$URN": "urn:li:industry:142",
+      "name": {
+        "localized": {
+          "en_US": "Wine & Spirits"
+        }
+      },
+      "id": 142
+    },
+    {
+      "$URN": "urn:li:industry:143",
+      "name": {
+        "localized": {
+          "en_US": "Luxury Goods & Jewelry"
+        }
+      },
+      "id": 143
+    },
+    {
+      "$URN": "urn:li:industry:144",
+      "name": {
+        "localized": {
+          "en_US": "Renewables & Environment"
+        }
+      },
+      "id": 144
+    },
+    {
+      "$URN": "urn:li:industry:145",
+      "name": {
+        "localized": {
+          "en_US": "Glass, Ceramics & Concrete"
+        }
+      },
+      "id": 145
+    },
+    {
+      "$URN": "urn:li:industry:146",
+      "name": {
+        "localized": {
+          "en_US": "Packaging & Containers"
+        }
+      },
+      "id": 146
+    },
+    {
+      "$URN": "urn:li:industry:147",
+      "name": {
+        "localized": {
+          "en_US": "Industrial Automation"
+        }
+      },
+      "id": 147
+    },
+    {
+      "$URN": "urn:li:industry:148",
+      "name": {
+        "localized": {
+          "en_US": "Government Relations"
+        }
+      },
+      "id": 148
+    },
+    {
+      "$URN": "urn:li:industry:150",
+      "name": {
+        "localized": {
+          "en_US": "Horticulture"
+        }
+      },
+      "id": 150
+    }
+  ],
+  "job_function": [
+    {
+      "$URN": "urn:li:function:1",
+      "name": {
+        "localized": {
+          "en_US": "Accounting"
+        }
+      },
+      "id": 1
+    },
+    {
+      "$URN": "urn:li:function:2",
+      "name": {
+        "localized": {
+          "en_US": "Administrative"
+        }
+      },
+      "id": 2
+    },
+    {
+      "$URN": "urn:li:function:3",
+      "name": {
+        "localized": {
+          "en_US": "Arts and Design"
+        }
+      },
+      "id": 3
+    },
+    {
+      "$URN": "urn:li:function:4",
+      "name": {
+        "localized": {
+          "en_US": "Business Development"
+        }
+      },
+      "id": 4
+    },
+    {
+      "$URN": "urn:li:function:5",
+      "name": {
+        "localized": {
+          "en_US": "Community and Social Services"
+        }
+      },
+      "id": 5
+    },
+    {
+      "$URN": "urn:li:function:6",
+      "name": {
+        "localized": {
+          "en_US": "Consulting"
+        }
+      },
+      "id": 6
+    },
+    {
+      "$URN": "urn:li:function:7",
+      "name": {
+        "localized": {
+          "en_US": "Education"
+        }
+      },
+      "id": 7
+    },
+    {
+      "$URN": "urn:li:function:8",
+      "name": {
+        "localized": {
+          "en_US": "Engineering"
+        }
+      },
+      "id": 8
+    },
+    {
+      "$URN": "urn:li:function:9",
+      "name": {
+        "localized": {
+          "en_US": "Entrepreneurship"
+        }
+      },
+      "id": 9
+    },
+    {
+      "$URN": "urn:li:function:10",
+      "name": {
+        "localized": {
+          "en_US": "Finance"
+        }
+      },
+      "id": 10
+    },
+    {
+      "$URN": "urn:li:function:11",
+      "name": {
+        "localized": {
+          "en_US": "Healthcare Services"
+        }
+      },
+      "id": 11
+    },
+    {
+      "$URN": "urn:li:function:12",
+      "name": {
+        "localized": {
+          "en_US": "Human Resources"
+        }
+      },
+      "id": 12
+    },
+    {
+      "$URN": "urn:li:function:13",
+      "name": {
+        "localized": {
+          "en_US": "Information Technology"
+        }
+      },
+      "id": 13
+    },
+    {
+      "$URN": "urn:li:function:14",
+      "name": {
+        "localized": {
+          "en_US": "Legal"
+        }
+      },
+      "id": 14
+    },
+    {
+      "$URN": "urn:li:function:15",
+      "name": {
+        "localized": {
+          "en_US": "Marketing"
+        }
+      },
+      "id": 15
+    },
+    {
+      "$URN": "urn:li:function:16",
+      "name": {
+        "localized": {
+          "en_US": "Media and Communication"
+        }
+      },
+      "id": 16
+    },
+    {
+      "$URN": "urn:li:function:17",
+      "name": {
+        "localized": {
+          "en_US": "Military and Protective Services"
+        }
+      },
+      "id": 17
+    },
+    {
+      "$URN": "urn:li:function:18",
+      "name": {
+        "localized": {
+          "en_US": "Operations"
+        }
+      },
+      "id": 18
+    },
+    {
+      "$URN": "urn:li:function:19",
+      "name": {
+        "localized": {
+          "en_US": "Product Management"
+        }
+      },
+      "id": 19
+    },
+    {
+      "$URN": "urn:li:function:20",
+      "name": {
+        "localized": {
+          "en_US": "Program and Project Management"
+        }
+      },
+      "id": 20
+    },
+    {
+      "$URN": "urn:li:function:21",
+      "name": {
+        "localized": {
+          "en_US": "Purchasing"
+        }
+      },
+      "id": 21
+    },
+    {
+      "$URN": "urn:li:function:22",
+      "name": {
+        "localized": {
+          "en_US": "Quality Assurance"
+        }
+      },
+      "id": 22
+    },
+    {
+      "$URN": "urn:li:function:23",
+      "name": {
+        "localized": {
+          "en_US": "Real Estate"
+        }
+      },
+      "id": 23
+    },
+    {
+      "$URN": "urn:li:function:24",
+      "name": {
+        "localized": {
+          "en_US": "Research"
+        }
+      },
+      "id": 24
+    },
+    {
+      "$URN": "urn:li:function:25",
+      "name": {
+        "localized": {
+          "en_US": "Sales"
+        }
+      },
+      "id": 25
+    },
+    {
+      "$URN": "urn:li:function:26",
+      "name": {
+        "localized": {
+          "en_US": "Support"
+        }
+      },
+      "id": 26
+    }
+  ],
+  "company_size": [
+    {
+      "name": "51-200 Employees",
+      "code": "SIZE_51_TO_200"
+    },
+    {
+      "name": "11-50 Employees",
+      "code": "SIZE_11_TO_50"
+    },
+    {
+      "name": "10,001+ Employees",
+      "code": "SIZE_10001_OR_MORE"
+    },
+    {
+      "name": "1001-5000 Employees",
+      "code": "SIZE_1001_TO_5000"
+    },
+    {
+      "name": "201-500 Employees",
+      "code": "SIZE_201_TO_500"
+    },
+    {
+      "name": "2-10 Employees",
+      "code": "SIZE_2_TO_10"
+    },
+    {
+      "name": "501-1000 Employees",
+      "code": "SIZE_501_TO_1000"
+    },
+    {
+      "name": "5001-1000 Employees",
+      "code": "SIZE_5001_TO_10000"
+    },
+    {
+      "name": "1 Employee",
+      "code": "SIZE_1"
+    }
+  ]
+}

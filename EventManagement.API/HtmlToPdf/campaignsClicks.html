@@ -1,0 +1,92 @@
+﻿<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body" style="max-height:400px">
+            <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                <span style="font-weight:bold;">_mcClickChartTitle_</span>
+                <span style="font-weight:bold;">_mcLineClickTotal_</span>
+            </h4>
+            <div style="display: flex; justify-content: center;">
+                <canvas id="_mcChartId_"
+                        style="display: block; box-sizing: border-box; height: 300px;width:100%;"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"></script>
+<script>
+
+
+
+    var options = {
+        type: 'bar',
+        data: {
+            labels: [_mcClickLabels_],
+            datasets: [{
+                fill: false,
+                label: "Current Period",
+                data: [_mcClickData1_],
+                backgroundColor: "rgb(108 60 179)",
+                borderColor: "rgb(108 60 179)",
+                borderWidth: 2,
+                pointRadius: 2
+            }
+
+            ],
+
+        },
+
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+
+                xAxes: [{
+
+                    type: 'time',
+                    time: {
+                        unit: 'month',
+                        displayFormats: {
+                            month: 'MMM YYYY',
+                        },
+                    },
+                    ticks: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14,
+                        maxRotation: 0,
+                        minRotation: 0,
+                        autoSkip: false
+
+
+                    },
+                    gridLines: {
+                        display: false // Hide y-axis grid lines
+                    }
+                }],
+                yAxes: [{
+
+                    ticks: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14
+                    },
+                    gridLines: {
+                        display: true // Hide y-axis grid lines
+                    }
+                }]
+            },
+            legend: {
+                display: false
+            },
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: "top",
+                },
+            },
+
+        }
+    }
+
+    var ctx = document.getElementById('_mcChartId_').getContext('2d');
+    new Chart(ctx, options);
+
+</script>
+

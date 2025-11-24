@@ -1,0 +1,308 @@
+﻿<body>
+    <!--start woo commerce-->
+    <div class="row a4-page">
+        <div class="col-md-6 mb-3">
+            <div class="content-header-style-cust mb-3" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Woo Commerce</h2>
+            </div>
+        </div>
+        <!--Cards-->
+        <div class="col-md-12 flex-style p-0">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-bg-1 card-body text-center card-border-radius" id="wcorders">
+                        <h5 class="card-title card-title-color">Orders</h5>
+                        <h1 class="card-text card-title-color fontxxlrge">_wcCardOrdersData_</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class=" card-bg-1 card-body text-center card-border-radius" id="wc">
+                        <h5 class="card-title card-title-color">Inventory</h5>
+                        <h1 class="card-text card-title-color fontxxlrge">_wcCardInventoryData_</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-bg-1 card-body text-center card-border-radius" id="wc">
+                        <h5 class="card-title card-title-color">Register Users</h5>
+                        <h1 class="card-text card-title-color fontxxlrge">_wcCardCustomerData_</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-bg-1 card-body text-center card-border-radius" id="website">
+                        <h5 class="card-title card-title-color">Average Order Value</h5>
+                        <h1 class="card-text card-title-color fontxxlrge">_wcCardAvgOrderData_</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 mt-3">
+            <div class="card card-body" style="max-height:400px;">
+
+                <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                    <span style="font-weight:bold;">Sales</span>
+                    <span style="font-weight: 500; color: _1wcSalesChartDiffColor_;">_1wcSalesChartDiffData_</span>
+                </h4>
+                <div style="display: flex;justify-content:center;">
+                    <canvas id="wcSalesChart"
+                            style="display: block; box-sizing: border-box; height: 300px; width: 100%"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Orders-->
+    <div class="row a4-page mt-3">
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px;">
+
+                <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                    <span style="font-weight:bold;">Orders</span>
+                    <span style="font-weight: 500; color: _1wcOrderChartDiffColor_;">_1wcOrderChartDiffData_</span>
+                </h4>
+                <div style="display: flex;justify-content:center;">
+                    <canvas id="wcOrderChart"
+                            style="display: block; box-sizing: border-box; height: 300px; width: 100%"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Revenue of Sales-->
+    <div class="row a4-page mt-3">
+        <div class="col-md-12">
+            <div class="card card-body text-center" style="max-height:400px">
+                <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                    <span style="font-weight:bold;">Revenue Of Sales Per Product</span>
+                </h4>
+                <table class="table table-bordered" id="wcProductRevenue">
+                    <thead>
+                        <tr class="fontsizesmall table-cell-height">
+                            <td class="table-zone td-col-text-style">Name</td>
+                            <td class="table-zone td-col-text-style">Revenue</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>                       
+                    </tbody>
+                    <tbody class="p-1">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--Number of Sales-->
+    <div class="row a4-page mt-3">
+        <div class="col-md-12">
+            <div class="card card-body text-center" style="max-height:400px">
+                <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                    <span style="font-weight:bold;">Number Of Sales Per Product</span>
+                </h4>
+                <table class="table table-bordered" id="wcProductSoldCount">
+                    <thead>
+                        <tr class="fontsizesmall table-cell-height">
+                            <td class="table-zone td-col-text-style">Name</td>
+                            <td class="table-zone td-col-text-style">Count</td>
+                        </tr>
+                    </thead>
+                    <tbody>                       
+                    </tbody>
+                    <tbody class="p-1">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--Returning Customer Rate-->
+    <div class="row a4-page mt-3">
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px;">
+                <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                    <span style="font-weight:bold;">Returning Customer Rate</span>
+                    <span style="font-weight: 500; color: _1wcReturnChartDiffColor_;">_1wcReturnChartDiffData_</span>
+                </h4>
+                <div style="display: flex;justify-content:center;">
+                    <canvas id="wcReturnChart"
+                            style="display: block; box-sizing: border-box; height: 300px; width: 100%"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Location-->
+    <div class="row a4-page mt-3">
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px">
+
+                <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                    <span style="font-weight:bold;">Location</span>
+                </h4>
+                <div class="px-5" style="display: flex; justify-content:center;">
+                    <div class="mx-5" style="width:210px;">
+                        <canvas id="wcLocationChart"
+                                style="display: block; box-sizing: border-box; height: 300px;"></canvas>
+                    </div>                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--end woo commerce-->
+    <script>
+
+        var labelnterval = _wcLabelInterval_;
+        var wcTableArray = _wcProductDataTable1_;
+        var currencySymbol = _wcCurrency_;       
+
+        var optionsCom = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: "top",
+                },
+            },
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14,
+                        maxRotation: 0,
+                        minRotation: 0,
+                        autoSkip: false,
+                        callback: function (value, index, values) {
+
+                            return index % labelnterval === 0 ? value : '';
+                        }
+                    }
+                }],
+                yAxes: [{
+
+                    ticks: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14
+                    }
+                }]
+            },
+            legend: {
+                labels: {
+                    fontColor: 'rgb(0,0,0)',
+                    usePointStyle: true,
+                    fontSize: 14
+                }
+            },
+        }
+       
+        var options1 = {
+            type: 'pie',
+            data: {
+                labels: [_wcPieChartLabel_],
+                datasets: [{
+                    label: 'My First Dataset',
+                    data: [_wcPieChartData_],
+                    backgroundColor: [_wcBgColorPieChart_],
+                    hoverOffset: 4
+                }]
+
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        usePointStyle: true,
+                        fontSize: 14
+                    },
+                    position: "right",
+                },
+            }
+        }
+        var options3 = {
+            type: 'line',
+            data: {
+                labels: [_1wcDateChartLabels_],
+                datasets: [{
+                    fill: false,
+                    data: [_1wcSalesChartData_],
+                    label: "Sales",
+                    backgroundColor: 'rgb(8, 120, 179)',
+                    borderColor: 'rgb(8, 120, 179)',
+                    borderWidth: 2,
+                    pointRadius: 2
+                }]
+
+            },
+            options: optionsCom
+        }
+        var options4 = {
+            type: 'line',
+            data: {
+                labels: [_1wcDateChartLabels_],
+                datasets: [{
+                    fill: false,
+                    data: [_1wcReturnChartData_],
+                    label: "Returning Customer Rate",
+                    backgroundColor: 'rgb(8, 120, 179)',
+                    borderColor: 'rgb(8, 120, 179)',
+                    borderWidth: 2,
+                    pointRadius: 2
+                }]
+
+            },
+            options: optionsCom
+        }   
+        var options6 = {
+            type: 'line',
+            data: {
+                labels: [_1wcDateChartLabels_],
+                datasets: [{
+                    fill: false,
+                    data: [_1wcOrderChartData_],
+                    label: "Orders",
+                    backgroundColor: 'rgb(8, 120, 179)',
+                    borderColor: 'rgb(8, 120, 179)',
+                    borderWidth: 2,
+                    pointRadius: 2
+                }]
+
+            },
+            options: optionsCom
+        }
+       
+        var wctable = document.getElementById("wcProductRevenue").getElementsByTagName('tbody')[0];
+        for (var i = 0; i < wcTableArray.length; i++) {
+            var row = wctable.insertRow(i);
+            row.classList.add('text-align-start');
+            var cell1 = row.insertCell(0);
+            cell1.innerHTML = wcTableArray[i].name;
+            var cell2 = row.insertCell(1);
+            cell2.innerHTML = currencySymbol + wcTableArray[i].total_revenue_per_product;
+        }    
+
+        var wctable1 = document.getElementById("wcProductSoldCount").getElementsByTagName('tbody')[0];
+        for (var i = 0; i < wcTableArray.length; i++) {
+            var row = wctable1.insertRow(i);
+            row.classList.add('text-align-start');
+            var cell1 = row.insertCell(0);
+            cell1.innerHTML = wcTableArray[i].name;
+            var cell2 = row.insertCell(1);
+            cell2.innerHTML = wcTableArray[i].quantity;
+        }
+
+        var ctx = document.getElementById('wcOrderChart').getContext('2d');
+        new Chart(ctx, options6);
+        var ctx = document.getElementById('wcSalesChart').getContext('2d');
+        new Chart(ctx, options3);
+        var ctx = document.getElementById('wcReturnChart').getContext('2d');
+        new Chart(ctx, options4);       
+        var ctx = document.getElementById('wcLocationChart').getContext('2d');
+        new Chart(ctx, options1);
+
+    </script>
+</body>

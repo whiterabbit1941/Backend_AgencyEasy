@@ -1,0 +1,478 @@
+﻿<!--Profile Views-->
+<div class="row a4-page">
+    <div class="col-md-6">
+        <div class="content-header-style-cust mb-3 mt-3" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+            <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Google Business Profile</h2>
+        </div>
+    </div>
+
+    <div class="col-md-12 flex-style p-0">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-bg-1 card-body text-center card-border-radius" id="interaction">
+                    <h5 class="card-title card-title-color">Interaction</h5>
+                    <h1 class="card-text card-title-color fontxxlrge">_gbpCardInteractionData_</h1>
+                    <h5 class="card-title card-title-color">_interactionCardPercent_</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class=" card-bg-1 card-body text-center card-border-radius" id="calls">
+                    <h5 class="card-title card-title-color">Calls</h5>
+                    <h1 class="card-text card-title-color fontxxlrge">_gbpCardCallsData_</h1>
+                    <h5 class="card-title card-title-color">_callCardPercent_</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-bg-1 card-body text-center card-border-radius" id="directions">
+                    <h5 class="card-title card-title-color">Directions</h5>
+                    <h1 class="card-text card-title-color fontxxlrge">_gbpCardDirectionData_</h1>
+                    <h5 class="card-title card-title-color">_directionCardPercent_</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-bg-1 card-body text-center card-border-radius" id="website">
+                    <h5 class="card-title card-title-color">Website Clicks</h5>
+                    <h1 class="card-text card-title-color fontxxlrge">_gbpCardWebsiteData_</h1>
+                    <h5 class="card-title card-title-color">_websiteCardPercent_</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 mt-3">
+        <div class="card card-body" style="max-height:400px">
+            <div class="card-title pt-2" style="display:flex;justify-content:space-between;align-items: center;">
+                <span style="font-weight:bold;align-self:flex-start;">Profile Views</span>
+                <div style="display: flex;flex-direction:column;align-items: flex-end;">
+                    <span style="font-weight: 500; color: _profileViewDiffColor_; text-align: right;">_profileViewDiff_</span>
+                    <span style="color:black;text-align:right;">_vsDateRange_</span>
+                </div>
+            </div>
+           
+            <div class="px-5" style="display: flex; justify-content:center;">
+                <div class="mx-5" style="width:210px;">
+                    <canvas id="gbpPieChart"
+                            style="display: block; box-sizing: border-box; height: 300px;"></canvas>
+                </div>
+                <div style="display:flex;flex-direction:column; justify-content:space-between;">
+                    <div class="mb-3">
+                        <div style="display: flex; flex-direction:row; align-items:center; gap: 1;">
+                            <div style="display: flex; width: 10px; height: 10px; border-radius: 50%; background-color: rgb(242, 153, 0)"></div>
+                            <div> _gSearchMobileData_</div>
+                        </div>
+                        <p class="mb-0 ml-0">Google Search - mobile</p>
+                    </div>
+                    <div class="mb-3">
+                        <div style="display: flex; flex-direction:row; align-items:center; gap: 1;">
+                            <div style="display: flex; width: 10px; height: 10px; border-radius: 50%; background-color: rgb(71, 71, 235)"></div>
+                            <div>_gMapMobileData_</div>
+                        </div>
+                        <p class="mb-0 ml-0">Google Maps - mobile</p>
+                    </div>
+                    <div class="mb-3">
+                        <div style="display: flex; flex-direction:row; align-items:center; gap: 1;">
+                            <div style="display: flex; width: 10px; height: 10px; border-radius: 50%; background-color: rgb(217, 48, 37)"></div>
+                            <div>_gSearchDesktopData_</div>
+                        </div>
+                        <p class="mb-0 ml-0">Google Search - desktop</p>
+                    </div>
+                    <div class="mb-3">
+                        <div style="display: flex; flex-direction:row; align-items:center; gap: 1;">
+                            <div style="display: flex; width: 10px; height: 10px; border-radius: 50%; background-color: rgb(0,100,0)"></div>
+                            <div>_gMapDesktopData_</div>
+                        </div>
+                        <p class="mb-0 ml-0">Google Maps - desktop</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--Searches-->
+<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body text-center" style="max-height:400px">
+            <div class="card-title pt-2" style="display:flex;justify-content:space-between; align-items: center;">
+                <span style="font-weight:bold; align-self:flex-start;">Searches</span>
+                <div style="display: flex; flex-direction:column;align-items: flex-end;">
+                    <span style="font-weight: 500; color: _searchKeywordDiffColor_; text-align: right;">_searchKeywordDiff_</span>
+                    <span style="color:black;text-align:right;">_vsDateRange_</span>
+                </div>
+            </div>
+ 
+            <table class="table table-bordered" id="keywordTable">
+                <thead>
+                    <tr class="fontsizesmall table-cell-height">
+                        <td class="table-zone td-col-text-style">Name</td>
+                        <td class="table-zone td-col-text-style">Searches</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--<tr>
+                <td>eIntelligence</td>
+                <td>1245</td>
+            </tr>
+            <tr>
+                <td>eIntelligence</td>
+                <td>1245</td>
+            </tr>
+            <tr>
+                <td>eIntelligence</td>
+                <td>1245</td>
+            </tr>
+            <tr>
+                <td>eIntelligence</td>
+                <td>1245</td>
+            </tr>
+            <tr>
+                <td>eIntelligence</td>
+                <td>1245</td>
+            </tr>-->
+                </tbody>
+                <tbody class="p-1">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!--Profile Interaction-->
+<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body" style="max-height:400px;">
+            
+            <div class="card-title pt-2" style="display: flex;justify-content: space-between; align-items: center;">
+                <span style="font-weight: bold; align-self: flex-start;">Profile Interaction</span>
+                <div style="display: flex; flex-direction: column; align-items: flex-end;">
+                    <span style="font-weight: 500; color: _profileInterDiffColor_; text-align: right;">_profileInterDiff_</span>
+                    <span style="color: black; text-align: right;">_vsDateRange_</span>
+                </div>
+            </div>
+     
+            <div style="display: flex;justify-content:center;">
+                <canvas id="chartJSProfileInt"
+                        style="display: block; box-sizing: border-box; height: 300px; width: 100%"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Calls-->
+<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body" style="max-height:400px;">
+
+            <div class="card-title pt-2" style="display: flex;justify-content: space-between; align-items: center;">
+                <span style="font-weight: bold;align-self: flex-start;">Calls</span>
+                <div style="display: flex; flex-direction:column; align-items: flex-end;">
+                    <span style="font-weight: 500; color: _callDiffColor_; text-align: right;">_callDiff_</span>
+                    <span style="color: black; text-align: right;">_vsDateRange_</span>
+                </div>
+            </div>
+        
+            <div style="display: flex;justify-content:center;">
+                <canvas id="chartJSCalls"
+                        style="display: block; box-sizing: border-box; height: 300px; width: 100%"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Messages-->
+<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body" style="max-height:400px;">
+
+            <div class="card-title pt-2" style="display: flex;justify-content: space-between; align-items: center;">
+                <span style="font-weight: bold;align-self:flex-start;">Messages</span>
+                <div style="display: flex;flex-direction:column; align-items: flex-end;">
+                    <span style="font-weight: 500; color: _messageColor_; text-align: right;">_messageDiff_</span>
+                    <span style="color: black;text-align: right;">_vsDateRange_</span>
+                </div>
+            </div>
+
+           
+            <div style="display: flex;justify-content:center;">
+                <canvas id="chartJSMessages"
+                        style="display: block; box-sizing: border-box; height: 300px; width: 100%"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Bookings-->
+<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body" style="max-height:400px;">
+
+            <div class="card-title pt-2" style="display: flex;justify-content: space-between; align-items: center;">
+                <span style="font-weight:bold;align-self: flex-start;">Bookings</span>
+                <div style="display: flex;flex-direction:column; align-items: flex-end;">
+                    <span style="font-weight: 500; color: _bookingsDiffColor_; text-align: right;">_bookingsDiff_</span>
+                    <span style="color: black;text-align: right;">_vsDateRange_</span>
+                </div>
+            </div>
+
+            <div style="display: flex;justify-content:center;">
+                <canvas id="chartJSBookings"
+                        style="display: block; box-sizing: border-box; height: 300px; width: 100%"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Directions-->
+<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body" style="max-height:400px;">
+
+            <div class="card-title pt-2" style="display:flex;justify-content: space-between; align-items: center;">
+                <span style="font-weight:bold;align-self:flex-start;">Directions</span>
+                <div style="display: flex;flex-direction:column;align-items: flex-end;">
+                    <span style="font-weight: 500; color: _directionDiffColor_; text-align: right;">_directionDiff_</span>
+                    <span style="color: black;text-align:right;">_vsDateRange_</span>
+                </div>
+            </div>
+
+            <div style="display: flex;justify-content:center;">
+                <canvas id="chartJSDirections"
+                        style="display: block; box-sizing: border-box; height: 300px; width: 100%"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Website Clicks-->
+<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body" style="max-height:400px;">
+
+            <div class="card-title pt-2" style="display:flex;justify-content:space-between; align-items: center;">
+                <span style="font-weight:bold; align-self:flex-start;">Website Clicks</span>
+                <div style="display: flex; flex-direction:column;align-items: flex-end;">
+                    <span style="font-weight: 500; color: _websiteDiffColor_; text-align: right;">_websiteClicksDiff_</span>
+                    <span style="color:black;text-align:right;">_vsDateRange_</span>
+                </div>
+            </div>
+       
+            <div style="display: flex;justify-content:center;">
+                <canvas id="chartJSWebClicks"
+                        style="display: block; box-sizing: border-box; height: 300px; width: 100%"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var labelnterval = _labelInterval_;
+    var tableArray = _gbpKeywordArrayList_;
+    var table = document.getElementById("keywordTable").getElementsByTagName('tbody')[0];
+    for (var i = 0; i < tableArray.length; i++) {
+        var row = table.insertRow(i);
+        row.classList.add('text-align-start');
+        var cell1 = row.insertCell(0);
+        cell1.innerHTML = tableArray[i].searchKeyword;
+        var cell2 = row.insertCell(1);
+        cell2.innerHTML = tableArray[i].insightsValue.value;
+    }
+
+    var optionsCom = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: "top",
+            },
+        },
+        scales: {
+            xAxes: [{
+                ticks: {
+                    fontColor: 'rgb(0,0,0)',
+                    fontSize: 14,
+                    maxRotation: 0,
+                    minRotation: 0,
+                    autoSkip: false,
+                    callback: function (value, index, values) {
+
+                        return index % labelnterval === 0 ? value : '';
+                    }
+                }
+            }],
+            yAxes: [{
+
+                ticks: {
+                    fontColor: 'rgb(0,0,0)',
+                    fontSize: 14
+                }
+            }]
+        },
+        legend: {
+            labels: {
+                fontColor: 'rgb(0,0,0)',
+                usePointStyle: true,
+                fontSize: 14
+            }
+        },
+    }
+
+    //Traffic Aquisition
+    var options1 = {
+        type: 'pie',
+        data: {
+            //labels: ['2001', '2002', '2003', '2004'],
+            datasets: [{
+                label: 'My First Dataset',
+                data: [_gbpPieChartData_],
+                backgroundColor: [
+                    'rgb(242, 153, 0)',
+                    'rgb(71, 71, 235)',
+                    'rgb(217, 48, 37)',
+                    'rgb(0, 100, 0)'
+                ],
+                hoverOffset: 4
+
+            }]
+
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: "top",
+                },
+            },
+            legend: {
+                labels: {
+                    fontColor: 'rgb(0,0,0)',
+                    usePointStyle: true,
+                    fontSize: 14
+                }
+            },
+        }
+    }
+
+    var options3 = {
+        type: 'line',
+        data: {
+            labels: [_1gbpInterChartLabels_],
+            datasets: [{
+                fill: false,
+                data: [_1gbpInterChartData_],
+                label: "Profile Interaction",
+                backgroundColor: 'rgb(8, 120, 179)',
+                borderColor: 'rgb(8, 120, 179)',
+                borderWidth: 2,
+                pointRadius: 2
+            }]
+
+        },
+        options: optionsCom
+    }
+    var options4 = {
+        type: 'line',
+        data: {
+            labels: [_1gbpInterChartLabels_],
+            datasets: [{
+                fill: false,
+                data: [_1gbpCallChartData_],
+                label: "Calls",
+                backgroundColor: 'rgb(8, 120, 179)',
+                borderColor: 'rgb(8, 120, 179)',
+                borderWidth: 2,
+                pointRadius: 2
+            }]
+
+        },
+        options: optionsCom
+    }
+    var options5 = {
+        type: 'line',
+        data: {
+            labels: [_1gbpInterChartLabels_],
+            datasets: [{
+                fill: false,
+                data: [_1gbpMessageChartData_],
+                label: "Messages",
+                backgroundColor: 'rgb(8, 120, 179)',
+                borderColor: 'rgb(8, 120, 179)',
+                borderWidth: 2,
+                pointRadius: 2
+            }]
+
+        },
+        options: optionsCom
+    }
+    var options6 = {
+        type: 'line',
+        data: {
+            labels: [_1gbpInterChartLabels_],
+            datasets: [{
+                fill: false,
+                data: [_1gbpBookingChartData_],
+                label: "Bookings",
+                backgroundColor: 'rgb(8, 120, 179)',
+                borderColor: 'rgb(8, 120, 179)',
+                borderWidth: 2,
+                pointRadius: 2
+            }]
+
+        },
+        options: optionsCom
+    }
+    var options7 = {
+        type: 'line',
+        data: {
+            labels: [_1gbpInterChartLabels_],
+            datasets: [{
+                fill: false,
+                data: [_1gbpDirectionChartData_],
+                label: "Directions",
+                backgroundColor: 'rgb(8, 120, 179)',
+                borderColor: 'rgb(8, 120, 179)',
+                borderWidth: 2,
+                pointRadius: 2
+            }]
+
+        },
+        options: optionsCom
+    }
+    var options8 = {
+        type: 'line',
+        data: {
+            labels: [_1gbpInterChartLabels_],
+            datasets: [{
+                fill: false,
+                data: [_1gbpWebsiteChartData_],
+                label: "Website Clicks",
+                backgroundColor: 'rgb(8, 120, 179)',
+                borderColor: 'rgb(8, 120, 179)',
+                borderWidth: 2,
+                pointRadius: 2
+            }]
+
+        },
+        options: optionsCom,
+    }
+
+    var ctx = document.getElementById('gbpPieChart').getContext('2d');
+    new Chart(ctx, options1);
+    var ctx = document.getElementById('chartJSProfileInt').getContext('2d');
+    new Chart(ctx, options3);
+    var ctx = document.getElementById('chartJSCalls').getContext('2d');
+    new Chart(ctx, options4);
+    var ctx = document.getElementById('chartJSMessages').getContext('2d');
+    new Chart(ctx, options5);
+    var ctx = document.getElementById('chartJSBookings').getContext('2d');
+    new Chart(ctx, options6);
+    var ctx = document.getElementById('chartJSDirections').getContext('2d');
+    new Chart(ctx, options7);
+    var ctx = document.getElementById('chartJSWebClicks').getContext('2d');
+    new Chart(ctx, options8);
+
+</script>
+

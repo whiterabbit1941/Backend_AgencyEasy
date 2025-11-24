@@ -1,0 +1,93 @@
+﻿
+    <div class="row a4-page mt-3">
+        <div class="col-md-12">
+            <div class="card card-body">
+                <h4 class="card-title pt-2" style="display: flex;justify-content: space-between;">
+                    <span style="font-weight:bold;">Top Sources</span>
+                </h4>
+                <div class="col-md-12" id="progressBarsContainer">
+                    <!-- Progress bars will be dynamically added here -->
+                </div>
+
+                <script>
+                    // Sample data: source values, percentages, and values
+
+                    var percentageList = [_crPercentageList_];
+                    var valueList = [_crValueList_];
+                    var sourceList = [_crSourceList_];
+
+
+                    // Function to create progress bar elements
+                    function createProgressBar(source, percentage, value) {
+                        var progressBarContainer = document.createElement('div');
+                        progressBarContainer.classList.add('col-md-12');
+
+                        var progressBarCard = document.createElement('div');
+
+
+                        var title = document.createElement('h4');
+                        title.classList.add('card-title', 'pt-2');
+                        title.style.display = 'flex';
+                        title.style.justifyContent = 'space-between';
+
+                        var titleSpan = document.createElement('span');
+                        titleSpan.style.fontWeight = 'bold';
+                        titleSpan.textContent = source;
+
+                        var percentageSpan = document.createElement('span');
+                        percentageSpan.textContent = value;
+
+                        title.appendChild(titleSpan);
+                        title.appendChild(percentageSpan);
+
+                        var progressDiv = document.createElement('div');
+                        progressDiv.classList.add('progress');
+
+                        var progressBar = document.createElement('div');
+                        progressBar.classList.add('progress-bar');
+                        progressBar.setAttribute('role', 'progressbar');
+                        progressBar.style.width = percentage + '%';
+                        progressBar.setAttribute('aria-valuenow', percentage);
+                        progressBar.setAttribute('aria-valuemin', '0');
+                        progressBar.setAttribute('aria-valuemax', '100');
+
+                        var valueDiv = document.createElement('div');
+                        valueDiv.classList.add('d-flex', 'justify-content-between', 'mb-1', 'mt-3');
+
+                        var sourceSpan = document.createElement('span');
+
+
+                        var valueSpan = document.createElement('span');
+
+
+                        valueDiv.appendChild(sourceSpan);
+                        valueDiv.appendChild(valueSpan);
+
+                        title.appendChild(titleSpan);
+                        title.appendChild(percentageSpan);
+
+                        progressDiv.appendChild(progressBar);
+                        progressBarCard.appendChild(title);
+                        progressBarCard.appendChild(progressDiv);
+                        progressBarCard.appendChild(valueDiv);
+                        progressBarContainer.appendChild(progressBarCard);
+
+                        return progressBarContainer;
+                    }
+
+                    // Get the progress bars container
+                    var progressBarsContainer = document.getElementById('progressBarsContainer');
+
+                    // Loop through the lists and create progress bars
+                    for (var i = 0; i < percentageList.length; i++) {
+                        var percentage = percentageList[i];
+                        var value = valueList[i];
+                        var source = sourceList[i];
+
+                        var progressBar = createProgressBar(source, percentage, value);
+                        progressBarsContainer.appendChild(progressBar);
+                    }
+                </script>
+            </div>
+        </div>
+    </div>

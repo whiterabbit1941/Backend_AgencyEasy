@@ -1,0 +1,187 @@
+﻿
+<body>
+
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3" style="background-color:_themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left:10px;">Facebook: Impressions Summary</h2>
+            </div>
+        </div>
+
+        <div class="col-md-12 flex-style p-0">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body text-center card-border-radius h-200">
+                        <iconify-icon style="float:right; padding:5px;" icon="mdi:poll"></iconify-icon>
+                        <h5 class="card-title fl-1">Page Impressions</h5>
+
+                        <h1 class="card-text  fontxxlrge">_1fbPageImpressionMainTotal1_</h1>
+                        <h6 id="impressionCard" class="card-text p-3 "><i id="impressionIcon" class="fas"></i>_1fbPageImpressionDiff1_<span>%</span></h6>
+                        <h6 class="fontsizesmall f-7">Avg. per day : _1fbPageImpressionsAvgTotal1_</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body text-center card-border-radius h-200">
+                        <iconify-icon style="float:right; padding:5px;" icon="mdi:poll"></iconify-icon>
+                        <h5 class="card-title fl-1">Page Reach</h5>
+                        <h1 class="card-text  fontxxlrge">_1fbPageReachMainTotal1_</h1>
+
+                        <h6 id="reachCard" class="card-text p-3 "><i id="reachIcon" class="fas"></i>_1fbPageReachDiff1_<span>%</span></h6>
+                        <h6 class="fontsizesmall f-7">Avg. per day : _1fbPageReachAvgTotal1_</h6>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row a4-page">
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px">
+                <h4 class="card-title pt-2" style="display: flex;justify-content: space-between;">
+                    <span style="font-weight:bold;">Organic Vs Paid Reach</span>
+                </h4>
+                <div style="display: flex; justify-content:center;">
+                    <canvas id="chartJSFbImpression"
+                            style="display: block; box-sizing:border-box; height: 300px;"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row a4-page mt-3">
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px">
+                <h4 class="card-title pt-2" style="display:flex;justify-content: space-between;">
+                    <span style="font-weight:bold;">Top Countries</span>
+                </h4>
+                <div style="display: flex; justify-content:center;">
+                    <canvas id="chartJSCountries"
+                            style="display: block; box-sizing:border-box; height: 300px;"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        var pageReachDiff = _1fbPageReachDiff1_;
+        var pageImpressionDiff = _1fbPageImpressionDiff1_;
+        var orgPaidChart1 = [_1fbPieChartReachData1_];
+        //document.getElementById("org1").innerText = orgPaidChart1[0];
+        //document.getElementById("paid1").innerText = orgPaidChart1[1];
+
+        var countryLabelData1 = [_1fbPieChartCountriesLabel1_];
+        //document.getElementById("coutlabel1").innerText = countryLabelData1[0];
+
+        var topcount = _1fbTopCountForCountries;
+        var countrychartData1 = [_1fbPieChartCountriesData1_];
+        //document.getElementById("topcount").innerText = topcount;
+        //document.getElementById("country1").innerText = countrychartData1[0];
+
+
+
+        if (pageImpressionDiff > 0) {
+
+            document.getElementById("impressionCard").classList.add("text-success");
+            document.getElementById("impressionIcon").classList.add("fa-arrow-up");
+        }
+        else if (pageImpressionDiff < 0) {
+            document.getElementById("impressionCard").classList.add("text-danger");
+            document.getElementById("impressionIcon").classList.add("fa-arrow-down");
+        }
+        else {
+            document.getElementById("impressionCard").classList.add("text-secondary");
+            /*document.getElementById("impressionIcon").classList.add("fa-arrow-up");*/
+        }
+
+        if (pageReachDiff > 0) {
+            document.getElementById("reachCard").classList.add("text-success");
+            document.getElementById("reachIcon").classList.add("fa-arrow-up");
+        }
+        else if (pageReachDiff < 0) {
+            document.getElementById("reachCard").classList.add("text-danger");
+            document.getElementById("reachIcon").classList.add("fa-arrow-down");
+        }
+        else {
+            document.getElementById("impressionCard").classList.add("text-secondary");
+        }
+
+
+        var options1 = {
+            type: 'pie',
+            data: {
+                labels: ["Organic " + orgPaidChart1[0], " Paid " + orgPaidChart1[1]],
+                datasets: [{
+
+                    data: [_1fbPieChartReachData1_],
+                    legend: false,
+                    fill: true,
+                    backgroundColor: ['#9a55ff', '#ffa096'],
+                    pointHoverBackgroundColor: '#2D9EE2',
+                    pointHoverBorderColor: 'white',
+
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14,
+                        usePointStyle: true
+                    }
+                },
+                responsive: true,
+            }
+        }
+        var options2 = {
+            type: 'pie',
+            data: {
+                labels: [_1fbPieChartCountriesLabel1_ + "Country: " + countryLabelData1[0] + " Count: " + topcount + " Percentage: " + countrychartData1[0]],
+                datasets: [{
+                    data: [_1fbPieChartCountriesData1_],
+                    legend: false, fill: true,
+                    backgroundColor: ["#9a55ff", "#ffa096", "#bc5090", "#7a85f5", "#5b94ba"],
+                    pointHoverBackgroundColor: '#2D9EE2',
+                    pointHoverBorderColor: 'white',
+
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14,
+                        usePointStyle: true
+                    }
+                },
+                responsive: true,
+            }
+        }
+
+
+        var ctx = document.getElementById('chartJSFbImpression').getContext('2d');
+        new Chart(ctx, options1);
+        var ctx = document.getElementById('chartJSCountries').getContext('2d');
+        new Chart(ctx, options2);
+
+        function getRandomColorHex() {
+            var hex = "0123456789ABCDEF",
+                color = "#";
+            for (var i = 1; i <= 6; i++) {
+                color += hex[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+
+</body>

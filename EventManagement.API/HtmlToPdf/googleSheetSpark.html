@@ -1,0 +1,98 @@
+﻿
+
+
+    <div class="row a4-page">
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px">
+                <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                    <span style="font-weight:bold;">_gsSparkChartTitle_</span>
+                    <span style="font-weight:500; color:_trafficdiffcolor_; ">_gsSparkAggeragatorValue_</span>
+                </h4>
+                <div style="display: flex; justify-content: center;">
+                    <canvas id="_gsChartId_"
+                            style="display: block; box-sizing: border-box; height: 300px;width:100%;"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+
+        var options = {
+            type: 'line',
+            data: {
+                labels: [_gsSparkLabels_],
+                datasets: [{
+                    fill: false,
+                    label: "Current Period",
+                    data: [_gsSparkData1_],
+                    backgroundColor: "rgb(108 60 179)",
+                    borderColor: "rgb(108 60 179)",
+                    borderWidth: 2,
+                    pointRadius: 2
+                }
+                ,
+                {
+                    hidden: _IsComparePrevious_ ,
+                    fill: false,
+                    label: "Previous Period",
+                    data: [_gsSparkData2_],
+                    backgroundColor: "rgb(217, 198, 247)",
+                    borderColor: "rgb(217, 198, 247)",
+                    borderWidth: 2,
+                    pointRadius: 2
+                }
+                ],
+
+            },
+
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14,
+                            maxRotation: 0,
+                            minRotation: 0,
+                            autoSkip: false,
+                            display: false
+
+                        },
+                        gridLines: {
+                            display: false // Hide y-axis grid lines
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14,
+                            display: false
+                        },
+                        gridLines: {
+                            display: false // Hide y-axis grid lines
+                        }
+                    }]
+                },
+                legend: {
+                    display: false
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                },
+
+            }
+        }
+
+        var ctx = document.getElementById('_gsChartId_').getContext('2d');
+        new Chart(ctx, options);
+
+    </script>
+

@@ -1,0 +1,118 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/EventManagement.API/bin/Debug/netcoreapp2.1
+/EventManagement.API/bin/Release/netcoreapp2.1
+/EventManagement.API/obj
+/EventManagement.Domain/bin/Debug/netcoreapp2.1
+/EventManagement.Domain/bin/Release/netcoreapp2.1
+/EventManagement.Domain/obj
+/EventManagement.Dto/bin/Debug/netcoreapp2.1
+/EventManagement.Dto/bin/Release/netcoreapp2.1
+/EventManagement.Dto/obj
+/EventManagement.IDP/bin
+/EventManagement.IDP/obj
+/EventManagement.Repository/bin/Debug/netcoreapp2.1
+/EventManagement.Repository/bin/Release/netcoreapp2.1
+/EventManagement.Repository/obj
+/EventManagement.Service/bin/Debug/netcoreapp2.1
+/EventManagement.Service/bin/Release/netcoreapp2.1
+/EventManagement.Service/obj
+/EventManagement.Utility/bin/Debug/netcoreapp2.1
+/EventManagement.Utility/bin/Release/netcoreapp2.1
+/EventManagement.Utility/obj
+/.vs/
+/.vs/EventManagement
+/.vs/EventManagement/config/applicationhost.config
+/.vs/EventManagement/v16/.suo
+/.vs/EventManagement/DesignTimeBuild/.dtbcache.v2
+/Files
+/CodeGenerator.runtimeconfig.json
+/CodeGenerator.runtimeconfig.dev.json
+/CodeGenerator.pdb
+/CodeGenerator.dll
+/CodeGenerator.deps.json
+/CMD_LIST.txt
+/.gitattributes
+/.vs/EventManagement/v16/Server/sqlite3
+/EventManagement.API/bin/Release/netcoreapp2.1
+/EventManagement.WebJob/obj/Debug/net472/EventManagement.WebJob.csproj.AssemblyReference.cache
+/EventManagement.API/bin/Release/netcoreapp3.1
+/EventManagement.Domain/bin/Release/netcoreapp3.1
+/EventManagement.Dto/bin/Release/netcoreapp3.1
+/EventManagement.Repository/bin/Release/netcoreapp3.1
+/EventManagement.Service/bin/Release/netcoreapp3.1
+/EventManagement.Utility/bin/Release/netcoreapp3.1
+/EventManagement.API/bin/Debug/netcoreapp3.1
+/EventManagement.Domain/bin/Debug/netcoreapp3.1
+/EventManagement.Dto/bin/Debug/netcoreapp3.1
+/EventManagement.Repository/bin/Debug/netcoreapp3.1
+/EventManagement.Service/bin/Debug/netcoreapp3.1
+/EventManagement.Utility/bin/Debug/netcoreapp3.1
+/EventManagement.WebJob/obj
+/EventManagement.WebJob/bin/Debug/net472
+/EventManagement.API/bin/Live/netcoreapp3.1
+/EventManagement.API/bin/Test/netcoreapp3.1
+/EventManagement.Domain/bin/Test/netcoreapp3.1
+/EventManagement.Domain/bin/Live/netcoreapp3.1
+/EventManagement.Dto/bin/Test/netcoreapp3.1
+/EventManagement.Dto/bin/Live/netcoreapp3.1
+/EventManagement.Repository/bin/Test/netcoreapp3.1
+/EventManagement.Repository/bin/Live/netcoreapp3.1
+/EventManagement.Service/bin/Test/netcoreapp3.1
+/EventManagement.Service/bin/Live/netcoreapp3.1
+/EventManagement.Utility/bin/Test/netcoreapp3.1
+/EventManagement.Utility/bin/Live/netcoreapp3.1
+/.vs/ProjectEvaluation/eventmanagement.projects.v5
+/.vs/ProjectEvaluation/eventmanagement.metadata.v5
+/obj/Debug/netcoreapp2.1
+/Platform-IdentityServerHost
+
+# ==============================================================================
+# SENSITIVE FILES - DO NOT COMMIT
+# ==============================================================================
+
+# Google OAuth credentials
+**/client_secret.json
+**/credentials.json
+**/google_credentials.json
+
+# Build outputs - ALL bin and obj directories
+**/bin/
+**/obj/
+**/publish/
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+
+# Configuration files with sensitive data (environment-specific)
+**/appsettings.Development.json
+**/appsettings.Test.json
+**/appsettings.Live.json
+**/appsettings.Production.json
+**/appsettings.development.json
+**/appsettings.production.json
+**/web.config
+**/app.config
+
+# Backup files that may contain sensitive data
+*.bak
+*.backup
+
+# Log files
+*.log
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Security audit files (remove before publishing)
+FINAL_SECURITY_REVIEW.md
+PRE_PUBLISH_CHECKLIST.md
+SECURITY_CLEANUP_SUMMARY.md
+OPEN_SOURCE_PREPARATION_CHECKLIST.md

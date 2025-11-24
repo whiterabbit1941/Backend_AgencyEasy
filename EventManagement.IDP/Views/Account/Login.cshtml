@@ -1,0 +1,411 @@
+@model LoginViewModel
+@*<div class="login-page">
+        <div class="page-header">
+            <center><h1>Login</h1></center>
+        </div>
+
+        <partial name="_ValidationSummary" />
+
+        <div class="row">
+            <div class="col-sm-3"></div>
+            @if (Model.EnableLocalLogin)
+            {
+                <div class="col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Local Login</h3>
+                        </div>
+                        <div class="panel-body">
+
+                            <form asp-route="Login">
+                                <input type="hidden" asp-for="ReturnUrl" />
+
+                            <fieldset>
+                                <div class="form-group">
+                                    <label asp-for="Username"></label>
+                                    <input class="form-control" placeholder="Username" asp-for="Username" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Password"></label>
+                                    <input type="password" class="form-control" placeholder="Password" asp-for="Password" autocomplete="off">
+                                </div>
+                                <div class="form-group" style="float:right">
+                                    <a asp-action="ForgotPassword">Forgot Password?</a>
+                                </div>
+                                @if (Model.AllowRememberLogin)
+                                {
+                                    <div class="form-group login-remember">
+                                        <label asp-for="RememberLogin">
+                                            <input asp-for="RememberLogin">
+                                            <strong>Remember My Login</strong>
+                                        </label>
+                                    </div>
+                                }
+
+                                <div class="form-group">
+                                    <button class="btn btn-primary" name="button" value="login">Login</button>
+                                    <button class="btn btn-default" name="button" value="cancel">Cancel</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="col-sm-3"></div>
+        @if (Model.VisibleExternalProviders.Any())
+        {
+            <div class="col-md-6 col-sm-6 external-providers">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">External Login</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-inline">
+                            @foreach (var provider in Model.VisibleExternalProviders)
+                            {
+                                <li>
+                                    <a class="btn btn-default"
+                                       asp-controller="External"
+                                       asp-action="Challenge"
+                                       asp-route-provider="@provider.AuthenticationScheme"
+                                       asp-route-returnUrl="@Model.ReturnUrl">
+                                        @provider.DisplayName
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        }
+
+            @if (!Model.EnableLocalLogin && !Model.VisibleExternalProviders.Any())
+            {
+                <div class="alert alert-warning">
+                    <strong>Invalid login request</strong>
+                    There are no login schemes configured for this client.
+                </div>
+            }
+        </div>
+    </div>*@
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<!-- BEGIN : Head-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Apex admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Apex admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="PIXINVENT">
+    <title>Login</title>
+
+
+    <!--<script src="~/js/bootstrap.min.js"></script>
+    <link href="~/js/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/app-assets/vendors/js/jqBootstrapValidation.js"></script>
+    <link href="~/js/bootstrap-theme.css" rel="stylesheet" />-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>-->
+    @*<link rel="apple-touch-icon" sizes="60x60" href="~/app-assets/img/ico/apple-icon-60.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="~/app-assets/img/ico/apple-icon-76.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="~/app-assets/img/ico/apple-icon-120.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="~/app-assets/img/ico/apple-icon-152.png">
+        <link rel="shortcut icon" type="image/x-icon" href="~/app-assets/img/ico/favicon.ico">
+        <link rel="shortcut icon" type="image/png" href="~/app-assets/img/ico/favicon-32.png">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900|Montserrat:300,400,500,600,700,800,900" rel="stylesheet">*@
+    <!-- BEGIN VENDOR CSS-->
+    <!-- font icons-->
+    @*<link rel="stylesheet" type="text/css" href="~/app-assets/fonts/feather/style.min.css">
+        <link rel="stylesheet" type="text/css" href="~/app-assets/fonts/simple-line-icons/style.css">
+        <link rel="stylesheet" type="text/css" href="~/app-assets/fonts/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="~/app-assets/vendors/css/perfect-scrollbar.min.css">
+        <link rel="stylesheet" type="text/css" href="~/app-assets/vendors/css/prism.min.css">*@
+    <!-- END VENDOR CSS-->
+    <!-- BEGIN APEX CSS-->
+    <link rel="stylesheet" type="text/css" href="~/app-assets/css/app.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+
+        form-control:hover {
+            border-color: red;
+            outline: 0;
+        }
+    </style>
+    <!-- END APEX CSS-->
+    <!-- BEGIN Page Level CSS-->
+    <!-- END Page Level CSS-->
+</head>
+<!-- END : Head-->
+<!-- BEGIN : Body-->
+<body data-col="1-column" class=" 1-column  blank-page">
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+
+    <div class="wrapper" style="overflow:hidden;display:flex;flex-direction: column;align-items:center;justify-content: center;">
+        <div class="main-panel">
+            <!-- BEGIN : Main Content-->
+            <div class="main-content">
+                <div class="content-wrapper" style="margin-top: 50px;">
+                    <section id="login">
+
+                        <!--<nav class="navbar navbar-default navbar-fixed-top bg-white" style="box-shadow: 2px 2px #e9e6e6;" role="navigation">
+                            <a class="navbar-brand" href="#">
+                                <img src="~/ei-logo.png" width="70%" height="70%" alt="" />
+                            </a>
+                            <ul class="nav navbar-nav" style="padding-right: 1%;">
+                                <!--<div class="row">-->
+                        <!--<li style="font-size: large;">New to dksdflds Agencyeasy? &nbsp;</li>-->
+                        @*<li style="font-size: large; color: #5D9CEC;"><a href="https://localhost:3000/register"> Create an Account </a></li>*@
+                        @*<li style="font-size: large; color: #5D9CEC;"><a href="https://app.agencyeasy.com/register"> Create an Account </a></li>-->*@
+                        <!--</div>-->
+                        <!--</ul>
+                        </nav>-->
+
+                        <br />
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10">
+                                <div class="card-body card-default shadow p-0 mb-0 bg-white rounded" style="border: 0px solid #1C4880;">
+
+                                    <div class="row">
+                                        <div class="row col-md-12 p-0">
+                                            <div class="col-md-6 pl-4" style="background: white;">
+                                                <div class="pt-5">
+                                                    <p style="text-align: center; font-style: normal; font-weight: bold; font-size: 50px; line-height: 59px; color: #1C4880; font-family: Arial;">LOGIN</p>
+                                                    <div class="text-center">
+                                                        <div class="card">
+                                                            <!-- <div class="card-body">
+                                                            <img src="~/google.png" style="height: 20px;" />&nbsp; Sign up with Google
+                                                                                 </div>-->
+                                                        </div>
+                                                    </div>
+                                                    <form asp-route="Login">
+                                                        <input type="hidden" asp-for="ReturnUrl" />
+                                                        <div class="input-group input-group-sm mb-3">
+                                                            <div class="input-group-prepend">
+                                                                <span style="background: #1C4880;color: white;font-size:16px;width: 55px;" class="input-group-text" id="inputGroup-sizing-sm"><i class="fa fa-user-circle ml-2"></i></span>
+                                                            </div>
+                                                            <input type="text" class="form-control mb-0" placeholder="Email" asp-for="Username" style="font-family: Arial; height: 3.00rem;" />
+                                                        </div>
+                                                        <div class="input-group input-group-sm mb-3">
+                                                            <div class="input-group-prepend">
+                                                                <span style="background: #1C4880; color: white; font-size: 16px; width: 55px;" class="input-group-text" id="inputGroup-sizing-sm"><i class="fa fa-key ml-2"></i></span>
+                                                            </div>
+                                                            <input id="txtPassword" type="password" class="form-control mb-0" placeholder="Password" asp-for="Password" style="height: 3.00rem; border-right: none; font-family: Arial;" />
+                                                            <div class="input-group-prepend">
+                                                                <button id="show_password" style="background-color: transparent; border: none; color: white;font-size: 16px; cursor: pointer; border-left: none; border-top: 1px solid #b8aaaa; border-right: 1px solid #b8aaaa; border-bottom: 1px solid #b8aaaa " type="button"><i id="show_password" class="fa fa-eye-slash" style="color: #929699;"></i></button>
+                                                            </div>
+                                                        </div>
+                                                        @*<label style="font-size:18px; color:black; text-transform:none; letter-spacing: normal !important;">Email</label>
+
+                                                            <label style="font-size:18px; color:black; text-transform:none; letter-spacing: normal !important;">Password</label>*@
+
+                                                        <div class="d-flex justify-content-between">
+                                                            <div class="remember-me">
+                                                                <div class="custom-control custom-checkbox custom-control-inline">
+                                                                    <input type="checkbox" id="customCheckboxInline1" name="customCheckboxInline1" class="custom-control-input" style="box-shadow:none!important " />
+                                                                    <label class="custom-control-label" for="customCheckboxInline1" style="text-transform: none !important; font-family: Arial; font-weight: none !important; letter-spacing: normal !important; color: #929699; font-size: 18px;">
+                                                                        Remember Me
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="forgot-password-option">
+                                                                <a asp-action="ForgotPassword" style="color: #929699; font-size: 18px; font-family: Arial;">
+                                                                    Forgot Password
+                                                                    ?
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="fg-actions d-flex justify-content-center mt-3">
+                                                            <div class="recover-pass form-group" style="margin-bottom: 0px !important; margin-top: 10px">
+                                                                <button class=" mr-1 btn btn-lg" style="font-family: Arial; width: 250px; left: 291px; color: white; top: 1162px; background: #1C4880; border-radius: 6px; font-size: 18px;" name="button" value="login">
+                                                                    LOGIN
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="text-center" style="display: flex;flex-direction: row;justify-content: center;align-items: center">
+                                                            <p style="font-family: Arial; font-style: normal; font-weight: normal; font-size: 18px; color: #929699;">New to Agency Easy? &nbsp;</p>
+                                                            @*<p style="font-family: Arial; font-style: normal; font-weight: bold; font-size: 18px; line-height: 33px; color: #1C4880;"><a href="https://localhost:3000/register" style="color: #1C4880;"> Sign Up </a></p>*@
+                                                            <p style="font-family: Arial; font-style: normal; font-weight: bold; font-size: 18px; line-height: 33px; color: #1C4880; "><a href="https://app.agencyeasy.com/register" style="color: #1C4880;"> Sign Up </a></p>
+                                                            @*<p><span>&copy;</span><span> 2021 Agencyeasy</span> </p>*@
+                                                        </div>
+
+                                                        <partial name="_ValidationSummary" />
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6" style="background: #F2F1F1;display: flex;align-items:center">
+                                                <img src="~/agencyEasy.png" style="width: 100%;" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                    </section>
+                    <!--Login Page Starts-->
+                    @*<section id="login" class="gradient-shdow-night" style="background-image: url(/back1.png) !important;">
+                        <div class="container-fluid">
+                            <div class="row full-height-vh m-0">
+                                <div class="col-12 d-flex align-items-center justify-content-center"  style="padding-left: 30% !important">
+                                    <div class="card" style="background:#0000003d !important;">
+                                        <div class="card-content">
+                                            <div class="card-body login-img" style="background:#0000003d !important; border-radius: 10px">
+                                                <div class="row m-0" style="min-width: 300px; min-height:450px">
+
+                                                    <div class="col-lg-12 col-md-12  px-4 pt-3" style="">
+                                                        <div style="margin-bottom: 55px">
+                                                            <div class="d-flex flex-column" style="padding-top: 22.5px">
+                                                                <p class="row d-flex align-items-center justify-content-center" style=" color:white; font-size:25px; font-weight:500">Login</p>
+                                                                <p class="row d-flex align-items-center justify-content-center" style="color:white; font-size: 18px;">
+                                                                    To Your Incredible Insights
+                                                                </p>
+                                                            </div>
+
+                                                            <form asp-route="Login">
+                                                                <input type="hidden" asp-for="ReturnUrl" />
+                                                                <input type="text" class="form-control mb-3" placeholder="Username" asp-for="Username" />
+                                                                <input type="password" class="form-control mb-1" placeholder="Password" asp-for="Password" />
+                                                                <div class="d-flex justify-content-between mt-2">
+                                                                    <div class="remember-me">
+                                                                        <div class="custom-control custom-checkbox custom-control-inline mb-3">
+                                                                            <input type="checkbox" id="customCheckboxInline1" name="customCheckboxInline1" class="custom-control-input" />
+                                                                            <label class="custom-control-label" for="customCheckboxInline1" style="text-transform:none !important; letter-spacing: normal !important; color:white">
+                                                                                Remember Me
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="forgot-password-option">
+                                                                        <a asp-action="ForgotPassword" class="text-decoration-none text-primary" style="color:white !important">
+                                                                            Forgot Password
+                                                                            ?
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="fg-actions d-flex justify-content-center">
+                                                                    <div class="recover-pass form-group" style="margin-bottom: 0px !important; margin-top: 10px">
+                                                                        <button class="btn btn-primary text-decoration-none text-white" style="background:linear-gradient(45deg, #060606, #8a8a8a)" name="button" value="login">
+                                                                            Login
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                            <partial name="_ValidationSummary"/>
+                                                            <div class="text-center">
+
+
+                                                                <img src="~/ei-logo.png" style="width: 200px; height: 90px" />
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>*@
+
+                    @*<div class="col-lg-6 d-lg-block d-none py-2 text-center align-middle"  style="padding: 0px !important;">
+                            <img src="~/loginF3.png" alt="" class="img-fluid" width="400" height="230" style="padding: 0px !important;">
+                        </div>
+
+                        <div class="col-lg-6 col-md-12 bg-white px-4 pt-3">
+                            <div class="row d-flex align-items-center justify-content-center">
+                                <img src="~/vnc-edge-icon-square.png" height="100" width="100" class="img-fluid mb-3" />
+                            </div>
+                            <p class="row d-flex align-items-center justify-content-center">
+                                Login to your Incredible Insights
+                            </p>
+                            <form asp-route="Login">
+                                <input type="hidden" asp-for="ReturnUrl" />
+                                <input type="text" class="form-control mb-3" placeholder="Username" asp-for="Username" />
+                                <input type="password" class="form-control mb-1" placeholder="Password" asp-for="Password" />
+                                <div class="d-flex justify-content-between mt-2">
+                                    <div class="remember-me">
+                                        <div class="custom-control custom-checkbox custom-control-inline mb-3">
+                                            <input type="checkbox" id="customCheckboxInline1" name="customCheckboxInline1" class="custom-control-input" />
+                                            <label class="custom-control-label" for="customCheckboxInline1">
+                                                Remember Me
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="forgot-password-option">
+                                        <a href="forgot-password-page.html" class="text-decoration-none text-primary">
+                                            Forgot Password
+                                            ?
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="fg-actions d-flex justify-content-center">
+                                    <div class="recover-pass form-group">
+                                        <button class="btn btn-primary text-decoration-none text-white" name="button" value="login">
+                                            Login
+                                        </button>
+                                    </div>
+                                </div>
+                                <hr class="m-0">
+                            </form>
+                        </div>*@
+
+                    @*</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>*@
+                    <!--Login Page Ends-->
+
+                </div>
+            </div>
+            <!-- END : End Main Content-->
+        </div>
+    </div>
+
+
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+    <!-- BEGIN VENDOR JS-->
+    <!--<script src="~/app-assets/vendors/js/core/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="~/app-assets/vendors/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="~/app-assets/vendors/js/core/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/app-assets/vendors/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+    <script src="~/app-assets/vendors/js/prism.min.js" type="text/javascript"></script>
+    <script src="~/app-assets/vendors/js/jquery.matchHeight-min.js" type="text/javascript"></script>
+    <script src="~/app-assets/vendors/js/screenfull.min.js" type="text/javascript"></script>
+    <script src="~/app-assets/vendors/js/pace/pace.min.js" type="text/javascript"></script>-->
+    <!-- BEGIN VENDOR JS-->
+    <!-- BEGIN PAGE VENDOR JS-->
+    <!-- END PAGE VENDOR JS-->
+    <!-- BEGIN APEX JS-->
+    <!-- <script src="~/app-assets/js/app-sidebar.js" type="text/javascript"></script>
+    <script src="~/app-assets/js/notification-sidebar.js" type="text/javascript"></script>
+    <script src="~/app-assets/js/customizer.js" type="text/javascript"></script>-->
+    <!-- END APEX JS-->
+    <!-- BEGIN PAGE LEVEL JS-->
+    <!-- END PAGE LEVEL JS-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#show_password').hover(function show() {
+                //Change the attribute to text
+                $('#txtPassword').attr('type', 'text');
+                $('#txtPassword').addClass('focus-false');
+                $('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+            },
+                function () {
+                    //Change the attribute back to password
+                    $('#txtPassword').attr('type', 'password');
+                    $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+                });
+        });
+    </script>
+
+</body>
+<!-- END : Body-->
+</html>

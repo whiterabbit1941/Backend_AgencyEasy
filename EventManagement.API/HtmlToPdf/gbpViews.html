@@ -1,0 +1,145 @@
+﻿<!--Profile Views-->
+<div class="row a4-page">
+    <!--<div class="col-md-6">
+        <div class="content-header-style-cust mb-3 mt-3" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+            <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Google Business Profile</h2>
+        </div>
+    </div>-->
+
+    <div class="col-md-12 mt-3">
+        <div class="card card-body" style="max-height:400px">
+            <div class="card-title pt-2" style="display:flex;justify-content:space-between;align-items: center;">
+                <span style="font-weight:bold;align-self:flex-start;">Profile Views</span>
+                <div style="display: flex;flex-direction:column;align-items: flex-end;">
+                    <span style="font-weight: 500; color: _profileViewDiffColor_; text-align: right;">_profileViewDiff_</span>
+                    <span style="color:black;text-align:right;">_vsDateRange_</span>
+                </div>
+            </div>
+
+            <div class="px-5" style="display: flex; justify-content:center;">
+                <div class="mx-5" style="width:210px;">
+                    <canvas id="gbpPieChart"
+                            style="display: block; box-sizing: border-box; height: 300px;"></canvas>
+                </div>
+                <div style="display:flex;flex-direction:column; justify-content:space-between;">
+                    <div class="mb-3">
+                        <div style="display: flex; flex-direction:row; align-items:center; gap: 1;">
+                            <div style="display: flex; width: 10px; height: 10px; border-radius: 50%; background-color: rgb(242, 153, 0)"></div>
+                            <div> _gSearchMobileData_</div>
+                        </div>
+                        <p class="mb-0 ml-0">Google Search - mobile</p>
+                    </div>
+                    <div class="mb-3">
+                        <div style="display: flex; flex-direction:row; align-items:center; gap: 1;">
+                            <div style="display: flex; width: 10px; height: 10px; border-radius: 50%; background-color: rgb(71, 71, 235)"></div>
+                            <div>_gMapMobileData_</div>
+                        </div>
+                        <p class="mb-0 ml-0">Google Maps - mobile</p>
+                    </div>
+                    <div class="mb-3">
+                        <div style="display: flex; flex-direction:row; align-items:center; gap: 1;">
+                            <div style="display: flex; width: 10px; height: 10px; border-radius: 50%; background-color: rgb(217, 48, 37)"></div>
+                            <div>_gSearchDesktopData_</div>
+                        </div>
+                        <p class="mb-0 ml-0">Google Search - desktop</p>
+                    </div>
+                    <div class="mb-3">
+                        <div style="display: flex; flex-direction:row; align-items:center; gap: 1;">
+                            <div style="display: flex; width: 10px; height: 10px; border-radius: 50%; background-color: rgb(0,100,0)"></div>
+                            <div>_gMapDesktopData_</div>
+                        </div>
+                        <p class="mb-0 ml-0">Google Maps - desktop</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+
+    var labelnterval = _labelInterval_;
+
+    var optionsCom = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: "top",
+            },
+        },
+        scales: {
+            xAxes: [{
+                ticks: {
+                    fontColor: 'rgb(0,0,0)',
+                    fontSize: 14,
+                    maxRotation: 0,
+                    minRotation: 0,
+                    autoSkip: false,
+                    callback: function (value, index, values) {
+
+                        return index % labelnterval === 0 ? value : '';
+                    }
+                }
+            }],
+            yAxes: [{
+
+                ticks: {
+                    fontColor: 'rgb(0,0,0)',
+                    fontSize: 14
+                }
+            }]
+        },
+        legend: {
+            labels: {
+                fontColor: 'rgb(0,0,0)',
+                usePointStyle: true,
+                fontSize: 14
+            }
+        },
+    }
+
+    //Traffic Aquisition
+    var options1 = {
+        type: 'pie',
+        data: {
+            //labels: ['2001', '2002', '2003', '2004'],
+            datasets: [{
+                label: 'My First Dataset',
+                data: [_gbpPieChartData_],
+                backgroundColor: [
+                    'rgb(242, 153, 0)',
+                    'rgb(71, 71, 235)',
+                    'rgb(217, 48, 37)',
+                    'rgb(0, 100, 0)'
+                ],
+                hoverOffset: 4
+
+            }]
+
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: "top",
+                },
+            },
+            legend: {
+                labels: {
+                    fontColor: 'rgb(0,0,0)',
+                    usePointStyle: true,
+                    fontSize: 14
+                }
+            },
+        }
+    }
+
+    var ctx = document.getElementById('gbpPieChart').getContext('2d');
+    new Chart(ctx, options1);
+
+
+
+</script>

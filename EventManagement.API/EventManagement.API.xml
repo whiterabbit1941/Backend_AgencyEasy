@@ -1,0 +1,319 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EventManagement.API</name>
+    </assembly>
+    <members>
+        <member name="T:EventManagement.API.Controllers.AppsumoPlanController">
+            <summary>
+            AppsumoPlan endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.AspUserController">
+            <summary>
+            AspUser endpoint
+            </summary>
+        </member>
+        <member name="M:EventManagement.API.Controllers.AspUserController.ForgotPassword(System.String,System.String)">
+            <summary>
+            Call from frontend for send forgot password email
+            </summary>
+            <param name="email">email</param>
+            <returns>true or false</returns>
+        </member>
+        <member name="T:EventManagement.API.Controllers.AuditsController">
+            <summary>
+            Audits endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.CampaignCallRailController">
+            <summary>
+            CampaignCallRail endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.CampaignController">
+            <summary>
+            Campaign endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.CampaignFacebookAdsController">
+            <summary>
+            CampaignFacebookAds endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.CampaignFacebookController">
+            <summary>
+            CampaignFacebook endpoint
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:EventManagement.API.Controllers.CampaignFacebookController.SetupGraphApi(System.String,System.String,System.String,System.String,System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:EventManagement.API.Controllers.CampaignFacebookController.GraphApiCallback(System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:EventManagement.API.Controllers.CampaignFacebookController.GraphApiCallbackForPop(System.String)" -->
+        <member name="T:EventManagement.API.Controllers.CampaignGBPController">
+            <summary>
+            CampaignGBP endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.CampaignGoogleAdsController">
+            <summary>
+            CampaignGoogleAds endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.CampaignGoogleAnalyticsController">
+            <summary>
+            CampaignGoogleAnalytics endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.CampaignGoogleSheetController">
+            <summary>
+            CampaignGoogleSheet endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.CampaignGSCController">
+            <summary>
+            CampaignGSC endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.CampaignInstagramController">
+            <summary>
+            CampaignInstagram endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.CampaignLinkedinController">
+            <summary>
+            CampaignLinkedin endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.CampaignMailchimpController">
+            <summary>
+            CampaignMailchimp endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.CampaignMicrosoftAdController">
+            <summary>
+            CampaignMicrosoftAd endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.CampaignUserController">
+            <summary>
+            CampaignUser endpoint
+            </summary>
+        </member>
+        <member name="M:EventManagement.API.Controllers.CampaignUserController.GetCampainForLoggedInUser(System.String,System.String,System.String)">
+            <summary>
+            This function will return Campaign that are assinged to the user in an company.
+            In case of Super admins it will return all the Campaign in an company. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EventManagement.API.Controllers.CampaignUserController.GetAllUsers(System.String,System.String,System.String,System.String)">
+            <summary>
+            This will query and fetch all the Users that are created in server.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EventManagement.API.Controllers.CampaignUserController.AddUsersInSelectedCampaign(System.String,System.String,System.Collections.Generic.List{EventManagement.Dto.AspUserDto})">
+            <summary>
+            Add multiple users in selected client.
+            </summary>
+            <returns>it will return users list</returns>
+        </member>
+        <member name="T:EventManagement.API.Controllers.CampaignWooCommerceController">
+            <summary>
+            CampaignWooCommerce endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.CancellationReasonController">
+            <summary>
+            CancellationReason endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.ChatGptReportController">
+            <summary>
+            ChatGptReport endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.ClientPostLogoutRedirectUriController">
+            <summary>
+            ClientPostLogoutRedirectUri endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.ClientRedirectUriController">
+            <summary>
+            ClientRedirectUri endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.CompanyController">
+            <summary>
+            Company endpoint
+            </summary>
+        </member>
+        <member name="M:EventManagement.API.Controllers.CompanyController.UpdateCompanySettings(System.String,EventManagement.Dto.CompanyDto)">
+            <summary>
+            This will query and update company settings.
+            </summary>
+            <returns>it will return company data</returns>
+        </member>
+        <member name="T:EventManagement.API.Controllers.CompanyPlanController">
+            <summary>
+            CompanyPlan endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.CompanyUserController">
+            <summary>
+            CompanyUser endpoint
+            </summary>
+        </member>
+        <member name="M:EventManagement.API.Controllers.CompanyUserController.GetAllUsersFromSelectedCompany">
+            <summary>
+            This will query and fetch all the Users that are created in server.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EventManagement.API.Controllers.DefaultPlanController">
+            <summary>
+            DefaultPlan endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.DomainWhitelabelController">
+            <summary>
+            DomainWhitelabel endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.EmailSettingController">
+            <summary>
+            EmailSetting endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.EmailWhitelabelController">
+            <summary>
+            EmailWhitelabel endpoint
+            </summary>
+        </member>
+        <member name="M:EventManagement.API.Controllers.EmailWhitelabelController.DeleteDomainByID(System.Int64)">
+            <summary>
+            Delete the domain from sendgrid as well as DB
+            </summary>
+            <param name="id">domainID</param>
+            <returns>status of the operations</returns>
+        </member>
+        <member name="T:EventManagement.API.Controllers.EventController">
+            <summary>
+            Event endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.FeatureController">
+            <summary>
+            Feature endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.GoogleAccountSetupController">
+            <summary>
+            GoogleAccountSetup endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.GoogleAdsSummaryController">
+            <summary>
+            GoogleAdsSummary endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.GoogleAnalyticsAccountController">
+            <summary>
+            GoogleAnalyticsAccount endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.GscSummaryController">
+            <summary>
+            GscSummary endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.LinkedinAdController">
+            <summary>
+            LinkedinAd endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.PlanController">
+            <summary>
+            Plan endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.PlanDetailController">
+            <summary>
+            PlanDetail endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.ProductController">
+            <summary>
+            Product endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.RankingGraphController">
+            <summary>
+            RankingGraph endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.ReportSchedulingController">
+            <summary>
+            ReportScheduling endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.ReportSettingController">
+            <summary>
+            ReportSetting endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.SerpController">
+            <summary>
+            Serp endpoint
+            </summary>
+        </member>
+        <member name="M:EventManagement.API.Controllers.SerpController.GetKeywordExistOrNot(System.String,System.Collections.Generic.List{System.String},System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="campaignID">  campaignID </param>
+            <param name="keywords">  list of keywords </param>
+            <param name="location">location</param>
+            <param name="locationName">locationName </param>
+            <param name=""></param>
+            <returns> ExistNotExistKeyword </returns>
+        </member>
+        <member name="T:EventManagement.API.Controllers.SocialMediaSUmmmaryController">
+            <summary>
+            SocialMediaSUmmmary endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.StripeCouponController">
+            <summary>
+            StripeCoupon endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.StripePaymentController">
+            <summary>
+            StripePayment endpoint
+            </summary>
+        </member>
+        <member name="M:EventManagement.API.Controllers.StripePaymentController.IsMonthly(System.String)">
+            <summary>
+            Get plan interval type
+            </summary>
+            <param name="subscriptionId"></param>
+            <returns>true or false</returns>
+        </member>
+        <member name="T:EventManagement.API.Controllers.TemplateSettingController">
+            <summary>
+            TemplateSetting endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.TrafficSummaryController">
+            <summary>
+            TrafficSummary endpoint
+            </summary>
+        </member>
+        <member name="T:EventManagement.API.Controllers.WhiteLabelController">
+            <summary>
+            WhiteLabel endpoint
+            </summary>
+        </member>
+    </members>
+</doc>

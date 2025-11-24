@@ -1,0 +1,64 @@
+﻿<!--Number of Sales-->
+<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body text-center">
+            <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                <span style="font-weight:bold;">Mailchimp Lists Performance</span>
+            </h4>
+            <table class="table table-bordered" id="mcListTable">
+                <thead>
+                    <tr class="fontsizesmall font-weight-bold table-cell-height">
+                        <td class="table-zone td-col-text-style">NA...</td>
+                        <td class="table-zone td-col-text-style">SU...</td>
+                        <td class="table-zone td-col-text-style">OP...</td>
+                        <td class="table-zone td-col-text-style">CL...</td>
+                        <td class="table-zone td-col-text-style">CA...</td>
+                        <td class="table-zone td-col-text-style">UN...</td>
+                        <td class="table-zone td-col-text-style">AV...</td>
+                        <td class="table-zone td-col-text-style">AV...</td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <tbody class="p-1">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var mcTableArray = _mcListTable_;
+
+    var wctable1 = document.getElementById("mcListTable").getElementsByTagName('tbody')[0];
+        for (var i = 0; i < mcTableArray.length; i++) {
+            var row = wctable1.insertRow(i);
+            row.classList.add('text-align-start');
+
+            var cell1 = row.insertCell(0);
+            cell1.innerHTML = mcTableArray[i].Name;
+
+            var cell2 = row.insertCell(1);
+            cell2.innerHTML = mcTableArray[i].Subscribers;
+
+            var cell3 = row.insertCell(2);
+            cell3.innerHTML = mcTableArray[i].OpenRate;
+
+            var cell4 = row.insertCell(3);
+            cell4.innerHTML = mcTableArray[i].ClickRate;
+
+            var cell5 = row.insertCell(4);
+            cell5.innerHTML = mcTableArray[i].Campaigns;
+
+            var cell6 = row.insertCell(5);
+            cell6.innerHTML = mcTableArray[i].Unsubscribes;
+
+            var cell7 = row.insertCell(6);
+            cell7.innerHTML = mcTableArray[i].AvgSubscribeRate;
+
+            var cell8 = row.insertCell(7);
+            cell8.innerHTML = mcTableArray[i].AvguNSubscribeRate;
+           
+        }
+</script>

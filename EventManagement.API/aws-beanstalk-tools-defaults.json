@@ -1,0 +1,26 @@
+
+{
+    "comment" : "This file is used to help set default values when using the dotnet CLI extension Amazon.ElasticBeanstalk.Tools. For more information run \"dotnet eb --help\" from the project root.",
+    "profile" : "default",
+    "region"  : "us-east-2",
+    "application" : "whitelabelboardbackend",
+    "environment" : "whitelabelboardbackend-dev-test",
+    "solution-stack" : "64bit Amazon Linux 2 v2.2.2 running .NET Core",
+    "iis-website"    : "Default Web Site",
+    "app-path"       : "/",
+    "enable-xray"    : false,
+    "configuration"  : "Test",
+    "framework"      : "netcoreapp3.1",
+    "self-contained" : false,
+    "enhanced-health-type" : "basic",
+    "additional-options"   : "",
+    "environment-type"     : "LoadBalanced",
+    "loadbalancer-type"    : "application",
+    "cname"                : "whitelabelboardbackend-dev",
+    "instance-type"        : "t3a.medium",
+    "key-pair"             : "",
+    "health-check-url"     : "/",
+    "instance-profile"     : "aws-elasticbeanstalk-ec2-role",
+    "service-role"         : "aws-elasticbeanstalk-service-role",
+    "proxy-server"         : "nginx"
+}

@@ -1,0 +1,84 @@
+﻿
+    <!--start woo commerce-->
+    <div class="row a4-page">       
+        <div class="col-md-12 mt-3">
+            <div class="card card-body" style="max-height:400px;">
+
+                <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                    <span style="font-weight:bold;">Sales</span>
+                    <span style="font-weight: 500; color: _1wcSalesChartDiffColor_;">_1wcSalesChartDiffData_</span>
+                </h4>
+                <div style="display: flex;justify-content:center;">
+                    <canvas id="wcSalesChart"
+                            style="display: block; box-sizing: border-box; height: 300px; width: 100%"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        var labelnterval = _wcLabelInterval_;
+
+        var optionsCom = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: "top",
+                },
+            },
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14,
+                        maxRotation: 0,
+                        minRotation: 0,
+                        autoSkip: false,
+                        callback: function (value, index, values) {
+
+                            return index % labelnterval === 0 ? value : '';
+                        }
+                    }
+                }],
+                yAxes: [{
+
+                    ticks: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14
+                    }
+                }]
+            },
+            legend: {
+                labels: {
+                    fontColor: 'rgb(0,0,0)',
+                    usePointStyle: true,
+                    fontSize: 14
+                }
+            },
+        }
+     
+        var options3 = {
+            type: 'line',
+            data: {
+                labels: [_1wcDateChartLabels_],
+                datasets: [{
+                    fill: false,
+                    data: [_1wcSalesChartData_],
+                    label: "Sales",
+                    backgroundColor: 'rgb(8, 120, 179)',
+                    borderColor: 'rgb(8, 120, 179)',
+                    borderWidth: 2,
+                    pointRadius: 2
+                }]
+
+            },
+            options: optionsCom
+        }
+         
+        var ctx = document.getElementById('wcSalesChart').getContext('2d');
+        new Chart(ctx, options3);
+      
+    </script>

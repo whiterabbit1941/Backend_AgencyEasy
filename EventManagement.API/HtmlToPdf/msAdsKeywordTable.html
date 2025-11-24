@@ -1,0 +1,80 @@
+﻿<!--Number of Keywords-->
+<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body text-center">
+            <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                <span style="font-weight:bold;">Microsoft Keywords Table</span>
+            </h4>
+            <table class="table table-bordered" id="_msAdsKeywordTableId_">
+                <thead>
+                    <tr class="fontsizesmall font-weight-bold table-cell-height">
+                        <td class="table-zone td-col-text-style">KEYWORD</td>
+                        <td class="table-zone td-col-text-style">AD GROUP</td>
+                        <td class="table-zone td-col-text-style">CAMPAIGN</td>
+                        <td class="table-zone td-col-text-style">STATUS</td>
+                        <td class="table-zone td-col-text-style">CLICKS</td>
+                        <td class="table-zone td-col-text-style">IMPRES...</td>
+                        <td class="table-zone td-col-text-style">CTR</td>
+                        <td class="table-zone td-col-text-style">AVG CPC</td>
+                        <td class="table-zone td-col-text-style">COST</td>
+                        <td class="table-zone td-col-text-style">CONVERS</td>
+                        <td class="table-zone td-col-text-style">CONVERS</td>
+                        <td class="table-zone td-col-text-style">COST PER</td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <tbody class="p-1">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var msAdsKeywordTableArray = _msAdsKeywordTableData_;
+
+    var wctable1 = document.getElementById("_msAdsKeywordTableId_").getElementsByTagName('tbody')[0];
+    for (var i = 0; i < msAdsKeywordTableArray.length; i++) {
+        var row = wctable1.insertRow(i);
+        row.classList.add('text-align-start');
+
+        var cell1 = row.insertCell(0);
+        cell1.innerHTML = msAdsKeywordTableArray[i].Keyword;
+
+        var cell2 = row.insertCell(1);
+        cell2.innerHTML = msAdsKeywordTableArray[i].AdGroupName;
+
+        var cell3 = row.insertCell(2);
+        cell3.innerHTML = msAdsKeywordTableArray[i].CampaignName;
+
+        var cell4 = row.insertCell(3);
+        cell4.innerHTML = msAdsKeywordTableArray[i].KeywordStatus;
+
+        var cell5 = row.insertCell(4);
+        cell5.innerHTML = msAdsKeywordTableArray[i].Clicks;
+
+        var cell6 = row.insertCell(5);
+        cell6.innerHTML = msAdsKeywordTableArray[i].Impressions;
+
+        var cell7 = row.insertCell(6);
+        cell7.innerHTML = msAdsKeywordTableArray[i].Ctr;
+
+        var cell8 = row.insertCell(7);
+        cell8.innerHTML = msAdsKeywordTableArray[i].AverageCpc;
+
+        var cell9 = row.insertCell(8);
+        cell9.innerHTML = msAdsKeywordTableArray[i].Spend;
+
+        var cell10 = row.insertCell(9);
+        cell10.innerHTML = msAdsKeywordTableArray[i].Conversions;
+
+        var cell11 = row.insertCell(10);
+        cell11.innerHTML = msAdsKeywordTableArray[i].ConversionRate;
+
+        var cell12 = row.insertCell(11);
+        cell12.innerHTML = msAdsKeywordTableArray[i].CostPerConversion;
+
+    }
+</script>

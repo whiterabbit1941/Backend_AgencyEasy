@@ -1,0 +1,413 @@
+﻿
+<body>
+
+    <!--four charts-->
+
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Campaign Health Score</h2>
+            </div>
+        </div>
+        <div class="col-md-12 a4-page">
+            <div class="card card-body" style="max-height:400px">
+                <h4 class="card-title pt-2" style="display: flex;justify-content: space-between;">
+                    <span style="font-weight:bold;">Impression</span>
+                    <span style="font-weight: 500;color: _fbAdImpColor_; ">_fbAdImpDifference_</span>
+                </h4>
+                <div style="display: flex; justify-content:center;">
+                    <canvas id="chartJSFbAdImp"
+                            style="display: block; box-sizing:border-box; height: 300px; width: 100%"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row a4-page mt-3">
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px">
+                <h4 class="card-title pt-2" style="display: flex;justify-content: space-between;">
+                    <span style="font-weight:bold;">Reach</span>
+                    <span style="font-weight: 500;color: _fbAdReachColor_; ">_fbAdReachDifference_</span>
+                </h4>
+                <div style="display: flex; justify-content:center;">
+                    <canvas id="chartJSFbAdReach"
+                            style="display: block; box-sizing:border-box;height: 300px; width: 100%"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row a4-page mt-3">
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px">
+                <h4 class="card-title pt-2" style="display: flex;justify-content: space-between;">
+                    <span style="font-weight:bold;">Clicks</span>
+                    <span style="font-weight: 500;color: _fbAdResultColor_; ">_fbAdResultDifference_</span>
+                </h4>
+                <div style="display: flex; justify-content:center;">
+                    <canvas id="chartJSFbAdResult"
+                            style="display: block; box-sizing:border-box; height: 300px; width: 100%"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row a4-page mt-3">
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px">
+                <h4 class="card-title pt-2" style="display: flex;justify-content: space-between;">
+                    <span style="font-weight:bold;">CTR</span>
+                    <span style="font-weight: 500;color: _fbAdCpcColor_; ">_fbCpcDifference_</span>
+                </h4>
+                <div style="display: flex; justify-content:center;">
+                    <canvas id="chartJSFbAdCpc"
+                            style="display: block; box-sizing:border-box; height: 300px; width: 100%"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Table-->
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3" style="background-color:_themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left:10px;">CAMPAIGN PERFORMANCE</h2>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="card Card-body">
+                <table id="fbAdsCampaignTable">
+                    <thead>
+                        <tr>
+                            <th class="p-1">Sr No</th>
+                            <th class="p-1">Campaign Name</th>
+                            <th class="p-1">Impressions</th>
+                            <th class="p-1">Reach</th>
+                            <th class="p-1">Clicks</th>
+                            <th class="p-1">CTR</th>
+                            <th class="p-1">Amount Spent</th>
+                        </tr>
+                    </thead>
+                    <tbody class="p-1">
+
+                        <!--<tr>
+                            <td class="p-1">Mono Carton - New</td>
+                            <td class="p-1">1218</td>
+                            <td class="p-1">33</td>
+                            <td class="p-1">13018</td>
+                            <td class="p-1">7.24</td>
+                            <td class="p-1">9103.24</td>
+                            <td class="p-1">275.86</td>
+                            <td class="p-1">2.71</td>
+                            <td class="p-1">0</td>
+                        </tr>
+                        <tr>
+                            <td class="p-1">Mono Carton - New</td>
+                            <td class="p-1">1218</td>
+                            <td class="p-1">33</td>
+                            <td class="p-1">13018</td>
+                            <td class="p-1">7.24</td>
+                            <td class="p-1">9103.24</td>
+                            <td class="p-1">275.86</td>
+                            <td class="p-1">2.71</td>
+                            <td class="p-1">0</td>
+                        </tr>-->
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var labelnterval = _labelInterval_;
+
+        var tableArray = _tableArrayList_;
+        var table = document.getElementById("fbAdsCampaignTable").getElementsByTagName('tbody')[0];
+        for (var i = 0; i < tableArray.length; i++) {
+            var row = table.insertRow(i);
+            row.classList.add('text-align-start');
+            var cell1 = row.insertCell(0);
+            cell1.innerHTML = i + 1;
+            var cell2 = row.insertCell(1);
+            cell2.innerHTML = tableArray[i].campaign_name;
+            var cell3 = row.insertCell(2);
+            cell3.innerHTML = tableArray[i].impressions;
+            var cell4 = row.insertCell(3);
+            cell4.innerHTML = tableArray[i].reach;
+            var cell5 = row.insertCell(4);
+            cell5.innerHTML = tableArray[i].clicks;
+            var cell6 = row.insertCell(5);
+            if (tableArray[i].cpr == "NaN") {
+                cell6.innerHTML =   0;
+            }
+            else {
+                cell6.innerHTML =  tableArray[i].ctr + "%";
+            }
+            var cell7 = row.insertCell(6);
+            cell7.innerHTML = _fbAdsCurrencyTable_ + tableArray[i].spend;
+        }
+
+        var options = {
+            type: 'line',
+            data: {
+                labels: [_fbadsImpressionChartLabels_],
+                datasets: [{
+                    label: 'Current Period',
+                    data: [_fbadsChartImpression_],
+                    fill: false,
+                    backgroundColor: "rgb(108 60 179)",
+                    borderColor: "rgb(108 60 179)",
+                    borderWidth: 2,
+                    pointRadius: 2
+
+                }, {
+                    label: 'Previous Period',
+                    data: [_fbadsDiffChartImpression_],
+                    fill: false,
+                    backgroundColor: "rgb(250 117 117)",
+                    borderColor: "rgb(250 117 117)",
+                    borderWidth: 2,
+                    pointRadius: 2
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14,
+                            maxRotation: 0,
+                            minRotation: 0,
+                            autoSkip: false,
+                            callback: function (value, index, values) {
+
+                                return index % labelnterval === 0 ? value : '';
+                            }
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        usePointStyle: true,
+                        fontSize: 14
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: "top",
+                    },
+                },
+            }
+        }
+
+        var options1 = {
+            type: 'line',
+            data: {
+                labels: [_fbadsReachChartLabels_],
+                datasets: [{
+                    label: 'Current Period',
+                    data: [_1fbadsChartReach1_],
+                    fill: false,
+                    backgroundColor: "rgb(108 60 179)",
+                    borderColor: "rgb(108 60 179)",
+                    borderWidth: 2,
+                    pointRadius: 2
+                }, {
+                    label: 'Previous Period',
+                    data: [_1fbadsDiffChartReach1_],
+                    fill: false,
+                    backgroundColor: "rgb(250 117 117)",
+                    borderColor: "rgb(250 117 117)",
+                    borderWidth: 2,
+                    pointRadius: 2
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14,
+                            maxRotation: 0,
+                            minRotation: 0,
+                            autoSkip: false,
+                            callback: function (value, index, values) {
+
+                                return index % labelnterval === 0 ? value : '';
+                            }
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        usePointStyle: true,
+                        fontSize: 14
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: "top",
+                    },
+                },
+            }
+        }
+
+        var options2 = {
+            type: 'line',
+            data: {
+                labels: [_fbadsResultChartLabels_],
+                datasets: [{
+                    label: 'Current Period',
+                    data: [_2fbadsChartResult2_],
+                    fill: false,
+                    backgroundColor: "rgb(108 60 179)",
+                    borderColor: "rgb(108 60 179)",
+                    borderWidth: 2,
+                    pointRadius: 2
+                }, {
+                    label: 'Previous Period',
+                    data: [_2fbadsDiffChartResult2_],
+                    fill: false,
+                    backgroundColor: "rgb(250 117 117)",
+                    borderColor: "rgb(250 117 117)",
+                    borderWidth: 2,
+                    pointRadius: 2
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14,
+                            maxRotation: 0,
+                            minRotation: 0,
+                            autoSkip: false,
+                            callback: function (value, index, values) {
+
+                                return index % labelnterval === 0 ? value : '';
+                            }
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        usePointStyle: true,
+                        fontSize: 14
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: "top",
+                    },
+                },
+            }
+        }
+
+        var options3 = {
+            type: 'line',
+            data: {
+                labels: [_fbadsCPRChartLabels_],
+                datasets: [{
+                    label: 'Current Period',
+                    data: [_3fbadsChartCPR3_],
+                    fill: false,
+                    backgroundColor: "rgb(108 60 179)",
+                    borderColor: "rgb(108 60 179)",
+                    borderWidth: 2,
+                    pointRadius: 2
+                }, {
+                    label: 'Previous Period',
+                    data: [_3fbadsDiffChartCPR3_],
+                    fill: false,
+                    backgroundColor: "rgb(250 117 117)",
+                    borderColor: "rgb(250 117 117)",
+                    borderWidth: 2,
+                    pointRadius: 2
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14,
+                            maxRotation: 0,
+                            minRotation: 0,
+                            autoSkip: false,
+                            callback: function (value, index, values) {
+
+                                return index % labelnterval === 0 ? value : '';
+                            }
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        usePointStyle: true,
+                        fontSize: 14
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: "top",
+                    },
+                },
+            }
+        }
+        var ctx = document.getElementById('chartJSFbAdImp').getContext('2d');
+        new Chart(ctx, options);
+        var ctx = document.getElementById('chartJSFbAdReach').getContext('2d');
+        new Chart(ctx, options1);
+        var ctx = document.getElementById('chartJSFbAdResult').getContext('2d');
+        new Chart(ctx, options2);
+        var ctx = document.getElementById('chartJSFbAdCpc').getContext('2d');
+        new Chart(ctx, options3);
+    </script>
+
+</body>

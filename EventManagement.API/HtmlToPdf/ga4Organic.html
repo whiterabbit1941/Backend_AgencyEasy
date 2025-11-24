@@ -1,0 +1,100 @@
+﻿
+<body>
+
+    <!--organic traffic and conversion-->
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Google Analytics4: Organic Sessions</h2>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px">
+                <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                    <span style="font-weight:bold;">Organic Sessions</span>
+                    <span style="font-weight:500; color:_trafficdiffcolor_; ">_trafficDifference_</span>
+                </h4>
+                <div style="display: flex; justify-content: center;">
+                    <canvas id="organicTrafficChart"
+                            style="display: block; box-sizing: border-box; height: 300px;width:100%;"></canvas>
+                </div>
+            </div>
+        </div>      
+    </div>
+   
+    <script>
+
+        var labelnterval = _labelInterval_;
+        //traffic and conversion
+        var options = {
+            type: 'line',
+            data: {
+                labels: [_1gaOrganicTrafficLables1_],
+                datasets: [{
+                    fill: false,
+                    label: "Current Period",
+                    data: [_1gaOrganicTrafficData1_],
+                    backgroundColor: "rgb(108 60 179)",
+                    borderColor: "rgb(108 60 179)",
+                    borderWidth: 2,
+                    pointRadius: 2
+                },
+                {
+                    fill: false,
+                    label: "Previous Period",
+                    data: [_2gaOrganicTrafficData2_],
+                    backgroundColor: "rgb(250 117 117)",
+                    borderColor: "rgb(250 117 117)",
+                    borderWidth: 2,
+                    pointRadius: 2
+                }],
+
+            },
+          
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14,
+                            maxRotation: 0,
+                            minRotation: 0,
+                            autoSkip : false,
+                            callback: function (value, index, values) {
+
+                                return index % labelnterval === 0 ? value : '';
+                            }
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14,
+                        usePointStyle: true
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: "top",
+                    },
+                },
+               
+            }
+        }
+    
+        var ctx = document.getElementById('organicTrafficChart').getContext('2d');
+        new Chart(ctx, options);
+
+    </script>
+</body>

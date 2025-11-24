@@ -1,0 +1,364 @@
+
+<body>
+
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Linkedin: Demographic Summary</h2>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px">
+                <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                    <span style="font-weight:bold;">Followers By Country</span>
+
+                </h4>
+                <div style="display: flex; justify-content: center;">
+                    <canvas id="chartCountry"
+                            style="display: block; box-sizing: border-box; height: 300px; width: 100%"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row a4-page mt-3">
+
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px">
+                <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                    <span style="font-weight:bold;">Followers By Seniority</span>
+
+                </h4>
+                <div style="display: flex; justify-content: center;">
+                    <canvas id="chartSeniority"
+                            style="display: block; box-sizing: border-box; height: 300px; width: 100%"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row a4-page mt-3">
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px">
+                <h4 class="card-title pt-2" style="display: flex;justify-content: space-between;">
+                    <span style="font-weight:bold;">Followers By Industry</span>
+
+                </h4>
+                <div style="display: flex; justify-content: center;">
+                    <canvas id="chartIndustry"
+                            style="display: block; box-sizing: border-box; height: 300px; width: 100%"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row a4-page mt-3">
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px">
+                <h4 class="card-title pt-2" style="display: flex;justify-content: space-between;">
+                    <span style="font-weight:bold;">Followers By Job Function</span>
+
+                </h4>
+                <div style="display: flex; justify-content: center;">
+                    <canvas id="chartJobFunction"
+                            style="display: block; box-sizing: border-box; height: 300px; width: 100%"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row a4-page mt-3">
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px">
+                <h4 class="card-title pt-2" style="display: flex;justify-content: space-between;">
+                    <span style="font-weight:bold;">Followers By Company Size</span>
+
+                </h4>
+                <div style="display: flex; justify-content: center;">
+                    <canvas id="chartCompanySize"
+                            style="display:block; box-sizing: border-box; height: 300px; width: 100%"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var optionsCountry = {
+            type: 'bar',
+            data: {
+                labels: [_countryChartLabels_],
+                datasets: [{
+                    data: [_countryChartData_],
+                    label: "Industry",
+                    borderColor: '#ff0a3e',
+                    backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: "top",
+                        datalabels: {
+                            anchor: "end",
+                            align: "top",
+                            formatter: function (value) {
+                                return value; // Show the actual value as the label
+                            }
+                        }
+                    },
+
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14,
+                        usePointStyle: true
+
+                    }
+                },
+            }
+        }
+        var optionsSeniority = {
+            type: 'bar',
+            data: {
+                labels: [_seniorityChartLabels_],
+                datasets: [{
+                    data: [_seniorityChartData_],
+                    label: "Seneority",
+                    borderColor: '#0482d6',
+                    backgroundColor: 'rgba(53, 162, 235, 0.5)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: "top",
+                        datalabels: {
+                            anchor: "end",
+                            align: "top",
+                            formatter: function (value) {
+                                return value; // Show the actual value as the label
+                            }
+                        }
+                    },
+
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14,
+                        usePointStyle: true
+
+                    }
+                },
+            }
+        }
+
+        var optionsIndustry = {
+            type: 'bar',
+            data: {
+                labels: [_industryChartLabels_],
+                datasets: [{
+                    data: [_industryChartData_],
+                    label: "Industry",
+                    borderColor: '#f7a705',
+                    backgroundColor: 'rgba(255, 212, 109, 0.5)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: "top",
+                        datalabels: {
+                            anchor: "end",
+                            align: "top",
+                            formatter: function (value) {
+                                return value; // Show the actual value as the label
+                            }
+                        }
+                    },
+
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14,
+                        usePointStyle: true
+
+                    }
+                },
+            }
+        }
+
+        var optionsJobFunction = {
+            type: 'bar',
+            data: {
+                labels: [_jobFunctionChartLabels_],
+                datasets: [{
+                    data: [_jobFunctionChartData_],
+                    label: "Job Function",
+                    borderColor: '#07e3e3',
+                    backgroundColor: 'rgba(150,253, 253, 0.5)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: "top",
+                        datalabels: {
+                            anchor: "end",
+                            align: "top",
+                            formatter: function (value) {
+                                return value; // Show the actual value as the label
+                            }
+                        }
+                    },
+
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14,
+                        usePointStyle: true
+
+                    }
+                },
+            }
+        }
+        var optionsCompanySize = {
+            type: 'bar',
+            data: {
+                labels: [_companySizeChartLabels_],
+                datasets: [{
+                    data: [_companySizeChartData_],
+                    label: "Company Size",
+                    borderColor: '#9cd102',
+                    backgroundColor: "rgba(209, 247, 97, 0.5)",
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: "top",
+                        datalabels: {
+                            anchor: "end",
+                            align: "top",
+                            formatter: function (value) {
+                                return value; // Show the actual value as the label
+                            }
+                        }
+                    },
+
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14,
+                        usePointStyle: true
+
+                    }
+                },
+            }
+        }
+        var ctx = document.getElementById('chartCountry').getContext('2d');
+        new Chart(ctx, optionsCountry);
+        var ctx = document.getElementById('chartSeniority').getContext('2d');
+        new Chart(ctx, optionsSeniority);
+        var ctx = document.getElementById('chartIndustry').getContext('2d');
+        new Chart(ctx, optionsIndustry);
+        var ctx = document.getElementById('chartJobFunction').getContext('2d');
+        new Chart(ctx, optionsJobFunction);
+        var ctx = document.getElementById('chartCompanySize').getContext('2d');
+        new Chart(ctx, optionsCompanySize);
+    </script>
+</body>

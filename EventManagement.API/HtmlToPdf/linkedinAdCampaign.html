@@ -1,0 +1,359 @@
+﻿
+  
+<body>
+
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3" style="background-color:_themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px;padding-left:10px;">Linkedin Ads Performance</h2>
+            </div>
+        </div>
+        <div class="col-md-12 flex-style p-0">
+            <div class="col-md-2 p-0"  style="padding:0 0px;">
+                <div class="card">
+                    <div id="campaign_number" class="card-bg-1 card-body text-center card-border-radius" >
+                        <h5 class="card-title card-title-color">Total no of Campaign </h5>
+                        <h1 class="card-text card-title-color fontxxlrge">_1noOfCampaigns1_</h1>
+                        <h6 class="card-text card-title-color"></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"  style="padding:0 0px;">
+                <div class="card">
+                    <div class="card-bg-1 card-body text-center card-border-radius" id="spent_card">
+                        <h5 class="card-title">Spent</h5>
+                        <h1 class="card-text fontxxlrge">_1ladsCurrency1_ _1ladsSpent1_</h1>
+                        <h6 class="card-text">_1ladsSpendDiff1_<span>%</span></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"  style="padding:0 0px;">
+                <div class="card">
+                    <div class="card-bg-1 card-body text-center card-border-radius" id="click_card">
+                        <h5 class="card-title">Clicks</h5>
+                        <h1 class="card-text fontxxlrge">_1ladsClicks1_</h1>
+                        <h6 class="card-text">_1ladsClicksDiff1_<span>%</span></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"  style="padding:0 0px;">
+                <div class="card">
+                    <div class="card-bg-1 card-body text-center card-border-radius" id="lead_card">
+                        <h5 class="card-title">Leads</h5>
+                        <h1 class="card-text fontxxlrge">_1ladsLeads1_</h1>
+                        <h6 class="card-text">_1ladsLeadsDiff1_<span>%</span></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"  style="padding:0 0px;">
+                <div class="card">
+                    <div class="card-bg-1 card-body text-center card-border-radius" id="cpl_card">
+                        <h5 class="card-title ">CPL</h5>
+                        <h1 class="card-text  fontxxlrge">_1ladsCurrency1_ _1ladsCpl1_</h1>
+                        <h6 class="card-text">_1ladsCplDiff1_<span>%</span></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Linkedin Ads Performance</h2>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="card Card-body px-4">
+                <table id="linkAdCtable1">
+                    <thead>
+                        <tr>
+                            <th class="p-1">Name</th>
+                            <th class="p-1">Status</th>
+                            <th class="p-1">Spent</th>
+                            <th class="p-1">Impressions</th>
+                            <th class="p-1">Clicks</th>
+                            <th class="p-1">Average CTR</th>
+                            <th class="p-1">Average CPM</th>
+                            <th class="p-1">Average CPC</th>
+                            <th class="p-1">Leads</th>
+                            <th class="p-1">Cost per Leads</th>
+                        </tr>
+                    </thead>
+                    <tbody class="p-1">
+
+                        <!--<tr>
+                                <td class="p-1">Mono Carton - New</td>
+                                <td class="p-1">1218</td>
+                                <td class="p-1">33</td>
+                                <td class="p-1">13018</td>
+                                <td class="p-1">7.24</td>
+                                <td class="p-1">9103.24</td>
+                                <td class="p-1">275.86</td>
+                                <td class="p-1">2.71</td>
+                                <td class="p-1">0</td>
+                        </tr>
+                        <tr>
+                                <td class="p-1">Mono Carton - New</td>
+                                <td class="p-1">1218</td>
+                                <td class="p-1">33</td>
+                                <td class="p-1">13018</td>
+                                <td class="p-1">7.24</td>
+                                <td class="p-1">9103.24</td>
+                                <td class="p-1">275.86</td>
+                                <td class="p-1">2.71</td>
+                                <td class="p-1">0</td>
+                        </tr>-->
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+        <div class="row a4-page mt-3">
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px">
+                <h4 class="card-title pt-2" style="display: flex;justify-content: space-between;">
+                    <span style="font-weight:bold;">CLICKS</span>
+                </h4>
+                <div style="display: flex; justify-content:center;">
+                    <canvas id="chartJSLACam"
+                            style="display: block;box-sizing: border-box; height: 300px; width: 100%"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Linkedin Ads Data</h2>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="card Card-body  px-4">
+                <h2 class="content-text-style mt-3">Demographics For Campaign Group</h2>
+                <table id="linkAdCtable2">
+                    <thead>
+                        <tr>
+                            <th class="p-1">Name</th>
+                            <th class="p-1">Impressions</th>
+                            <th class="p-1">Clicks</th>
+                            <th class="p-1">Average CTR</th>
+                        </tr>
+                    </thead>
+                    <tbody class="p-1">
+
+                        <!--<tr>
+                                <td class="p-1">Mono Carton - New</td>
+                                <td class="p-1">1218</td>
+                                <td class="p-1">33</td>
+                                <td class="p-1">13018</td>
+                                <td class="p-1">7.24</td>
+                                <td class="p-1">9103.24</td>
+                                <td class="p-1">275.86</td>
+                                <td class="p-1">2.71</td>
+                                <td class="p-1">0</td>
+                        </tr>
+                        <tr>
+                                <td class="p-1">Mono Carton - New</td>
+                                <td class="p-1">1218</td>
+                                <td class="p-1">33</td>
+                                <td class="p-1">13018</td>
+                                <td class="p-1">7.24</td>
+                                <td class="p-1">9103.24</td>
+                                <td class="p-1">275.86</td>
+                                <td class="p-1">2.71</td>
+                                <td class="p-1">0</td>
+                        </tr>-->
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        var labelnterval = _labelInterval_;
+
+        var perSpent = _1ladsSpendDiff1_;
+        var perClicks = _1ladsClicksDiff1_;
+        var perLeads = _1ladsLeadsDiff1_;
+        var perCpl = _1ladsCplDiff1_;
+
+
+        perSpent > 0 ? document.getElementById("spent_card").classList.add("card-bg-pos") : perSpent < 0 ? document.getElementById("spent_card").classList.add("card-bg-neg") : document.getElementById("spent_card").classList.add("card-bg-neu");
+        perClicks > 0 ? document.getElementById("click_card").classList.add("card-bg-pos") : perClicks < 0 ? document.getElementById("click_card").classList.add("card-bg-neg") : document.getElementById("click_card").classList.add("card-bg-neu");
+        perLeads > 0 ? document.getElementById("lead_card").classList.add("card-bg-pos") : perLeads < 0 ? document.getElementById("lead_card").classList.add("card-bg-neg") : document.getElementById("lead_card").classList.add("card-bg-neu");
+        perCpl > 0 ? document.getElementById("cpl_card").classList.add("card-bg-pos") : perCpl < 0 ? document.getElementById("cpl_card").classList.add("card-bg-neg") : document.getElementById("cpl_card").classList.add("card-bg-neu");
+
+
+        if (perSpent > 0) {
+
+            document.getElementById("spent_card").classList.add("card-bg-pos");
+        }
+        else if (perSpent < 0) {
+
+            document.getElementById("spent_card").classList.add("card-bg-neg");
+        }
+        else if (perSpent == 0) {
+
+            document.getElementById("spent_card").classList.add("card-bg-neu");
+        }
+
+
+        if (perClicks > 0) {
+
+            document.getElementById("click_card").classList.add("card-bg-pos");
+        }
+        else if (perClicks < 0) {
+
+            document.getElementById("click_card").classList.add("card-bg-neg");
+        }
+        else if (perClicks == 0) {
+
+            document.getElementById("click_card").classList.add("card-bg-neu");
+        }
+
+
+        if (perLeads > 0) {
+
+            document.getElementById("lead_card").classList.add("card-bg-pos");
+        }
+        else if (perLeads < 0) {
+
+            document.getElementById("lead_card").classList.add("card-bg-neg");
+        }
+        else if (perLeads == 0) {
+
+            document.getElementById("lead_card").classList.add("card-bg-neu");
+        }
+
+        if (perCpl > 0) {
+
+            document.getElementById("cpl_card").classList.add("card-bg-pos");
+        }
+        else if (perCpl < 0) {
+
+            document.getElementById("cpl_card").classList.add("card-bg-neg");
+        }
+        else if (perCpl == 0) {
+
+            document.getElementById("cpl_card").classList.add("card-bg-neu");
+        }
+
+        document.getElementById("campaign_number").classList.add("card-bg-neu");
+
+        var tableArray = _tableArrayList_;
+        var table = document.getElementById("linkAdCtable1").getElementsByTagName('tbody')[0];
+        for (var i = 0; i < tableArray.length; i++) {
+            var row = table.insertRow(i);
+            row.classList.add('text-align-start');
+            var cell1 = row.insertCell(0);
+            cell1.innerHTML = tableArray[i].name;
+            var cell2 = row.insertCell(1);
+            cell2.innerHTML = tableArray[i].status;
+            var cell3 = row.insertCell(2);
+            cell3.innerHTML = tableArray[i].currency + tableArray[i].spent;
+            var cell4 = row.insertCell(3);
+            cell4.innerHTML = tableArray[i].impressions;
+            var cell5 = row.insertCell(4);
+            cell5.innerHTML = tableArray[i].clicks;
+            var cell6 = row.insertCell(5);
+            cell6.innerHTML = tableArray[i].avg_ctr + "%";
+            var cell7 = row.insertCell(6);
+            cell7.innerHTML = tableArray[i].currency + tableArray[i].avg_cpm;
+            var cell8 = row.insertCell(7);
+            cell8.innerHTML = tableArray[i].currency + tableArray[i].avg_cpc;
+            var cell9 = row.insertCell(8);
+            cell9.innerHTML = tableArray[i].lead;
+            var cell10 = row.insertCell(9);
+            cell10.innerHTML = tableArray[i].currency + tableArray[i].cost_per_lead;
+        }
+
+
+        //second table
+        var tableArray = _tableArrayList1_;
+        var table = document.getElementById("linkAdCtable2").getElementsByTagName('tbody')[0];
+        for (var i = 0; i < tableArray.length; i++) {
+            var row = table.insertRow(i);
+            row.classList.add('text-align-start');
+            var cell1 = row.insertCell(0);
+            cell1.innerHTML = tableArray[i].name;
+            var cell2 = row.insertCell(1);
+            cell2.innerHTML = tableArray[i].impressions + "(" + tableArray[i].percent_impressions + ")";
+            var cell3 = row.insertCell(2);
+            cell3.innerHTML = tableArray[i].clicks + "(" + tableArray[i].percent_clicks + ")";
+            var cell4 = row.insertCell(3);
+            cell4.innerHTML = tableArray[i].avg_ctr + "%";
+        }
+
+
+        var options = {
+            type: 'line',
+            data: {
+                labels: [_1linkedinAdsLineChartLabels_],
+                datasets: [{
+                    label: 'Clicks',
+                    data: [_1linkedinAdsLinchartData_],
+                    fill: true,                   
+                    backgroundColor: "rgb(108 60 179)",
+                    borderColor: "rgb(108 60 179)",
+                    borderWidth: 2,
+                    pointRadius: 2
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14,
+                            maxRotation: 0,
+                            minRotation: 0,
+                            autoSkip: false,
+                            callback: function (value, index, values) {
+
+                                return index % labelnterval === 0 ? value : '';
+                            }
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        usePointStyle: true,
+                        fontSize: 14
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: "top",
+                    },
+                },
+            }
+        }
+
+
+        var ctx = document.getElementById('chartJSLACam').getContext('2d');
+        new Chart(ctx, options);
+
+
+    </script>
+
+</body>

@@ -1,0 +1,166 @@
+﻿
+<body>
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3" style="background-color:_themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left:10px;">Instagram: Audience Summary (Life Time Value)</h2>
+            </div>
+        </div>
+
+
+        <div class="col-md-12 flex-style p-0">
+            <div class="col-md-4">
+                <div class="card class-list-overflow">
+                    <div class="card-body text-center card-border-radius">
+                        <iconify-icon style="float:right; padding:5px;" icon="mdi:poll"></iconify-icon>
+                        <h5 class="card-title">Age</h5>
+
+                        <ul id="localeList" class="flex-style-ul">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card class-list-overflow">
+                    <div class="card-body text-center card-border-radius">
+                        <iconify-icon style="float:right; padding:5px;" icon="mdi:poll"></iconify-icon>
+                        <h5 class="card-title">Countries of Followers</h5>
+                        <ul id="countyList" class="flex-style-ul">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card class-list-overflow">
+                    <div class="card-body text-center card-border-radius">
+                        <iconify-icon style="float:right; padding:5px;" icon="mdi:poll"></iconify-icon>
+                        <h5 class="card-title">Cities of Followers</h5>
+                        <ul id="cityList" class="flex-style-ul">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+    <!--organic traffic and conversion-->
+    <div class="row a4-page mt-3">
+        
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px">
+                <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                    <span style="font-weight:bold;">Audience Gender</span>
+                   
+                </h4>
+                <div style="display: flex; justify-content: center;">
+                    <canvas id="chartJSGender"
+                            style="display: block; box-sizing: border-box; height: 300px;"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        var ulCity = document.getElementById("cityList");
+        var ulCountry = document.getElementById("countyList");
+        var ulLocale = document.getElementById("localeList");
+        var cityListArray = _1cityListArray1_;
+        var countryListArray = _1countryListArray1_;
+        var localeListArray = _1localeListArray1_;
+        var genderData = [_1instaGenderPieChartData_];
+        
+
+        cityListArray.sort((a, b) => b.value - a.value);
+        countryListArray.sort((a, b) => b.value - a.value);
+        localeListArray.sort((a, b) => b.value - a.value);
+        for (var i = 1; i <= 5; i++) {
+            var li = document.createElement("li");
+
+            var divCityName = document.createElement("div");
+            divCityName.innerHTML = cityListArray[i].name;
+            divCityName.classList.add("list-font-size", "text-style-cust", "flex-style-li-div1");
+            var divCityValue = document.createElement("div");
+            divCityValue.innerHTML = cityListArray[i].value;
+            divCityValue.classList.add("list-font-size", "flex-style-li-div2");
+
+            li.classList.add("flex-style-li");
+            li.appendChild(divCityName);
+            li.appendChild(divCityValue);
+            ulCity.appendChild(li);
+        }
+
+        for (var i = 1; i <= 5; i++) {
+            var li = document.createElement("li");
+
+            var divCountryName = document.createElement("div");
+            divCountryName.innerHTML = countryListArray[i].name;
+            divCountryName.classList.add("list-font-size", "text-style-cust", "flex-style-li-div1");
+
+            var divCountryValue = document.createElement("div");
+            divCountryValue.innerHTML = countryListArray[i].value;
+            divCountryValue.classList.add("list-font-size", "flex-style-li-div2");
+
+            li.classList.add("flex-style-li");
+            li.appendChild(divCountryName);
+            li.appendChild(divCountryValue);
+            ulCountry.appendChild(li);
+        }
+
+        for (var i = 1; i <= 5; i++) {
+            var li = document.createElement("li");
+
+            var divLocaleName = document.createElement("div");
+            divLocaleName.innerHTML = localeListArray[i].name;
+            divLocaleName.classList.add("list-font-size", "text-style-cust", "flex-style-li-div1");
+
+            var divLocaleValue = document.createElement("div");
+            divLocaleValue.innerHTML = localeListArray[i].value;
+            divLocaleValue.classList.add("list-font-size", "flex-style-li-div2");
+
+            li.classList.add("flex-style-li");
+            li.appendChild(divLocaleName);
+            li.appendChild(divLocaleValue);
+            ulLocale.appendChild(li);
+        }
+
+
+
+        var options1 = {
+            type: 'pie',
+            data: {
+                labels: ["Male:" + genderData[0], " Female: " + genderData[1] ],
+                datasets: [{
+
+                    data: [_1instaGenderPieChartData_],
+                    legend: false,
+                    fill: true,
+
+                    backgroundColor: ['#ffa096', '#9a55ff'],
+                    pointHoverBackgroundColor: '#2D9EE2',
+                    pointHoverBorderColor: 'white',
+
+                }]
+            },
+        
+            options: {
+                maintainAspectRatio: false,
+
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14,
+                        usePointStyle: true
+                    }
+                },
+                responsive: true,
+            }
+        }
+
+        var ctx = document.getElementById('chartJSGender').getContext('2d');
+        new Chart(ctx, options1);
+    </script>
+
+</body>

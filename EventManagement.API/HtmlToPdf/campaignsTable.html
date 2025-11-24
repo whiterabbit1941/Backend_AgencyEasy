@@ -1,0 +1,124 @@
+﻿<!--Number of Sales-->
+<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body text-center">
+            <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                <span style="font-weight:bold;">Mailchimp Campaign Performance</span>
+            </h4>
+            <table class="table table-bordered" id="mcCampaignsTable">
+                <thead>
+                    <tr class="fontsizesmall font-weight-bold table-cell-height">
+
+                        <td class="table-zone td-col-text-style">N...</td>
+                        <td class="table-zone td-col-text-style">R...</td>
+                        <td class="table-zone td-col-text-style">U...</td>
+                        <td class="table-zone td-col-text-style">B...</td>
+                        <td class="table-zone td-col-text-style">U...</td>
+                        <td class="table-zone td-col-text-style">O...</td>
+                        <td class="table-zone td-col-text-style">C...</td>
+                        <td class="table-zone td-col-text-style">U...</td>
+                        <td class="table-zone td-col-text-style">U...</td>
+                        <td class="table-zone td-col-text-style">B...</td>
+                        <td class="table-zone td-col-text-style">C...</td>
+
+                        <td class="table-zone td-col-text-style">S...</td>
+                        <td class="table-zone td-col-text-style">O...</td>
+                        <td class="table-zone td-col-text-style">O...</td>
+
+                        <td class="table-zone td-col-text-style">A...</td>
+                        <td class="table-zone td-col-text-style">R...</td>
+                        <td class="table-zone td-col-text-style">T...</td>
+                        <td class="table-zone td-col-text-style">D...</td>
+                        <td class="table-zone td-col-text-style">D...</td>
+                        <td class="table-zone td-col-text-style">S...</td>
+                        <td class="table-zone td-col-text-style">S...</td>
+                        <td class="table-zone td-col-text-style">S...</td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <tbody class="p-1">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var mcTableArray = _mcCampaignsTable_;
+
+    var wctable1 = document.getElementById("mcCampaignsTable").getElementsByTagName('tbody')[0];
+        for (var i = 0; i < mcTableArray.length; i++) {
+            var row = wctable1.insertRow(i);
+            row.classList.add('text-align-start');
+
+            var cell1 = row.insertCell(0);
+            cell1.innerHTML = mcTableArray[i].Name;
+
+            var cell2 = row.insertCell(1);
+            cell2.innerHTML = mcTableArray[i].Recipients;
+
+            var cell3 = row.insertCell(2);
+            cell3.innerHTML = mcTableArray[i].UnopenedEmails;
+
+            var cell4 = row.insertCell(3);
+            cell4.innerHTML = mcTableArray[i].BouncedEmails;
+
+            var cell5 = row.insertCell(4);
+            cell5.innerHTML = mcTableArray[i].UniqueOpens;
+
+            var cell6 = row.insertCell(5);
+            cell6.innerHTML = mcTableArray[i].OpenRate;
+
+            var cell7 = row.insertCell(6);
+            cell7.innerHTML = mcTableArray[i].ClickRate;
+
+            var cell8 = row.insertCell(7);
+            cell8.innerHTML = mcTableArray[i].UnsubscribeRate;
+
+            var cell9 = row.insertCell(8);
+            cell9.innerHTML = mcTableArray[i].Unsubscribes;
+
+            var cell10 = row.insertCell(9);
+            cell10.innerHTML = mcTableArray[i].BounceRate;
+
+            var cell11 = row.insertCell(10);
+            cell11.innerHTML = mcTableArray[i].Click;
+
+            var cell12 = row.insertCell(11);
+            cell12.innerHTML = mcTableArray[i].SubsciberClick;
+
+            var cell13 = row.insertCell(12);
+            cell13.innerHTML = mcTableArray[i].Opens;
+
+            var cell14 = row.insertCell(13);
+            cell14.innerHTML = mcTableArray[i].Orders;
+
+            var cell15 = row.insertCell(14);
+            cell15.innerHTML = mcTableArray[i].AverageOrder;
+
+            var cell16 = row.insertCell(15);
+            cell16.innerHTML = mcTableArray[i].Revenue;
+
+            var cell17 = row.insertCell(16);
+            cell17.innerHTML = mcTableArray[i].TotalSpent;
+
+            var cell18 = row.insertCell(17);
+            cell18.innerHTML = mcTableArray[i].Deliveries;
+
+            var cell19 = row.insertCell(18);
+            cell19.innerHTML = mcTableArray[i].DeliveryRate;
+
+            var cell20 = row.insertCell(19);
+            cell20.innerHTML = mcTableArray[i].Spams;
+
+            var cell21 = row.insertCell(20);
+            cell21.innerHTML = mcTableArray[i].SpamRate;
+
+
+            var cell22 = row.insertCell(21);
+            cell22.innerHTML = mcTableArray[i].SendTime;
+
+        }
+</script>

@@ -1,0 +1,493 @@
+﻿<html>
+<head>
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js"></script>
+    <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .pt-35 {
+            padding-top: 35px;
+        }
+
+        #pageFooter:after {
+            counter-increment: page;
+            content: counter(page);
+        }
+
+        .content-header-style {
+            width: 633px;
+            width: fit-content;
+            height: 44px;
+            left: 349px;
+            top: 198px;
+            border-radius: 6px;
+            margin: 20px 0px 20px 18px;
+            padding: 10px;
+        }
+
+        .content-header-style-cust {
+            width: 100%;
+            height: 44px;
+            left: 349px;
+            top: 198px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        .content-text-style {
+            width: 100%;
+            height: 29px;
+            left: 372px;
+            top: 216px;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 29px;
+        }
+
+        .content-text-style-cust {
+            width: 100%;
+            height: 29px;
+            left: 372px;
+            top: 0px;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 11px;
+            line-height: 29px;
+        }
+
+        .flex-style-1 {
+            flex-direction: column;
+            box-sizing: border-box;
+            display: flex;
+            background-color: red;
+        }
+
+        .flex-style {
+            flex-direction: row;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .flex-style-center {
+            flex-direction: column;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center
+        }
+
+        .mat-card-style {
+            height: 100%;
+            min-height: 100%;
+            min-width: 100%;
+            width: 100%;
+            place-content: center;
+            align-items: center;
+            flex-direction: row;
+            box-sizing: border-box;
+            display: flex;
+        }
+
+        .mat-card-title {
+            left: 23.29%;
+            right: 35.29%;
+            top: -1.33%;
+            bottom: 94.43%;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18.0602px;
+            line-height: 21px;
+            display: flex;
+            align-items: center;
+            color: black;
+        }
+
+        .mat-card-content-height {
+            min-height: 90px;
+        }
+
+        .fontxxlrge {
+            font-size: xx-large !important;
+        }
+
+        .fontColor {
+            color: black;
+        }
+
+        .fontsizesmall {
+            font-size: small;
+            margin-bottom: 0%;
+            font-family: Arial;
+        }
+
+        .card-bg-1 {
+            background-color: white;
+        }
+
+        .card-bg-2 {
+            background-color: white;
+        }
+
+        .card-title-color {
+            color: black;
+        }
+
+        .card-title {
+            display: flex;
+        }
+
+        .card-border-radius {
+            border-radius: 4px;
+        }
+
+        .fontxxlrge {
+            font-size: xx-large !important;
+        }
+
+        table {
+            width: 100%;
+            border: 0px solid black;
+        }
+
+        th {
+            color: #E78A1E;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        tr {
+            font-family: Arial;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: black;
+        }
+
+        .text-style-cust {
+            white-space: nowrap;
+            overflow-x: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .list-font-size {
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        li:nth-child(2n+1) {
+            background-color: rgba(0, 0, 0, 0.06);
+            ;
+            height: 30px;
+            text-overflow: ellipsis;
+        }
+
+        li:nth-child(2n) {
+            height: 30px;
+            text-overflow: ellipsis;
+        }
+
+        .flex-style-ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            padding: 5px;
+        }
+
+        .flex-style-li {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            flex: 1;
+        }
+
+        .flex-style-li-div1 {
+            flex: 0.8;
+        }
+
+        .flex-style-li-div2 {
+            flex: 0.2;
+        }
+
+        .class-list-overflow {
+            width: 100%;
+            height: 190px;
+            overflow-y: hidden;
+        }
+
+        @media screen and (max-width: 992px) {
+            .content-header-style {
+                width: 250px;
+                height: 70px;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Chewy|Quattrocento+Sans|Kaushan+Script|Comfortaa|Lobster+Two|Raleway|Montserrat|Titillium+Web|Josefin+Sans|Pacifico|Orbitron|Josefin+Slab|Satisfy|Economica|Courgette" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js">-->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+</head>
+<body style="background-color: #f2edf3;">
+    <div style="background-color: _headerBgColor_; color: _headerTextColor_; height: 50px; visibility: _showHeader_; font-family: _font_;">
+        <div style="height: 100%; padding: 0px 20px; display: flex; flex-direction: row; align-items: center; justify-content: space-between">
+            <!--<span><img src=_headerImage1_ alt="CompanyLogo" width="30" height="30" style=" visibility: _showImg1_;"></span>
+        <span style="color: _headerTextColor_;">_headerText_</span>
+        <span><img src=_headerImage_ alt="campaignLogo" width="30" height="30" style=" visibility: _showImg2_;"></span>-->
+
+            <span>_campaignName_</span>
+            <span>_reportDateRange_</span>
+        </div>
+    </div>
+    <div class="content-header-style" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+        <h2 class="content-text-style" style="display:block; ">Instagram: Performance Summary</h2>
+    </div>
+    <div class="col-md-12 flex-style p-0 mt-3">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-bg-1 card-body text-center card-border-radius">
+                    <iconify-icon style="float:right; padding:5px;" icon="mdi:poll"></iconify-icon>
+                    <h5 class="card-title card-title-color">PAGE PROFILE VIEWS</h5>
+                    <h1 class="card-text card-title-color  fontxxlrge">_1instaTotalPageProfileViews_1</h1>
+                    <h6 class="card-text card-title-color  pt-5">Avg. per day : _1instaAvgPageProfileViews_1</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-bg-1 card-body text-center card-border-radius">
+                    <iconify-icon style="float:right; padding:5px;" icon="mdi:poll"></iconify-icon>
+                    <h5 class="card-title card-title-color">NEW FOLLOWERS</h5>
+                    <h1 class="card-text card-title-color  fontxxlrge">_1instaTotalNewFollowers_1</h1>
+                    <h6 class="card-text card-title-color  pt-5">Avg. per day : _1instaAvgNewFollowers_1</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-bg-1 card-body text-center card-border-radius">
+                    <iconify-icon style="float:right; padding:5px;" icon="mdi:poll"></iconify-icon>
+                    <h5 class="card-title card-title-color">TOTAL FOLLOWERS</h5>
+                    <h1 class="card-text card-title-color  fontxxlrge">_1instaTotalFollowers_1</h1>
+                    <h6 class="card-text card-title-color  pt-5">Avg. per day : NA</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-header-style" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+        <h2 class="content-text-style">Instagram: Impression Summary</h2>
+    </div>
+    <div class="col-md-12 flex-style p-0 mt-3">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-bg-1 card-body text-center card-border-radius">
+                    <iconify-icon style="float:right; padding:5px;" icon="mdi:poll"></iconify-icon>
+                    <h5 class="card-title card-title-color">IG MEDIA IMPRESSIONS</h5>
+                    <h1 class="card-text card-title-color  fontxxlrge">_1instaTotalImpressions_1</h1>
+                    <h6 class="card-text card-title-color  pt-5">Avg. per day : _1instaAvgMediaImpressions_1</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-bg-1 card-body text-center card-border-radius">
+                    <iconify-icon style="float:right; padding:5px;" icon="mdi:poll"></iconify-icon>
+                    <h5 class="card-title card-title-color">IG MEDIA REACH</h5>
+                    <h1 class="card-text card-title-color  fontxxlrge">_1instaTotalReach_1</h1>
+                    <h6 class="card-text card-title-color  pt-5">Avg. per day : _1instaAvgMediaReach_1</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-bg-1 card-body text-center card-border-radius">
+                    <iconify-icon style="float:right; padding:5px;" icon="mdi:poll"></iconify-icon>
+                    <h5 class="card-title card-title-color">WEBSITE REACH</h5>
+                    <h1 class="card-text card-title-color  fontxxlrge">_1instaTotalWebClicks_1</h1>
+                    <h6 class="card-text card-title-color  pt-5">Avg. per day : _1instaAvgWebsiteClicksTotal_1</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-header-style" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+        <h2 class="content-text-style">Instagram: Audience Summary (Life Time Value)</h2>
+    </div>
+    <div class="col-md-12 flex-style p-0 mt-3">
+        <div class="col-md-3">
+            <div class="card class-list-overflow">
+                <div class="card-body text-center card-border-radius">
+                    <iconify-icon style="float:right; padding:5px;" icon="mdi:poll"></iconify-icon>
+                    <h5 class="card-title">TOP LANGUAGES</h5>
+
+                    <ul id="localeList" class="flex-style-ul">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card class-list-overflow">
+                <div class="card-body text-center card-border-radius">
+                    <iconify-icon style="float:right; padding:5px;" icon="mdi:poll"></iconify-icon>
+                    <h5 class="card-title">COUNTRIES OF FOLLOWERS</h5>
+                    <ul id="countyList" class="flex-style-ul">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card class-list-overflow">
+                <div class="card-body text-center card-border-radius">
+                    <iconify-icon style="float:right; padding:5px;" icon="mdi:poll"></iconify-icon>
+                    <h5 class="card-title">CITIES OF FOLLOWERS</h5>
+                    <ul id="cityList" class="flex-style-ul">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body text-center card-border-radius">
+                    <h5 class="card-title">AUDIENCE GENDER</h5>
+                    <canvas style="margin-left: 25px;" id="instagramChartCont" height="115"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer" style="background-color: _headerBgColor_; color: _headerTextColor_; height: 50px; visibility: _showFooter_; font-family: _font_;">
+        <div style="height: 100%; padding: 0px 20px; display: flex; flex-direction: row; align-items: center; justify-content: center">
+            <span>Prepared By -</span><span>&nbsp;_companyName_</span>
+            <!--<span style="color: _headerTextColor_; text-align: center;">_footerText_</span>
+        <span style="color: _headerTextColor_;visibility: _showPageNumber_; ">_pageNumber_</span>-->
+        </div>
+    </footer>
+    <script>
+
+        var ulCity = document.getElementById("cityList");
+        var ulCountry = document.getElementById("countyList");
+        var ulLocale = document.getElementById("localeList");
+        var cityListArray = _1cityListArray1_;
+        var countryListArray = _1countryListArray1_;
+        var localeListArray = _1localeListArray1_;
+
+        cityListArray.sort((a, b) => b.keyValue - a.keyValue);
+        countryListArray.sort((a, b) => b.keyValue - a.keyValue);
+        localeListArray.sort((a, b) => b.keyValue - a.keyValue);
+        for (var i = 1; i <= 5; i++) {
+            var li = document.createElement("li");
+
+            var divCityName = document.createElement("div");
+            divCityName.innerHTML = cityListArray[i].keyName;
+            divCityName.classList.add("list-font-size", "text-style-cust", "flex-style-li-div1");
+            var divCityValue = document.createElement("div");
+            divCityValue.innerHTML = cityListArray[i].keyValue;
+            divCityValue.classList.add("list-font-size", "flex-style-li-div2");
+
+            li.classList.add("flex-style-li");
+            li.appendChild(divCityName);
+            li.appendChild(divCityValue);
+            ulCity.appendChild(li);
+        }
+
+        for (var i = 1; i <= 5; i++) {
+            var li = document.createElement("li");
+
+            var divCountryName = document.createElement("div");
+            divCountryName.innerHTML = countryListArray[i].keyName;
+            divCountryName.classList.add("list-font-size", "text-style-cust", "flex-style-li-div1");
+
+            var divCountryValue = document.createElement("div");
+            divCountryValue.innerHTML = countryListArray[i].keyValue;
+            divCountryValue.classList.add("list-font-size", "flex-style-li-div2");
+
+            li.classList.add("flex-style-li");
+            li.appendChild(divCountryName);
+            li.appendChild(divCountryValue);
+            ulCountry.appendChild(li);
+        }
+
+        for (var i = 1; i <= 5; i++) {
+            var li = document.createElement("li");
+
+            var divLocaleName = document.createElement("div");
+            divLocaleName.innerHTML = localeListArray[i].keyName;
+            divLocaleName.classList.add("list-font-size", "text-style-cust", "flex-style-li-div1");
+
+            var divLocaleValue = document.createElement("div");
+            divLocaleValue.innerHTML = localeListArray[i].keyValue;
+            divLocaleValue.classList.add("list-font-size", "flex-style-li-div2");
+
+            li.classList.add("flex-style-li");
+            li.appendChild(divLocaleName);
+            li.appendChild(divLocaleValue);
+            ulLocale.appendChild(li);
+        }
+       
+
+        var options1 = {
+            type: 'pie',
+            data: {
+                labels: ["Male", "Female"],
+                datasets: [{
+
+                    data: [_1instaGenderPieChartData_],
+                    legend: false, fill: true,
+
+                    backgroundColor: ['#ffa096', '#9a55ff'],
+                    pointHoverBackgroundColor: '#2D9EE2',
+                    pointHoverBorderColor: 'white',
+
+                }]
+            },
+            options: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        fontSize: 10,
+                        usePointStyle: true
+                    }
+
+                },
+            }
+        }
+
+        var ctx = document.getElementById('instagramChartCont').getContext('2d');
+        new Chart(ctx, options1);
+    </script>
+
+</body>
+</html>

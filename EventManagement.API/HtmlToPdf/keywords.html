@@ -1,0 +1,66 @@
+﻿<body>
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3" style="background-color:_themeBgColor_;color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top:10px; padding-left:10px;">Google Keyword Ranking</h2>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="card card-body text-center">
+                <h3></h3>
+                <table class="table table-bordered" id="keywordTable">
+                    <thead>
+                        <tr class="fontsizesmall table-cell-height">
+                            <td class="table-zone td-col-text-style">Keyword Phrase</td>
+                            <td class="table-zone td-col-text-style">Cur. Position</td>
+                            <td class="table-zone td-col-text-style">Prev. Position</td>
+                            <td class="table-zone td-col-text-style">Cur. Date</td>
+                            <td class="table-zone td-col-text-style">Prev. Date</td>
+                            <td class="table-zone td-col-text-style">Change</td>
+                            <td class="table-zone td-col-text-style">Location</td>
+                        </tr>
+                    </thead>
+                    <tbody class="p-1">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tableArray = _tableArrayList_;
+        var table = document.getElementById("keywordTable").getElementsByTagName('tbody')[0];
+        table.classList.add("p-1");
+        for (var i = 0; i < tableArray.length; i++) {
+            var row = table.insertRow(i);
+            row.classList.add('text-align-start');
+            var cell1 = row.insertCell(0);
+            cell1.innerHTML = tableArray[i].Keyword;
+            cell1.classList.add("p-1");
+            var cell2 = row.insertCell(1);
+            cell2.innerHTML = tableArray[i].CurrentPosition;
+            cell2.classList.add("p-1");
+            var cell3 = row.insertCell(2);
+            cell3.innerHTML = tableArray[i].PreviousPosition;
+            cell3.classList.add("p-1");
+            var cell4 = row.insertCell(3);
+            cell4.innerHTML = tableArray[i].CurrentDate;
+            cell4.classList.add("p-1");
+            var cell5 = row.insertCell(4);
+            cell5.innerHTML = tableArray[i].PreDate;
+            cell5.classList.add("p-1");
+            var cell6 = row.insertCell(5);
+            cell6.innerHTML = tableArray[i].change;
+            cell6.classList.add("p-1");
+            var cell7 = row.insertCell(6);
+            cell7.innerHTML = tableArray[i].Location;
+            cell7.classList.add("p-1");
+        }
+                                                                    //# sourceURL=pen.js
+    </script>
+
+
+</body>
+
+

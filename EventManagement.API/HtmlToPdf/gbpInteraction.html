@@ -1,0 +1,85 @@
+﻿<!--Profile Interaction-->
+<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body" style="max-height:400px;">
+
+            <div class="card-title pt-2" style="display: flex;justify-content: space-between; align-items: center;">
+                <span style="font-weight: bold; align-self: flex-start;">Profile Interaction</span>
+                <div style="display: flex; flex-direction: column; align-items: flex-end;">
+                    <span style="font-weight: 500; color: _profileInterDiffColor_; text-align: right;">_profileInterDiff_</span>
+                    <span style="color: black; text-align: right;">_vsDateRange_</span>
+                </div>
+            </div>
+
+            <div style="display: flex;justify-content:center;">
+                <canvas id="chartJSProfileInt"
+                        style="display: block; box-sizing: border-box; height: 300px; width: 100%"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var labelnterval = _labelInterval_;
+
+    var optionsCom = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: "top",
+            },
+        },
+        scales: {
+            xAxes: [{
+                ticks: {
+                    fontColor: 'rgb(0,0,0)',
+                    fontSize: 14,
+                    maxRotation: 0,
+                    minRotation: 0,
+                    autoSkip: false,
+                    callback: function (value, index, values) {
+
+                        return index % labelnterval === 0 ? value : '';
+                    }
+                }
+            }],
+            yAxes: [{
+
+                ticks: {
+                    fontColor: 'rgb(0,0,0)',
+                    fontSize: 14
+                }
+            }]
+        },
+        legend: {
+            labels: {
+                fontColor: 'rgb(0,0,0)',
+                usePointStyle: true,
+                fontSize: 14
+            }
+        },
+    }
+
+    var options3 = {
+        type: 'line',
+        data: {
+            labels: [_1gbpInterChartLabels_],
+            datasets: [{
+                fill: false,
+                data: [_1gbpInterChartData_],
+                label: "Profile Interaction",
+                backgroundColor: 'rgb(8, 120, 179)',
+                borderColor: 'rgb(8, 120, 179)',
+                borderWidth: 2,
+                pointRadius: 2
+            }]
+
+        },
+        options: optionsCom
+    }
+
+    var ctx = document.getElementById('chartJSProfileInt').getContext('2d');
+    new Chart(ctx, options3);
+</script>

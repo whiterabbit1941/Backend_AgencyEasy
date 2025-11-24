@@ -1,0 +1,364 @@
+﻿
+<html>
+<head>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+        body {
+            background: #222;
+        }
+
+        .pt-35 {
+            padding-top: 35px;
+        }
+
+        h1 {
+            font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+            color: #BBB;
+            font-weight: 500;
+            font-size: 40px;
+        }
+
+        .piechartWrapper {
+            padding: 10px 50px;
+            text-align: center;
+        }
+
+        .piechart {
+            position: relative;
+            display: inline-block;
+            margin: 20px 10px;
+            color: #BBB;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            text-align: center;
+        }
+
+            .piechart canvas {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+        .content-header-style {
+            width: 633px;
+            height: 44px;
+            left: 349px;
+            top: 198px;
+            background: #3445f6;
+            border-radius: 6px;
+            margin: 20px 0px 20px 18px;
+            padding: 3px;
+            width: fit-content;
+        }
+
+        .flex-style-1 {
+            flex-direction: column;
+            box-sizing: border-box;
+            display: flex;
+            background-color: red;
+        }
+
+        .flex-style {
+            flex-direction: row;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .flex-style-center {
+            flex-direction: column;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center
+        }
+
+        .mat-card-style {
+            height: 100%;
+            min-height: 100%;
+            min-width: 100%;
+            width: 100%;
+            place-content: center;
+            align-items: center;
+            flex-direction: row;
+            box-sizing: border-box;
+            display: flex;
+        }
+
+        .mat-card-title {
+            left: 23.29%;
+            right: 35.29%;
+            top: -1.33%;
+            bottom: 94.43%;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18.0602px;
+            line-height: 21px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .mat-card-content-height {
+            min-height: 90px;
+        }
+
+        .fontxxlrge {
+            font-size: xx-large !important;
+        }
+
+        .fontColor {
+            color: white;
+        }
+
+        .fontsizesmall {
+            font-size: small;
+            margin-bottom: 0%;
+            font-family: Arial;
+        }
+
+        .card-bg-1 {
+            background-color: #1C4880;
+        }
+
+        .card-bg-2 {
+            background-color: #E52D2D;
+        }
+
+        .card-title-color {
+            color: white;
+        }
+
+        .card-border-radius {
+            border-radius: 4px;
+        }
+
+        .fontxxlrge {
+            font-size: xx-large !important;
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .table-cell-height {
+            height: 10px !important;
+        }
+
+        .table-zone {
+            padding: 0.25rem !important;
+        }
+
+        .td-col-text-style {
+            color: black;
+        }
+
+        .table-border-none {
+            border: none;
+        }
+
+        .set-iconsize {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        .flex-style-container-header {
+            display: flex;
+            flex-direction: row;
+            flex: 1
+        }
+
+        .flex-cust-25 {
+            flex: 0.25;
+        }
+
+        .flex-cust-8 {
+            flex: 0.091;
+        }
+
+        .flex-cust-9 {
+            flex: 0.091;
+        }
+
+        .flex-cust-3 {
+            flex: 0.03;
+        }
+
+        .flex-cust-21 {
+            flex: 0.25
+        }
+
+        .flex-cust-23 {
+            flex: 0.18
+        }
+
+        .content-header-style-cust {
+            height: 44px;
+            left: 349px;
+            top: 198px;
+            border-radius: 6px;
+            padding: 3px;
+        }
+
+        .content-text-style {
+            width: 100%;
+            height: 29px;
+            left: 372px;
+            top: 216px;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        #pageFooter:after {
+            counter-increment: page;
+            content: counter(page);
+        }
+    </style>
+
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Chewy|Quattrocento+Sans|Kaushan+Script|Comfortaa|Lobster+Two|Raleway|Montserrat|Titillium+Web|Josefin+Sans|Pacifico|Orbitron|Josefin+Slab|Satisfy|Economica|Courgette" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js">-->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.2/Chart.bundle.min.js"></script>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://rendro.github.io/easy-pie-chart/javascripts/jquery.easy-pie-chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+</head>
+<body style="background-color :#f2edf3;">
+    <div style="background-color: _headerBgColor_; color: _headerTextColor_; height: 50px; visibility: _showHeader_; font-family: _font_;">
+        <div style="height: 100%; padding: 0px 20px; display: flex; flex-direction: row; align-items: center; justify-content: space-between">
+            <!--<span><img src=_headerImage1_ alt="CompanyLogo" width="30" height="30" style=" visibility: _showImg1_;"></span>
+        <span style="color: _headerTextColor_;">_headerText_</span>
+        <span><img src=_headerImage_ alt="campaignLogo" width="30" height="30" style=" visibility: _showImg2_;"></span>-->
+
+            <span>_campaignName_</span>
+            <span>_reportDateRange_</span>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="content-header-style-cust mb-3 mt-3 ml-2" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                    <h2 class="content-text-style" style="padding-top:10px; padding-left:10px;">GOOGLE ANALYTICS - ORGANIC SESSIONS</h2>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="content-header-style-cust mb-3 mt-3" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                    <h2 class="content-text-style" style="padding-top:10px; padding-left:10px;">GOOGLE ANALYTICS - ORGANIC CONVERSIONS</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 flex-style mt-2 p-0">
+        <div class="col-md-6">
+            <div class="card card-body text-center">
+                <h4 class="card-title" style="align-self: flex-start">Organic Sessions</h4>
+                <canvas id="OrganicTrafficChartJSCont"
+                        style="display: block; box-sizing: border-box; height:200px;"></canvas>
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card card-body text-center">
+                <h4 class="card-title" style="align-self:flex-start  ">Organic Conversions</h4>
+                <canvas id="OrganicConversionChartJSCont"
+                        style="display: block; box-sizing: border-box; height:200px;"></canvas>
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer" style="background-color: _headerBgColor_; color: _headerTextColor_; height: 50px; visibility: _showFooter_; font-family: _font_;">
+        <div style="height: 100%; padding: 0px 20px; display: flex; flex-direction: row; align-items: center; justify-content: center">
+            <span>Prepared By -</span><span>&nbsp;_companyName_</span>
+            <!--<span style="color: _headerTextColor_; text-align: center;">_footerText_</span>
+        <span style="color: _headerTextColor_;visibility: _showPageNumber_; ">_pageNumber_</span>-->
+        </div>
+    </footer>
+
+    <script>
+        var options1 = {
+            type: 'bar',
+            data: {
+                labels: [_1gaConverionLabels1_],
+                datasets: [{
+                    label: 'Current Period',
+                    data: [_1gaConverionData1_],
+                    backgroundColor: '#9049f9',                    
+                }, {
+                    label: 'Previous Period',
+                    data: [_2gaConverionData2_],
+                    backgroundColor: '#fb8d82',
+                },
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: "top",
+                    },
+                },
+            }
+        }
+
+        var options = {
+            type: 'bar',
+            data: {
+                labels: [_1gaTrafficLabels1_],
+                datasets: [{
+                    label: 'Current Period',
+                    data: [_1gaTrafficData1_],
+                    backgroundColor: '#9049f9',
+                }, {
+                    label: 'Previous Period',
+                    data: [_2gaTrafficData2_],
+                    backgroundColor: '#fb8d82',
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: "top",
+                    },
+                },
+            }
+        }
+
+        var ctx = document.getElementById('OrganicTrafficChartJSCont').getContext('2d');
+        new Chart(ctx, options);
+        var ctx = document.getElementById('OrganicConversionChartJSCont').getContext('2d');
+        new Chart(ctx, options1);
+
+    </script>
+
+</body>
+</html>
+

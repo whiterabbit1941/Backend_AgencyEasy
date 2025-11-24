@@ -1,0 +1,604 @@
+﻿<html>
+<head>
+    <script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .content-header-style {
+            width: 633px;
+            height: 44px;
+            left: 349px;
+            top: 198px;
+            border-radius: 6px;
+            margin: 20px 0px 20px 18px;
+            padding: 10px;
+            width: fit-content;
+        }
+
+        .pt-35 {
+            padding-top: 35px;
+        }
+
+        .content-header-style-cust {
+            width: 100%;
+            height: 44px;
+            left: 349px;
+            top: 198px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        .content-text-style {
+            width: 100%;
+            height: 29px;
+            left: 372px;
+            top: 216px;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 29px;
+            width: fit-content;
+        }
+
+        .content-text-style-cust {
+            width: 100%;
+            height: 29px;
+            left: 372px;
+            top: 0px;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 29px;
+        }
+
+        .flex-style-1 {
+            flex-direction: column;
+            box-sizing: border-box;
+            display: flex;
+            background-color: red;
+        }
+
+        .flex-style {
+            flex-direction: row;
+            box-sizing: border-box;
+            display: flex;
+        }
+
+        .flex-style-center {
+            flex-direction: column;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center
+        }
+
+        .mat-card-style {
+            height: 100%;
+            min-height: 100%;
+            min-width: 100%;
+            width: 100%;
+            place-content: center;
+            align-items: center;
+            flex-direction: row;
+            box-sizing: border-box;
+            display: flex;
+        }
+
+        .mat-card-title {
+            left: 23.29%;
+            right: 35.29%;
+            top: -1.33%;
+            bottom: 94.43%;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18.0602px;
+            line-height: 21px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .mat-card-content-height {
+            min-height: 90px;
+        }
+
+        .fontxxlrge {
+            font-size: xx-large !important;
+        }
+
+        .fontColor {
+            color: white;
+        }
+
+        .fontsizesmall {
+            font-size: small;
+            margin-bottom: 0%;
+            font-family: Arial;
+        }
+
+        .card-bg-1 {
+            background-color: white;
+        }
+
+        .card-title-color {
+            color: white;
+        }
+
+        .card-border-radius {
+            border-radius: 4px;
+        }
+
+        .fontxxlrge {
+            font-size: xx-large !important;
+        }
+
+        table {
+            width: 100%;
+            border: 0px solid black;
+        }
+
+        th {
+            color: #E78A1E;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        tr {
+            font-family: Arial;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: black;
+        }
+
+        .h-200 {
+            height: 200px
+        }
+
+        .fontsizesmall {
+            font-size: small;
+            font-family: Arial;
+        }
+
+        .card-flex-style-sub {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+        }
+
+        .fl-1 {
+            display: flex;
+        }
+
+        .f-3 {
+            flex: 0.3;
+        }
+
+        .f-2 {
+            flex: 0.2;
+        }
+
+        .f-7 {
+            flex: 0.7;
+        }
+
+        .f-10 {
+            flex: 1;
+        }
+
+        .pt-4-cust {
+            padding-top: 2.3rem !important;
+        }
+
+        .border-0 {
+            border: 0;
+            background-color: white;
+        }
+
+        .pt-4-cust-1 {
+            padding-top: 2.2rem !important;
+        }
+
+        .countryDetail {
+            text-align: center;
+        }
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            background-color: #9a55ff;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .bold {
+            font-weight: 500;
+        }
+
+        .dotOrange {
+            height: 15px;
+            width: 15px;
+            background-color: #ffa096;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .fontsizesmallCountry {
+            font-size: smaller;
+            font-family: $figFontFamily;
+        }
+
+        .neg {
+            color: red;
+        }
+
+        .pos {
+            color: green;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        #pageFooter:after {
+            counter-increment: page;
+            content: counter(page);
+        }
+    </style>
+
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Chewy|Quattrocento+Sans|Kaushan+Script|Comfortaa|Lobster+Two|Raleway|Montserrat|Titillium+Web|Josefin+Sans|Pacifico|Orbitron|Josefin+Slab|Satisfy|Economica|Courgette" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js">-->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+</head>
+<body style="background-color :#f2edf3;">
+    <div style="background-color: _headerBgColor_; color: _headerTextColor_; height: 50px; visibility: _showHeader_; font-family: _font_;">
+        <div style="height: 100%; padding: 0px 20px; display: flex; flex-direction: row; align-items: center; justify-content: space-between">
+            <!--<span><img src=_headerImage1_ alt="CompanyLogo" width="30" height="30" style=" visibility: _showImg1_;"></span>
+        <span style="color: _headerTextColor_;">_headerText_</span>
+        <span><img src=_headerImage_ alt="campaignLogo" width="30" height="30" style=" visibility: _showImg2_;"></span>-->
+
+            <span>_campaignName_</span>
+            <span>_reportDateRange_</span>
+        </div>
+    </div>
+
+    <div class="content-header-style" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+        <h2 class="content-text-style">Facebook: Impression Summary</h2>
+    </div>
+    <div class="col-md-12 flex-style p-0 mt-3">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body text-center card-border-radius h-200">
+                    <iconify-icon style="float:right; padding:5px;" icon="mdi:poll"></iconify-icon>
+                    <h5 class="card-title fl-1">PAGE IMPRESSIONS</h5>
+
+                    <h1 class="card-text  fontxxlrge">_1fbPageImpressionMainTotal1_</h1>
+                    <h6 id="impressionCard" class="card-text p-3 "><i id="impressionIcon" class="fas"></i>_1fbPageImpressionDiff1_<span>%</span></h6>
+                    <h6 class="fontsizesmall f-7">Avg. per day : _1fbPageImpressionsAvgTotal1_</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body text-center card-border-radius h-200">
+                    <iconify-icon style="float:right; padding:5px;" icon="mdi:poll"></iconify-icon>
+                    <h5 class="card-title fl-1">PAGE REACH</h5>
+                    <h1 class="card-text  fontxxlrge">_1fbPageReachMainTotal1_</h1>
+
+                    <h6 id="reachCard" class="card-text p-3 "><i id="reachIcon" class="fas"></i>_1fbPageReachDiff1_<span>%</span></h6>
+                    <h6 class="fontsizesmall f-7">Avg. per day : _1fbPageReachAvgTotal1_</h6>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="text-center">
+                    <h5 class="card-title" style="padding-top:20px;">ORGANIC VS PAID REACH</h5>
+                </div>
+                <div class="row">
+                    <div class="col-md-6" style="height:145px;">
+                        <div class="card-body text-center card-border-radius h-200 p-0">
+                            <canvas style="margin-left: 20px;" id="fbOrganicvsPaid" height="350"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="display:flex;flex-direction:column;justify-content:center">
+                        <div class="countryDetail" style="display:flex;flex-direction:column;justify-content:center">
+                            <span><span class="dot"></span> Organic : <span id="org1" class="bold"></span></span>
+                            <span><span class="dotOrange"></span>  Paid : <span id="paid1" class="bold"></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="text-center">
+                    <h5 class="card-title" style="padding-top:20px;">TOP COUNTRIES</h5>
+                </div>
+                <div class="row">
+                    <div class="col-md-6" style="height:145px;">
+                        <div class="card-body text-center card-border-radius h-200 p-0">
+                            <canvas style="margin-left: 20px;" id="topContriesFb" height="350"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="display:flex;flex-direction:column;justify-content:center">
+                        <div class="countryDetail" style="display:flex;flex-direction:column">
+                            <span><span class="dot"></span> Country : <span id="coutlabel1" class="bold"></span></span>
+                            <span><span class="fontsizesmallCountry">Count : <span id="topcount" class="bold"></span></span></span>
+                            <span><span class="fontsizesmallCountry">Percentage : <span id="country1" class="bold"></span></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 flex-style p-0 mt-3">
+        <div class="col-md-3">
+            <div class="content-header-style-cust" style="height:64px; background-color: _themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style-cust">Facebook: Performance Summary</h2>
+            </div>
+
+        </div>
+        <div class="col-md-6  mt-0">
+            <div class="content-header-style-cust " style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style-cust">Facebook: Audience Summary</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 flex-style p-0 mt-3">
+        <div class="col-md-3">
+            <div class="card">
+                <div style="height : 190px;" class="card-body text-center card-border-radius">
+                    <iconify-icon style="float:right; padding:5px;" icon="mdi:poll"></iconify-icon>
+                    <h5 class="card-title fl-1">PAGE PROFILE VIEWS</h5>
+                    <h1 class="card-text  fontxxlrge">_1fbPageProfileMainTotal1_</h1>
+
+                    <h6 id="profileViewCard" class="card-text p-3 f-3 "><iconify-icon id="profileViewIcon" class="fas" icon=""></iconify-icon>_1fbPageProfileDiff1_<span>%</span></h6>
+                    <h6 class="fontsizesmall f-7">Avg. per day : _1fbPageProfileAvgTotal1_</h6>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card">
+                <div style="height : 190px;" class="card-body text-center card-border-radius">
+                    <iconify-icon style="float:right; padding:5px;" icon="mdi:poll"></iconify-icon>
+                    <h5 class="card-title fl-1">TOTAL PAGE LIKES</h5>
+                    <h1 class="card-text  fontxxlrge">_1fbPageLikesMainTotal1_</h1>
+                    <!--<h6 class="card-text  pt-5">-22.92%</h6>-->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body text-center card-border-radius">
+                    <iconify-icon style="float:right; padding:5px;" icon="mdi:poll"></iconify-icon>
+                    <h5 class="card-title fl-1">NEW LIKES</h5>
+                    <h1 class="card-text  fontxxlrge">_1fbPageNewLikesMainTotal1_</h1>
+                    <div class="card-footer card-flex-style-sub border-0" style="border: 0;background: white;">
+                        <h6 class="fontsizesmall pt-4-cust f-10">Avg. per day : -12</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="text-center">
+                    <h5 class="card-title" style="padding-top:20px;">ORGANIC VS PAID LIKES</h5>
+                </div>
+                <div class="row">
+                    <div class="col-md-6" style="max-height:145px;">
+                        <div style="height : 190px;" class="card-body text-center card-border-radius p-0">
+                            <canvas style="margin-left: 20px;" id="organicPaidvsLike" height="350"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="display:flex;flex-direction:column;justify-content:center">
+                        <span><span class="dot"></span> Organic : <span id="org2" class="bold"></span></span>
+                        <span><span class="dotOrange"></span>  Paid : <span id="paid2" class="bold"></span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" style="background-color: _headerBgColor_; color: _headerTextColor_; height: 50px; visibility: _showFooter_; font-family: _font_;">
+        <div style="height: 100%; padding: 0px 20px; display: flex; flex-direction: row; align-items: center; justify-content: center">
+            <span>Prepared By -</span><span>&nbsp;_companyName_</span>
+            <!--<span style="color: _headerTextColor_; text-align: center;">_footerText_</span>
+        <span style="color: _headerTextColor_;visibility: _showPageNumber_; ">_pageNumber_</span>-->
+        </div>
+    </footer>
+
+    <script>
+
+        var pageReachDiff = _1fbPageReachDiff1_;
+        var pageImpressionDiff = _1fbPageImpressionDiff1_;
+        var pageProfileDiff = _1fbPageProfileDiff1_;
+        var orgPaidChart1 = [_1fbPieChartReachData1_];
+        document.getElementById("org1").innerText = orgPaidChart1[0];
+        document.getElementById("paid1").innerText = orgPaidChart1[1];
+        var countryLabelData1 = [_1fbPieChartCountriesLabel1_];
+        document.getElementById("coutlabel1").innerText = countryLabelData1[0];
+        var topcount = _1fbTopCountForCountries;
+        var countrychartData1 = [_1fbPieChartCountriesData1_];
+        document.getElementById("topcount").innerText = topcount;
+        document.getElementById("country1").innerText = countrychartData1[0];
+        var likesData = [_1fbPieChartLikesData1_];
+        document.getElementById("org2").innerText = likesData[0];
+        document.getElementById("paid2").innerText = likesData[1];
+
+        if (pageImpressionDiff > 0) {
+
+            document.getElementById("impressionCard").classList.add("text-success");
+            document.getElementById("impressionIcon").classList.add("fa-arrow-up");
+        }
+        else if (pageImpressionDiff < 0) {
+            document.getElementById("impressionCard").classList.add("text-danger");
+            document.getElementById("impressionIcon").classList.add("fa-arrow-down");
+        }
+        else {
+            document.getElementById("impressionCard").classList.add("text-secondary");
+            /*document.getElementById("impressionIcon").classList.add("fa-arrow-up");*/
+        }
+
+        if (pageReachDiff > 0) {
+            document.getElementById("reachCard").classList.add("text-success");
+            document.getElementById("reachIcon").classList.add("fa-arrow-up");
+        }
+        else if (pageReachDiff < 0) {
+            document.getElementById("reachCard").classList.add("text-danger");
+            document.getElementById("reachIcon").classList.add("fa-arrow-down");
+        }
+        else {
+            document.getElementById("impressionCard").classList.add("text-secondary");
+        }
+
+        if (pageProfileDiff > 0) {
+            document.getElementById("profileViewCard").classList.add("text-success");
+            document.getElementById("profileViewIcon").classList.add("fa-arrow-up");
+        }
+        else if (pageProfileDiff < 0) {
+            document.getElementById("profileViewCard").classList.add("text-danger");
+            document.getElementById("profileViewIcon").classList.add("fa-arrow-down");
+        }
+        else {
+            document.getElementById("profileViewCard").classList.add("text-secondary");
+        }
+
+        //var countriesPieChartColor = [_1fbPieChartCountriesData1_];
+        //for (var i = 0; i < countriesPieChartColor.length; i++) {
+
+        //    options2.data.datasets[0].backgroundColor.push(getRandomColorHex());
+        //}
+        var options1 = {
+            type: 'pie',
+            data: {
+                labels: ["Organic", "Paid"],
+                datasets: [{
+
+                    data: [_1fbPieChartReachData1_],
+                    legend: false, fill: true,
+
+                    backgroundColor: ['#9a55ff', '#ffa096'],
+                    pointHoverBackgroundColor: '#2D9EE2',
+                    pointHoverBorderColor: 'white',
+
+                }]
+            },
+            options: {
+                legend: {
+                    display: false,
+                    position: 'bottom',
+                    labels: {
+                        fontSize: 10,
+                        usePointStyle: true
+                    }
+
+                },
+            }
+        }
+        var options2 = {
+            type: 'pie',
+            data: {
+                labels: [_1fbPieChartCountriesLabel1_],
+                datasets: [{
+
+                    data: [_1fbPieChartCountriesData1_],
+                    legend: false, fill: true,
+                    backgroundColor: ["#9a55ff", "#ffa096", "#bc5090", "#7a85f5", "#5b94ba"],
+                    pointHoverBackgroundColor: '#2D9EE2',
+                    pointHoverBorderColor: 'white',
+
+                }]
+            },
+            options: {
+                legend: {
+                    position: 'bottom',
+                    display: false,
+                    labels: {
+                        fontSize: 10,
+                        usePointStyle: true
+                    }
+
+                },
+            }
+        }
+        var options3 = {
+            type: 'pie',
+            data: {
+                labels: ["Organic", "Paid"],
+                datasets: [{
+
+                    data: [_1fbPieChartLikesData1_],
+                    legend: false, fill: true,
+
+                    backgroundColor: ['#9a55ff', '#ffa096'],
+                    pointHoverBackgroundColor: '#2D9EE2',
+                    pointHoverBorderColor: 'white',
+
+                }]
+            },
+            options: {
+                legend: {
+                    display: false,
+                    position: 'bottom',
+                    labels: {
+                        fontSize: 10,
+                        usePointStyle: true
+                    }
+
+                },
+            }
+        }
+
+        var ctx = document.getElementById('fbOrganicvsPaid').getContext('2d');
+        new Chart(ctx, options1);
+        var ctx = document.getElementById('topContriesFb').getContext('2d');
+        new Chart(ctx, options2);
+        var ctx = document.getElementById('organicPaidvsLike').getContext('2d');
+        new Chart(ctx, options3);
+        function getRandomColorHex() {
+            var hex = "0123456789ABCDEF",
+                color = "#";
+            for (var i = 1; i <= 6; i++) {
+                color += hex[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+
+</body>
+</html>

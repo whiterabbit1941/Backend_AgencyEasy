@@ -1,0 +1,39 @@
+﻿<!--Searches-->
+<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body text-center">
+            <div class="card-title pt-2" style="display:flex;justify-content:space-between; align-items: center;">
+                <span style="font-weight:bold; align-self:flex-start;">Searches</span>
+                <div style="display: flex; flex-direction:column;align-items: flex-end;">
+                    <span style="font-weight: 500; color: _searchKeywordDiffColor_; text-align: right;">_searchKeywordDiff_</span>
+                    <span style="color:black;text-align:right;">_vsDateRange_</span>
+                </div>
+            </div>
+
+            <table class="table table-bordered" id="gbpSearchTable">
+                <thead>
+                    <tr class="fontsizesmall table-cell-height">
+                        <td class="table-zone td-col-text-style">Name</td>
+                        <td class="table-zone td-col-text-style">Searches</td>
+                    </tr>
+                </thead>
+                <tbody class="p-1">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+
+    var tableArray = _gbpKeywordArrayList_;
+    var table = document.getElementById("gbpSearchTable").getElementsByTagName('tbody')[0];
+    for (var i = 0; i < tableArray.length; i++) {
+        var row = table.insertRow(i);
+        row.classList.add('text-align-start');
+        var cell1 = row.insertCell(0);
+        cell1.innerHTML = tableArray[i].searchKeyword;
+        var cell2 = row.insertCell(1);
+        cell2.innerHTML = tableArray[i].insightsValue.value;
+    }
+
+</script>

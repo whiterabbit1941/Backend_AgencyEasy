@@ -1,0 +1,55 @@
+﻿
+    <!--Location-->
+    <div class="row a4-page mt-3">
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px">
+
+                <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                    <span style="font-weight:bold;">Location</span>
+                </h4>
+                <div class="px-5" style="display: flex; justify-content:center;">
+                    <div class="mx-5" style="width:210px;">
+                        <canvas id="wcLocationChart"
+                                style="display: block; box-sizing: border-box; height: 300px;"></canvas>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--end woo commerce-->
+
+    <script>
+
+        var options1 = {
+            type: 'pie',
+            data: {
+                labels: [_wcPieChartLabel_],
+                datasets: [{
+                    label: 'My First Dataset',
+                    data: [_wcPieChartData_],
+                    backgroundColor: [_wcBgColorPieChart_],
+                    hoverOffset: 4
+                }]
+
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        usePointStyle: true,
+                        fontSize: 14
+                    },
+                    position: "right",
+                },
+            }
+        }
+
+        var ctx = document.getElementById('wcLocationChart').getContext('2d');
+        new Chart(ctx, options1);
+
+    </script>

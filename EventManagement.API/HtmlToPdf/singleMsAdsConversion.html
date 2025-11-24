@@ -1,0 +1,249 @@
+﻿<div class="row a4-page mt-3">
+    <div class="col-md-6">
+        <div class="content-header-style-cust mb-3 mt-3" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+            <h2 class="content-text-style" style="padding-top: 10px;padding-left: 10px;">_singleMsAdsConversionName_</h2>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="card card-body" style="max-height:400px">
+            <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                <span style="font-weight:bold;">_msAdsLineTitle_</span>
+                <span style="font-weight:bold;">_msAdsLineTotal_</span>
+
+            </h4>
+            <div style="display: flex; justify-content: center;">
+                <canvas id="_msAdsLineChartId_"
+                        style="display: block; box-sizing: border-box; height: 300px;width:100%;"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body" style="max-height:400px">
+            <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                <span style="font-weight:bold;">_msAdsBarChartTitle_</span>
+                <span style="font-weight:bold;">_msAdsBarChartTotal</span>
+            </h4>
+            <div style="display: flex; justify-content: center;">
+                <canvas id="_msAdsBarChartId_"
+                        style="display: block; box-sizing: border-box; height: 300px;width:100%;"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row a4-page">
+
+    <div class="col-md-6">
+        <div class="content-header-style-cust mt-3" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+            <h2 class="content-text-style" style="padding-top: 10px;padding-left: 10px;">Microsoft Ads - Conversions Performance</h2>
+        </div>
+    </div>
+
+    <div class="col-md-12 flex-style p-0 mt-3">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-bg-1 card-body text-center card-border-radius">
+                    <h5 class="card-title card-title-color">Conversions</h5>
+                    <h1 class="card-text card-title-color fontxxlrge">_msAdsConversionsData_</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class=" card-bg-1 card-body text-center card-border-radius">
+                    <h5 class="card-title card-title-color">Revenue</h5>
+                    <h1 class="card-text card-title-color fontxxlrge">_msAdsRevenueData_</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Number of Keywords-->
+<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body text-center">
+            <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                <span style="font-weight:bold;">Microsoft Conversions Table</span>
+            </h4>
+            <table class="table table-bordered" id="_msAdsConversionTableId_">
+                <thead>
+                    <tr class="fontsizesmall font-weight-bold table-cell-height">
+                        <td class="table-zone td-col-text-style">GOAL</td>
+                        <td class="table-zone td-col-text-style">CAMPAGIN</td>
+                        <td class="table-zone td-col-text-style">CONVERSIONS</td>
+                        <td class="table-zone td-col-text-style">REVENUE</td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <tbody class="p-1">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var labelnterval = _msAdsLabelInterval_;
+
+    var options = {
+        type: 'line',
+        data: {
+            labels: [_msAdsLineChartLabel_],
+            datasets: [{
+                fill: false,
+                label: "Current Period",
+                data: [_msLineChartData_],
+                backgroundColor: "rgb(108 60 179)",
+                borderColor: "rgb(108 60 179)",
+                borderWidth: 2,
+                pointRadius: 2
+            }
+
+            ],
+
+        },
+
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+
+                xAxes: [{
+                    ticks: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14,
+                        maxRotation: 0,
+                        minRotation: 0,
+                        autoSkip: false,
+                        callback: function (value, index, values) {
+
+                            return index % labelnterval === 0 ? value : '';
+                        }
+
+
+                    },
+                    gridLines: {
+                        display: false // Hide y-axis grid lines
+                    }
+                }],
+                yAxes: [{
+
+                    ticks: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14
+                    },
+                    gridLines: {
+                        display: true // Hide y-axis grid lines
+                    }
+                }]
+            },
+            legend: {
+                display: false
+            },
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: "top",
+                },
+            },
+
+        }
+    }
+
+    var ctx = document.getElementById('_msAdsLineChartId_').getContext('2d');
+    new Chart(ctx, options);
+
+    var options1 = {
+        type: 'bar',
+        data: {
+            labels: [_msAdsBarChartLabel_],
+            datasets: [{
+                fill: false,
+                label: "Current Period",
+                data: [_msAdsBarChartData_],
+                backgroundColor: "rgb(108 60 179)",
+                borderColor: "rgb(108 60 179)",
+                borderWidth: 2,
+                pointRadius: 2
+            }
+
+            ],
+
+        },
+
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+
+                xAxes: [{
+
+                    ticks: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14,
+                        maxRotation: 0,
+                        minRotation: 0,
+                        autoSkip: false
+
+
+                    },
+                    gridLines: {
+                        display: false // Hide y-axis grid lines
+                    }
+                }],
+                yAxes: [{
+
+                    ticks: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14,
+                        beginAtZero: true
+                    },
+                    gridLines: {
+                        display: true // Hide y-axis grid lines
+                    }, beginAtZero: true
+                }]
+            },
+            legend: {
+                display: false
+            },
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: "top",
+                },
+            },
+
+        }
+    }
+
+    var ctx1 = document.getElementById('_msAdsBarChartId_').getContext('2d');
+    new Chart(ctx1, options1);
+
+    var _msAdsConversionTable_Array = _msAdsConvTableData_;
+
+    var wctable1 = document.getElementById("_msAdsConversionTableId_").getElementsByTagName('tbody')[0];
+    for (var i = 0; i < _msAdsConversionTable_Array.length; i++) {
+        var row = wctable1.insertRow(i);
+        row.classList.add('text-align-start');
+
+        var cell1 = row.insertCell(0);
+        cell1.innerHTML = _msAdsConversionTable_Array[i].Goal;
+
+        var cell2 = row.insertCell(1);
+        cell2.innerHTML = _msAdsConversionTable_Array[i].CampaignName;
+
+        var cell3 = row.insertCell(2);
+        cell3.innerHTML = _msAdsConversionTable_Array[i].Conversions;
+
+        var cell4 = row.insertCell(3);
+        cell4.innerHTML = _msAdsConversionTable_Array[i].Revenue;
+
+    }
+
+
+</script>

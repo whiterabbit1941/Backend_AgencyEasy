@@ -1,0 +1,86 @@
+﻿
+<body>
+  
+    <!--user purchase journey-->
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Google Analytics4: User Purchase Journey</h2>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px">
+                <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                    <span style="font-weight:bold;">User Purchase Journey</span>
+                    <span  style="font-size: 14px;font-weight:500;"></span>
+                </h4>
+                <div style="display: flex; justify-content:center;">
+                    <canvas id="ga4PurchaseChart"
+                            style="display: block; box-sizing: border-box; height: 300px; width: 100%"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+        //Purchase journey
+        var options7 = {
+            type: 'bar',
+            data: {
+                labels: ["Session start", "View product", "Add to cart", "Begin checkout", "Purchase"],
+                datasets: [{
+                    fill: false,
+                    data: [_purchaseData_],
+                    label: "User Purchase",
+                    backgroundColor: "rgb(154 85 255)"
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: "top",
+                        datalabels: {
+                            anchor: "end",
+                            align: "top",
+                            formatter: function (value) {
+                                return value; // Show the actual value as the label
+                            }
+                        }
+                    },
+
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14,
+                        usePointStyle: true
+                    
+                    }
+                },
+
+            }
+        }
+        var ctx = document.getElementById('ga4PurchaseChart').getContext('2d');
+        new Chart(ctx, options7);
+
+    </script>
+</body>

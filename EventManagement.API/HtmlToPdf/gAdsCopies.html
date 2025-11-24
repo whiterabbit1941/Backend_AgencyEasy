@@ -1,0 +1,291 @@
+
+<body>
+
+	<div class="row a4-page">
+		<div class="col-md-6">
+			<div class="content-header-style-cust mb-3 mt-3" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+				<h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Campaign Health Score</h2>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="card card-body" style="max-height:400px">
+				<h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+					<span style="font-weight:bold;">_gaAdChartName_</span>
+				</h4>
+				<div style="display: flex; justify-content: center;">
+					<canvas id="chartJSAdCopies1"
+							style="display: block; box-sizing: border-box; height: 300px;width:100%;"></canvas>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row a4-page">
+		<div class="col-md-6">
+			<div class="content-header-style-cust mb-3 mt-3" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+				<h2 class="content-text-style" style="padding-top: 10px;padding-left: 10px;">Campaign Health Score</h2>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="card card-body" style="max-height:400px">
+				<h4 class="card-title pt-2" style="display: flex;justify-content: space-between;">
+					<span style="font-weight:bold;">Top Destination Url</span>
+				</h4>
+				<div style="display: flex; justify-content:center;">
+					<canvas id="chartJSAdCopies2"
+							style="display:block; box-sizing: border-box; height: 300px;"></canvas>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row a4-page">
+		<div class="col-md-12 flex-style p-0 mt-3">
+			<div class="col-md-3">
+				<div class="card" id="cardClicks">
+					<div class="card-bg-1 card-body text-center card-border-radius" id="clicks">
+						<h5 class="card-title card-title-color">Clicks</h5>
+						<h1 class="card-text card-title-color fontxxlrge">_gaAdsClicksData_</h1>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card" id="cardImpression">
+					<div class=" card-bg-1 card-body text-center card-border-radius" id="impressions">
+						<h5 class="card-title card-title-color">Impressions</h5>
+						<h1 class="card-text card-title-color fontxxlrge">_gaAdImpressionsData_</h1>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card" id="cardVTC">
+					<div class="card-bg-1 card-body text-center card-border-radius" id="view_th_conv">
+						<h5 class="card-title card-title-color">View-Through Conv.</h5>
+						<h1 class="card-text card-title-color fontxxlrge">_gaAdVTCData_</h1>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card" id="cardAvgCpc">
+					<div class="card-bg-1 card-body text-center card-border-radius" id="avg_cpc">
+						<h5 class="card-title card-title-color">Average CPC</h5>
+						<h1 class="card-text card-title-color fontxxlrge"><span>_gaAdsCurrencyData_ </span>_gaAdAVGCPCData_</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12 flex-style p-0 mt-3">
+			<div class="col-md-3">
+				<div class="card" id="cardConvRate">
+					<div class="card-bg-1 card-body text-center card-border-radius" id="conv_rate">
+						<h5 class="card-title card-title-color">Conversion Rate</h5>
+						<h1 class="card-text card-title-color fontxxlrge">_gaAdConversionRateData_<span>%</span></h1>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card" id="cardConv">
+					<div class=" card-bg-1 card-body text-center card-border-radius" id="conversions">
+						<h5 class="card-title card-title-color">Conversions</h5>
+						<h1 class="card-text card-title-color fontxxlrge">_gaAdCONVData_</h1>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card" id="cardCost">
+					<div class="card-bg-1 card-body text-center card-border-radius" id="cost">
+						<h5 class="card-title card-title-color">Cost</h5>
+						<h1 class="card-text card-title-color fontxxlrge"><span>_gaAdsCurrencyData_ </span>_gaAdCOSTData_</h1>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card" id="cardCostConv">
+					<div class="card-bg-1 card-body text-center card-border-radius" id="cost_conv">
+						<h5 class="card-title card-title-color">Cost/Conversion</h5>
+						<h1 class="card-text card-title-color fontxxlrge"><span>_gaAdsCurrencyData_ </span>_gaAdCOSTCONVData_</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="row a4-page">
+		<div class="content-header-style" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+			<h2 class="content-text-style">Campaign Performance</h2>
+		</div>
+		<div class="col-md-12">
+			<div class="card Card-body px-4">
+				<table id="myTable">
+					<thead>
+						<tr>
+							<th class="p-1">Name</th>
+							<th class="p-1">Clicks</th>
+							<th class="p-1">Conversion</th>
+							<th class="p-1">Impressions</th>
+							<th class="p-1">Avg CPC</th>
+							<th class="p-1">Cost</th>
+							<th class="p-1">Cost/Conversion</th>
+							<th>Conversion Rate</th>
+							<th>View Through Conversion</th>
+						</tr>
+					</thead>
+					<tbody class="p-1">
+
+						<!--<tr>
+							<td class="p-1">Mono Carton - New</td>
+							<td class="p-1">1218</td>
+							<td class="p-1">33</td>
+							<td class="p-1">13018</td>
+							<td class="p-1">7.24</td>
+							<td class="p-1">9103.24</td>
+							<td class="p-1">275.86</td>
+							<td class="p-1">2.71</td>
+							<td class="p-1">0</td>
+					</tr>
+					<tr>
+							<td class="p-1">Mono Carton - New</td>
+							<td class="p-1">1218</td>
+							<td class="p-1">33</td>
+							<td class="p-1">13018</td>
+							<td class="p-1">7.24</td>
+							<td class="p-1">9103.24</td>
+							<td class="p-1">275.86</td>
+							<td class="p-1">2.71</td>
+							<td class="p-1">0</td>
+					</tr>-->
+					</tbody>
+
+				</table>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+
+			var tableArray = _tableArrayList_;
+			var labelnterval = _labelInterval_;
+			var table = document.getElementById("myTable").getElementsByTagName('tbody')[0];
+			for (var i = 0; i < tableArray.length; i++) {
+				var row = table.insertRow(i);
+				row.classList.add('text-align-start');
+				var cell1 = row.insertCell(0);
+				cell1.innerHTML = tableArray[i].campName;
+				var cell2 = row.insertCell(1);
+				cell2.innerHTML = tableArray[i].click;
+				var cell3 = row.insertCell(2);
+				cell3.innerHTML = tableArray[i].conv;
+				var cell4 = row.insertCell(3);
+				cell4.innerHTML = tableArray[i].impression;
+				var cell5 = row.insertCell(4);
+				cell5.innerHTML = _gaAdsCurrencyDataTable_ + tableArray[i].avg_cpc;
+				var cell6 = row.insertCell(5);
+				cell6.innerHTML = _gaAdsCurrencyDataTable_ + tableArray[i].cost;
+				var cell7 = row.insertCell(6);
+				cell7.innerHTML = _gaAdsCurrencyDataTable_ + tableArray[i].cost_conv;
+				var cell8 = row.insertCell(7);
+				cell8.innerHTML = tableArray[i].conv_rate;
+				var cell9 = row.insertCell(8);
+				cell9.innerHTML = tableArray[i].vtc;
+			}
+			var options = {
+				type: 'line',
+				data: {
+					labels: [_1gaAdsLineChartLabels_],
+					datasets: [{
+						fill: true,
+						backgroundColor: "#d6dafd",
+						borderColor: "#6572f1",
+						label: 'Clicks',
+						data: [_1gaAdsLinchartData_],
+                        fill: true,
+                        backgroundColor: "rgb(108 60 179)",
+                        borderColor: "rgb(108 60 179)",
+                        borderWidth: 2,
+                        pointRadius: 2
+					}]
+				},
+				options: {
+                    maintainAspectRatio: false,
+                    scales: {
+
+                        xAxes: [{
+                            ticks: {
+                                fontColor: 'rgb(0,0,0)',
+                                fontSize: 14,
+                                maxRotation: 0,
+                                minRotation: 0,
+                                autoSkip: false,
+                                callback: function (value, index, values) {
+
+                                    return index % labelnterval === 0 ? value : '';
+                                }
+                            }
+                        }],
+                        yAxes: [{
+
+                            ticks: {
+                                fontColor: 'rgb(0,0,0)',
+                                fontSize: 14
+                            }
+                        }]
+                    },
+                    legend: {
+                        labels: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14,
+                            usePointStyle: true
+                        }
+                    },
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: "top",
+                        },
+                    }
+				}
+			}
+
+			var options1 = {
+				type: 'bar',
+				data: {
+					labels: [_2gaAdDoughnutChartLabels_],
+					datasets: [{
+						data: [_2gaAdDoughnutChartData_],
+						label: "%",
+						borderColor: "#6572f1",
+						backgroundColor: "#6572f1",
+					}]
+				},
+				options: {
+                    maintainAspectRatio: false,
+                    legend: {
+                        labels: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14,
+                            usePointStyle: true
+                        }
+                    },					
+					indexAxis: 'y',
+					elements: {
+						bar: {
+							borderWidth: 2,
+						},
+					},
+					responsive: true,
+					plugins: {
+						legend: {
+							position: 'right',
+						},
+					}
+
+				}
+			}
+			var ctx = document.getElementById('chartJSAdCopies1').getContext('2d');
+			new Chart(ctx, options);
+			var ctx = document.getElementById('chartJSAdCopies2').getContext('2d');
+			new Chart(ctx, options1);
+		</script>
+
+</body>

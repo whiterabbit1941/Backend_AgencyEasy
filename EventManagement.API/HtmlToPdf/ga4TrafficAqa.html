@@ -1,0 +1,209 @@
+﻿
+<body>
+
+
+    <!--traffic aquisition-->
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Google Analytics4: Traffic Acquisition</h2>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="card card-body style=" max-height:400px"">
+
+                <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                    <span style="font-weight:bold;">Traffic Acquisition</span>
+                </h4>
+                <div style="display: flex; justify-content:center;">
+                    <canvas id="trafficAqaChart1"
+                            style="display: block; box-sizing: border-box; height: 300px; width: 100%"></canvas>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Google Analytics4: Traffic Acquisition</h2>
+            </div>
+        </div>
+
+
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px;">
+
+                <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                    <span style="font-weight:bold;">Traffic Acquisition</span>
+                    <span style="font-weight: 500; color: _trafficAquaDiffColor_;">_trafficAquaDiff_</span>
+                </h4>
+                <div style="display: flex;justify-content:center;">
+                    <canvas id="trafficAqaChart2"
+                            style="display: block; box-sizing: border-box; height: 300px; width: 100%"></canvas>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+
+        var labelnterval = _labelInterval_;
+
+        //Traffic Aquisition
+        var options4 = {
+            type: 'line',
+            data: {
+                labels: [_1gaConverionLabels1_],
+                datasets: [{
+                    fill: false,
+                    data: [_dataset1TrafficData_],
+                    label: "Direct",
+                    backgroundColor: 'rgb(8, 120, 179)',
+                    borderColor: 'rgb(8, 120, 179)',
+                    borderWidth: 2,
+                    pointRadius: 2
+                },
+                {
+                    fill: false,
+                    data: [_dataset2TrafficData_],
+                    label: "Organic Search",
+                    backgroundColor: 'rgb(71, 71, 235)',
+                    borderColor: 'rgb(71, 71, 235)',
+                    borderWidth: 2,
+                    pointRadius: 2
+                },
+                {
+                    fill: false,
+                    data: [_dataset3TrafficData_],
+                    label: "Organic Social",
+                    backgroundColor: 'rgb(24, 107, 216)',
+                    borderColor: 'rgb(24, 107, 216)',
+                    borderWidth: 2,
+                    pointRadius: 2
+                },
+                {
+                    fill: false,
+                    data: [_dataset4TrafficData_],
+                    label: "Referral",
+                    backgroundColor: 'rgb(107, 47, 190)',
+                    borderColor: 'rgb(107, 47, 190)',
+                    borderWidth: 2,
+                    pointRadius: 2
+                },
+                {
+                    fill: false,
+                    data: [_dataset5TrafficData_],
+                    label: "Unassigned",
+                    backgroundColor: 'rgb(107, 11, 142)',
+                    borderColor: 'rgb(107, 11, 142)',
+                    borderWidth: 2,
+                    pointRadius: 2
+                }]
+
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: "top",
+                    },
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14,
+                            maxRotation: 0,
+                            minRotation: 0,
+                            autoSkip: false,
+                            callback: function (value, index, values) {
+
+                                return index % labelnterval === 0 ? value : '';
+                            }
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        usePointStyle: true,
+                        fontSize: 14
+                    }
+                },
+            }
+        }
+     
+        var options5 = {
+            type: 'bar',
+            data: {
+                labels: ["Direct", "Organic Search", "Organic Social", "Referral", "Unassigned"],
+                datasets: [{
+                    fill: false,
+                    data: [_trafficAquDataCurrent_],
+                    label: "Current Period",
+                    backgroundColor: "#ffa096",
+                },
+                {
+                    fill: false,
+                    data: [_trafficAquDataPrev_],
+                    label: "Previous Period",
+                    backgroundColor: "#9a55ff",
+
+                },],
+
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: "top"
+
+                    },
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        usePointStyle: true,
+                        fontSize: 14
+
+                    }
+                },
+            }
+        }
+
+        var ctx = document.getElementById('trafficAqaChart1').getContext('2d');
+        new Chart(ctx, options4);
+        var ctx = document.getElementById('trafficAqaChart2').getContext('2d');
+        new Chart(ctx, options5);
+
+    </script>
+</body>

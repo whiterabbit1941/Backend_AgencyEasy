@@ -1,0 +1,101 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information"
+    }
+  },
+
+  //#region Live
+
+  "Env": "Live",
+  "ClientId": "3",
+  "HostedUrl": "YOUR_LIVE_BACKEND_URL",
+  "IdentityServerUrl": "YOUR_LIVE_IDENTITY_URL",
+  "FrontendUrl": "YOUR_LIVE_FRONTEND_URL",
+  "ConnectionStrings": {
+    "EventManagementDB": ""
+  },
+  "ReturnUrlSuperAdminAgencyVerification": "superAdminAgencyActivation",
+  "ReturnUrlEmailVerification": "emailVerification",
+  "ResetUrl": "resetPassword",
+
+  //Google App Id and Secret - Configure in your environment
+  "ClientSecretForGoogleAds": "",
+  "ClientIdForGoogleAds": "",
+  "DeveloperTokenForGoogleAds": "",
+  "GoogleApiKey": "",
+
+  //Facebook App Id and Secret - Configure in your environment
+  "FacebookAppId": "",
+  "FacebookAppSecret": "",
+
+  //LinkedIn App Id and Secret - Configure in your environment
+  "LinkedinClientID": "",
+  "LinkedinSeceretId": "",
+
+  //Mailchimp OAuth - Configure in your environment
+  "MailchimpClientId": "",
+  "MailchimpSecretId": "",
+  "MailchimpRedirectUrl": "html/auth-redirect.html",
+
+  //Stripe Key and Secret - Configure in your environment (use LIVE keys for production)
+  "StripeKey": "",
+  "StripeSecret": "",
+
+  //Microsoft Ads - Configure in your environment
+  "MicrosoftClientId": "",
+  "MicrosoftClientSeceret": "",
+  "DeveloperToken": "",
+
+  //Stripe Tax ID - Configure in your environment
+  "StripeTaxId": "",
+
+  //Stripe Product Id - Configure in your environment (use LIVE product IDs)
+  "StripeSubscriptionPriceId": {
+    "CustomMonthly": "",
+    "CustomYearly": "",
+    "AgencyYearly": "",
+    "AgencyMonthly": "",
+    "StartupYearly": "",
+    "StartupMonthly": "",
+    "ProfessionalYearly": "",
+    "ProfessionalMonthly": ""
+  },
+
+  "StripeCouponCode": {
+    "20Percent": "",
+    "50Percent": ""
+  },
+
+  //Market Place Product Id - Configure in your environment
+  "MarketPlaceProductId": "",
+
+  //AWS Settings - Configure in your environment
+  "AWS": {
+    "AccessKeyID": "",
+    "SecretAccessKeyID": "",
+    "DistributionId": "",
+    "AmplifyAppId": "",
+    "BranchName": ""
+  },
+
+  "AllowedHosts": "*",
+  "ApplicationInsights": {
+    "InstrumentationKey": ""
+  },
+
+  "GoHighLevelApiKey": "",
+
+  "Mailchimp": {
+    "ApiKey": "",
+    "ListId": ""
+  },
+
+  // HtmlToPdf Template - Configure in your environment
+  "BlobUrl": "",
+
+  // ChatGPT API Key - Configure in your environment
+  "ChatGptApiKey": ""
+
+  // #endregion
+}

@@ -1,0 +1,207 @@
+﻿
+<body>
+    <!--user aquisition-->
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">GOOGLE ANALYTICS4 - NEW USER ACQUISITION</h2>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px">
+                <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                    <span style="font-weight:bold;">NEW USER ACQUISITION</span>
+                </h4>
+                <div style="display: flex; justify-content: center;">
+                    <canvas id="userAquisitionChart1"
+                            style="display: block; box-sizing: border-box; height: 300px; width: 100%"></canvas>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--user aquisition-->
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Google Analytics4: New User Acquisition</h2>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height: 400px">
+
+                <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                    <span style="font-weight:bold;">New User Acquisition</span>
+                    <span style="font-weight: 500; color: _userAquaDiffColor_; ">_userAquaDiff_</span>
+                </h4>
+                <div style="display: flex; justify-content:center;">
+                    <canvas id="userAquisitionChart2"
+                            style="display: block; box-sizing: border-box; height: 300px; width: 100%"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        var labelnterval = _labelInterval_;
+
+        //User Aquisition
+        var options2 = {
+            type: 'line',
+            data: {
+                labels: [_1gaConverionLabels1_],
+                datasets: [{
+                    fill: false,
+                    data: [_dataset1Data_],
+                    label: "Direct",
+                    backgroundColor: 'rgb(8, 120, 179)',
+                    borderColor: 'rgb(8, 120, 179)',
+                    borderWidth: 2,
+                    pointRadius: 2
+                },
+                {
+                    fill: false,
+                    data: [_dataset2Data_],
+                    label: "Organic Search",
+                    backgroundColor: 'rgb(71, 71, 235)',
+                    borderColor: 'rgb(71, 71, 235)',
+                    borderWidth: 2,
+                    pointRadius: 2
+                },
+                {
+                    fill: false,
+                    data: [_dataset3Data_],
+                    label: "Organic Social",
+                    backgroundColor: 'rgb(24, 107, 216)',
+                    borderColor: 'rgb(24, 107, 216)',
+                    borderWidth: 2,
+                    pointRadius: 2
+                },
+                {
+                    fill: false,
+                    data: [_dataset4Data_],
+                    label: "Referral",
+                    backgroundColor: 'rgb(107, 47, 190)',
+                    borderColor: 'rgb(107, 47, 190)',
+                    borderWidth: 2,
+                    pointRadius: 2
+                },
+                {
+                    fill: false,
+                    data: [_dataset5Data_],
+                    label: "Unassigned",
+                    backgroundColor: 'rgb(107, 11, 142)',
+                    borderColor: 'rgb(107, 11, 142)',
+                    borderWidth: 2,
+                    pointRadius: 2
+                }]
+
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: "top"
+
+                    },
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14,
+                            maxRotation: 0,
+                            minRotation: 0,
+                            autoSkip: false,
+                            callback: function (value, index, values) {
+
+                                return index % labelnterval === 0 ? value : '';
+                            }
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        usePointStyle: true,
+                        fontSize: 14
+                    }
+                },
+            }
+        }
+        
+        var options3 = {
+            type: 'bar',
+            data: {
+                labels: ["Direct", "Organic Search", "Organic Social", "Referral", "Unassigned"],
+                datasets: [{
+                    fill: false,
+                    data: [_userAquDataCurrent_],
+                    label: "Current Period",
+                    backgroundColor: "#ffa096",
+                },
+                {
+                    fill: false,
+                    data: [_userAquDataPrev_],
+                    label: "Previous Period",
+                    backgroundColor: "#9a55ff",
+
+                },],
+
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: "top"
+
+                    },
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        usePointStyle: true,
+                        fontSize: 14
+                    }
+                },
+            }
+        }
+
+        var ctx = document.getElementById('userAquisitionChart1').getContext('2d');
+        new Chart(ctx, options2);
+
+        var ctx = document.getElementById('userAquisitionChart2').getContext('2d');
+        new Chart(ctx, options3);
+
+    </script>
+</body>

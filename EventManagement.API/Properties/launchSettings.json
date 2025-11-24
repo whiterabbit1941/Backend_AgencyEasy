@@ -1,0 +1,48 @@
+﻿{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:52049",
+      "sslPort": 44357
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "api/values",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "EventManagement.API-Dev": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "api/values",
+      "applicationUrl": "https://localhost:5001;http://localhost:5000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "EventManagement.API-Test": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "api/values",
+      "applicationUrl": "https://whitelabelboardbackend-dev-test.us-east-2.elasticbeanstalk.com/index.html; http://whitelabelboardbackend-dev-test.us-east-2.elasticbeanstalk.com/index.html",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Test"
+      },
+      "EventManagement.API-Live": {
+        "commandName": "Project",
+        "launchBrowser": true,
+        "launchUrl": "api/values",
+        "applicationUrl": "https://whitelabelboardbackend-dev.us-east-2.elasticbeanstalk.com/index.html; http://whitelabelboardbackend-dev.us-east-2.elasticbeanstalk.com/index.html",
+        "environmentVariables": {
+          "ASPNETCORE_ENVIRONMENT": "Live"
+        }
+      }
+    }
+  }
+}

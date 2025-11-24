@@ -1,0 +1,78 @@
+
+<body>
+
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3" style="background-color:_themeBgColor_;color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top:10px; padding-left:10px;">Facebook Ad Copies Performance</h2>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="card Card-body">
+                <table id="fbAdCopiesTable">
+                    <thead>
+                        <tr>
+                            <th class="p-1">Sr No</th>
+                            <th class="p-1">Campaign Name</th>
+                            <th class="p-1">Impressions	</th>
+                            <th class="p-1">Reach</th>
+                            <th class="p-1">Clicks</th>
+                            <th class="p-1">CTR</th>
+                            <th class="p-1">Amount Spent</th>
+                        </tr>
+                    </thead>
+                    <tbody class="p-1">
+
+                        <!-- <tr> -->
+                        <!-- <td class="p-1">Mono Carton - New</td> -->
+                        <!-- <td class="p-1">1218</td> -->
+                        <!-- <td class="p-1">33</td> -->
+                        <!-- <td class="p-1">13018</td> -->
+                        <!-- <td class="p-1">7.24</td> -->
+                        <!-- <td class="p-1">9103.24</td> -->
+                        <!-- <td class="p-1">275.86</td> -->
+                        <!-- </tr> -->
+                        <!-- <tr> -->
+                        <!-- <td class="p-1">Mono Carton - New</td> -->
+                        <!-- <td class="p-1">1218</td> -->
+                        <!-- <td class="p-1">33</td> -->
+                        <!-- <td class="p-1">13018</td> -->
+                        <!-- <td class="p-1">7.24</td> -->
+                        <!-- <td class="p-1">9103.24</td> -->
+                        <!-- <td class="p-1">275.86</td> -->
+                        <!-- </tr> -->
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        var tableArray = _tableArrayList_;
+        var table = document.getElementById("fbAdCopiesTable").getElementsByTagName('tbody')[0];
+        for (var i = 0; i < tableArray.length; i++) {
+            var row = table.insertRow(i);
+            row.classList.add('text-align-start');
+            var cell1 = row.insertCell(0);
+            cell1.innerHTML = i + 1;
+            var cell2 = row.insertCell(1);
+            cell2.innerHTML = tableArray[i].adset_name;
+            var cell3 = row.insertCell(2);
+            cell3.innerHTML = tableArray[i].impressions;
+            var cell4 = row.insertCell(3);
+            cell4.innerHTML = tableArray[i].reach;
+            var cell5 = row.insertCell(4);
+            cell5.innerHTML = tableArray[i].clicks;
+            var cell6 = row.insertCell(5);
+            if (tableArray[i].cpr == "NaN") {
+                cell6.innerHTML =   0;
+            }
+            else {
+                cell6.innerHTML = tableArray[i].ctr + "%";
+            }
+            var cell7 = row.insertCell(6);
+            cell7.innerHTML = _fbAdsCurrencyTable_ + tableArray[i].spend;
+        }
+    </script>
+</body>

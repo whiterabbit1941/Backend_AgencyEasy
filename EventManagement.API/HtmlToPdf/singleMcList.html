@@ -1,0 +1,476 @@
+﻿
+
+<div class="row mt-3 a4-page">
+    <div class="col-md-6">
+        <div class="content-header-style-cust mb-3 mt-3" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+            <h2 class="content-text-style" style="padding-top: 10px;padding-left: 10px;">_singleMcListName_</h2>
+        </div>
+    </div>
+    <div class="col-md-12 flex-style p-0">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-bg-1 card-body text-center card-border-radius">
+                    <h5 class="card-title card-title-color">Subscribers</h5>
+                    <h1 class="card-text card-title-color fontxxlrge">_mcsListSubscribers_</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-bg-1 card-body text-center card-border-radius">
+                    <h5 class="card-title card-title-color">Open Rate</h5>
+                    <h1 class="card-text card-title-color fontxxlrge">_mcsListOpenRate_ %</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-bg-1 card-body text-center card-border-radius">
+                    <h5 class="card-title card-title-color">Click Rate</h5>
+                    <h1 class="card-text card-title-color fontxxlrge">_mcsListClickRate_ %</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-bg-1 card-body text-center card-border-radius">
+                    <h5 class="card-title card-title-color">Campaigns</h5>
+                    <h1 class="card-text card-title-color fontxxlrge">_mcsListCampaigns_</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-12 flex-style p-0 mt-3">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-bg-1 card-body text-center card-border-radius" id="clicks">
+                    <h5 class="card-title card-title-color">Unsubscribes</h5>
+                    <h1 class="card-text card-title-color fontxxlrge">_mcsListUnsubscribes_</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-bg-1 card-body text-center card-border-radius" id="clicks">
+                    <h5 class="card-title card-title-color">Average Subscribe Rate</h5>
+                    <h1 class="card-text card-title-color fontxxlrge">_mcsListAsr_ %</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-bg-1 card-body text-center card-border-radius" id="clicks">
+                    <h5 class="card-title card-title-color">Average Unsubscribe Rate</h5>
+                    <h1 class="card-text card-title-color fontxxlrge">_mcsListUasr_ %</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!--Open chart-->
+
+<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body" style="max-height:400px">
+            <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                <span style="font-weight:bold;">Opens</span>
+                <span style="font-weight:500;">_mcsListOpenTotal_</span>
+            </h4>
+            <div style="display: flex; justify-content: center;">
+                <canvas id="_mcsListOpenChart_"
+                        style="display: block; box-sizing: border-box; height: 300px;width:100%;"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Click chart-->
+
+<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body" style="max-height:400px">
+            <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                <span style="font-weight:bold;">Clicks</span>
+                <span style="font-weight:500;">_mcsListClicksTotal_</span>
+            </h4>
+            <div style="display: flex; justify-content: center;">
+                <canvas id="_mcsListClickChart_"
+                        style="display: block; box-sizing: border-box; height: 300px;width:100%;"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Top audiance growth-->
+
+<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body" style="max-height:400px">
+            <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                <span style="font-weight:bold;">Audience Growth</span>
+            </h4>
+            <div style="display: flex; justify-content: center;">
+                <canvas id="_mcsListAudGrowthChart_"
+                        style="display: block; box-sizing: border-box; height: 300px;width:100%;"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Top email client-->
+<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body" style="max-height:400px">
+            <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                <span style="font-weight:bold;">Top Email Clients</span>
+            </h4>
+            <div style="display: flex; justify-content: center;">
+                <canvas id="_mcsListTopEmailChart_"
+                        style="display: block; box-sizing: border-box; height: 300px;width:100%;"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Tables-->
+<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body text-center">
+            <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                <span style="font-weight:bold;">Single List Performance</span>
+            </h4>
+            <table class="table table-bordered" id="_mcsListTableId_">
+                <thead>
+                    <tr class="fontsizesmall font-weight-bold table-cell-height">
+
+                        <td class="table-zone td-col-text-style">EMAIL ADDRESS</td>
+                        <td class="table-zone td-col-text-style">SIGNUP DATE</td>
+                        <td class="table-zone td-col-text-style">COUNTRY</td>
+                        <td class="table-zone td-col-text-style">MEMBER RATING</td>
+                        <td class="table-zone td-col-text-style">STATUS</td>
+                        <td class="table-zone td-col-text-style">OPEN RATE</td>
+                        <td class="table-zone td-col-text-style">CLICK RATE</td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <tbody class="p-1">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"></script>
+
+<script>
+
+    //Open Chart
+    var options = {
+        type: 'line',
+        data: {
+            labels: [_mcListOpenLabels_],
+            datasets: [{
+                fill: false,
+                label: "Current Period",
+                data: [_mcListOpenData1_],
+                backgroundColor: "rgb(108 60 179)",
+                borderColor: "rgb(108 60 179)",
+                borderWidth: 2,
+                pointRadius: 2
+            }
+
+            ],
+
+        },
+
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+
+                xAxes: [{
+
+                    type: 'time',
+                    time: {
+                        unit: 'day',
+                        displayFormats: {
+                            month: 'MMM YYYY',
+                        },
+                    },
+                    ticks: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14,
+                        maxRotation: 0,
+                        minRotation: 0,
+                        autoSkip: false
+
+
+                    },
+                    gridLines: {
+                        display: false // Hide y-axis grid lines
+                    }
+                }],
+                yAxes: [{
+
+                    ticks: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14
+                    },
+                    gridLines: {
+                        display: true // Hide y-axis grid lines
+                    }
+                }]
+            },
+            legend: {
+                display: false
+            },
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: "top",
+                },
+            },
+
+        }
+    }
+    var ctx = document.getElementById('_mcsListOpenChart_').getContext('2d');
+    new Chart(ctx, options);
+
+    ////Click Chart
+    var options3 = {
+        type: 'line',
+        data: {
+            labels: [_mcsListClickLabels_],
+            datasets: [{
+                fill: false,
+                label: "Current Period",
+                data: [_mcsListClickData1_],
+                backgroundColor: "rgb(108 60 179)",
+                borderColor: "rgb(108 60 179)",
+                borderWidth: 2,
+                pointRadius: 2
+            }
+
+            ],
+
+        },
+
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+
+                xAxes: [{
+
+                    type: 'time',
+                    time: {
+                        unit: 'day',
+                        displayFormats: {
+                            month: 'MMM YYYY',
+                        },
+                    },
+                    ticks: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14,
+                        maxRotation: 0,
+                        minRotation: 0,
+                        autoSkip: false
+
+
+                    },
+                    gridLines: {
+                        display: false // Hide y-axis grid lines
+                    }
+                }],
+                yAxes: [{
+
+                    ticks: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14
+                    },
+                    gridLines: {
+                        display: true // Hide y-axis grid lines
+                    }
+                }]
+            },
+            legend: {
+                display: false
+            },
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: "top",
+                },
+            },
+
+        }
+    }
+    var ctx = document.getElementById('_mcsListClickChart_').getContext('2d');
+    new Chart(ctx, options3);
+
+    //Top Audiance Growth chart
+    var options4 = {
+        type: 'bar',
+        data: {
+            labels: [_mcsListAudienceLabels_],
+            datasets: [{
+                fill: false,
+                label: "Current Period",
+                data: [_mcsListAudienceData1_],
+                backgroundColor: "rgb(108 60 179)",
+                borderColor: "rgb(108 60 179)",
+                borderWidth: 2,
+                pointRadius: 2
+            }
+
+            ],
+
+        },
+
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+
+                xAxes: [{
+
+                    ticks: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14,
+                        maxRotation: 0,
+                        minRotation: 0,
+                        autoSkip: false
+
+
+                    },
+                    gridLines: {
+                        display: false // Hide y-axis grid lines
+                    }
+                }],
+                yAxes: [{
+
+                    ticks: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14
+                    },
+                    gridLines: {
+                        display: true // Hide y-axis grid lines
+                    }
+                }]
+            },
+            legend: {
+                display: false
+            },
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: "top",
+                },
+            },
+
+        }
+    }
+    var ctx = document.getElementById('_mcsListAudGrowthChart_').getContext('2d');
+    new Chart(ctx, options4);
+
+    //Top Emails Client
+    var options5 = {
+        type: 'bar',
+        data: {
+            labels: [_mcsListEmailLabels_],
+            datasets: [{
+                fill: false,
+                label: "Current Period",
+                data: [_mcsListEmailData1_],
+                backgroundColor: "rgb(108 60 179)",
+                borderColor: "rgb(108 60 179)",
+                borderWidth: 2,
+                pointRadius: 2
+            }
+
+            ],
+
+        },
+
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+
+                xAxes: [{
+
+                    ticks: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14,
+                        maxRotation: 0,
+                        minRotation: 0,
+                        autoSkip: false
+
+
+                    },
+                    gridLines: {
+                        display: false // Hide y-axis grid lines
+                    }
+                }],
+                yAxes: [{
+
+                    ticks: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14
+                    },
+                    gridLines: {
+                        display: true // Hide y-axis grid lines
+                    }
+                }]
+            },
+            legend: {
+                display: false
+            },
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: "top",
+                },
+            },
+
+        }
+    }
+    var ctx = document.getElementById('_mcsListTopEmailChart_').getContext('2d');
+    new Chart(ctx, options5);
+
+    ////TABLE DATA
+    var mcTableArray = _mcsListTable_;
+
+    var wctable1 = document.getElementById("_mcsListTableId_").getElementsByTagName('tbody')[0];
+    for (var i = 0; i < mcTableArray.length; i++) {
+        var row = wctable1.insertRow(i);
+        row.classList.add('text-align-start');
+
+        var cell1 = row.insertCell(0);
+        cell1.innerHTML = mcTableArray[i].Email;
+
+        var cell2 = row.insertCell(1);
+        cell2.innerHTML = mcTableArray[i].SignupDate ? mcTableArray[i].SignupDate : "-";
+
+        var cell3 = row.insertCell(2);
+        cell3.innerHTML = mcTableArray[i].Country ? mcTableArray[i].Country : "-";
+
+        var cell4 = row.insertCell(3);
+        cell4.innerHTML = mcTableArray[i].MemberRating + " Star";
+
+        var cell5 = row.insertCell(4);
+        cell5.innerHTML = mcTableArray[i].Status;
+
+        var cell6 = row.insertCell(5);
+        cell6.innerHTML = mcTableArray[i].OpenRate + "%";
+
+        var cell7 = row.insertCell(6);
+        cell7.innerHTML = mcTableArray[i].ClickRate + "%";
+    }
+
+</script>
+

@@ -1,0 +1,57 @@
+﻿<!--google sheet-->
+<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body" style="max-height:400px">
+
+            <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                <span style="font-weight:bold;">_gsTitle_</span>
+                <span style="font-weight:500; color:_condiffcolor_;"> _gsAggeragatorValue_</span>
+            </h4>
+
+           
+            <div class="px-5" style="display: flex; justify-content:center;">
+                <div class="mx-5" style="width:410px;">
+                    <canvas id="_gsChartId_"
+                            style="display: block; box-sizing: border-box; height: 300px;"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--end -->
+
+<script>
+
+        var options1 = {
+            type: 'doughnut',
+            data: {
+                labels: [_gsPieChartLabel_],
+                datasets: [{
+                    label: 'My First Dataset',
+                    data: [_gsPieChartData_],
+                    backgroundColor: [_gsBgColorPieChart_],
+                    hoverOffset: 4
+                }]
+
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        usePointStyle: true,
+                        fontSize: 14
+                    },
+                    position: "right",
+                },
+            }
+        }
+
+        var ctx = document.getElementById('_gsChartId_').getContext('2d');
+        new Chart(ctx, options1);
+
+</script>

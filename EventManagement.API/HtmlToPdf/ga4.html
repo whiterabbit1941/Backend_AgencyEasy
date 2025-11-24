@@ -1,0 +1,1041 @@
+<html>
+
+<head>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+        body {
+            background: #222;
+        }
+
+        .pt-35 {
+            padding-top: 35px;
+        }
+
+        .content-header-style {
+            width: 633px;
+            height: 44px;
+            left: 349px;
+            top: 198px;
+            border-radius: 6px;
+            margin: 20px 0px 20px 18px;
+            padding: 10px;
+        }
+
+        .content-text-style {
+            width: 100%;
+            height: 29px;
+            left: 372px;
+            top: 216px;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .flex-style-1 {
+            flex-direction: column;
+            box-sizing: border-box;
+            display: flex;
+            background-color: red;
+        }
+
+        .flex-style {
+            flex-direction: row;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .flex-style-center {
+            flex-direction: column;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center
+        }
+
+        .mat-card-style {
+            height: 100%;
+            min-height: 100%;
+            min-width: 100%;
+            width: 100%;
+            place-content: center;
+            align-items: center;
+            flex-direction: row;
+            box-sizing: border-box;
+            display: flex;
+        }
+
+        .mat-card-title {
+            left: 23.29%;
+            right: 35.29%;
+            top: -1.33%;
+            bottom: 94.43%;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18.0602px;
+            line-height: 21px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .mat-card-content-height {
+            min-height: 90px;
+        }
+
+        .fontxxlrge {
+            font-size: xx-large !important;
+        }
+
+        .fontColor {
+            color: white;
+        }
+
+        .fontsizesmall {
+            font-size: small;
+            margin-bottom: 0%;
+            font-family: Arial;
+        }
+
+        .card-bg-1 {
+            background-color: #1C4880;
+        }
+
+        .card-bg-2 {
+            background-color: #E52D2D;
+        }
+
+        .card-title-color {
+            color: white;
+        }
+
+        .card-border-radius {
+            border-radius: 4px;
+        }
+
+        .fontxxlrge {
+            font-size: xx-large !important;
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .set-iconsize {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        .flex-style-container-header {
+            display: flex;
+            flex-direction: row;
+            flex: 1
+        }
+
+        .flex-cust-25 {
+            flex: 0.25;
+        }
+
+        .flex-cust-8 {
+            flex: 0.10;
+        }
+
+        .flex-cust-9 {
+            flex: 0.13;
+        }
+
+        .flex-cust-3 {
+            flex: 0.03;
+        }
+
+        .flex-cust-21 {
+            flex: 0.25
+        }
+
+        .flex-cust-23 {
+            flex: 0.18
+        }
+
+        .content-header-style-cust {
+            height: 44px;
+            left: 349px;
+            top: 198px;
+            background: #3445f6;
+            border-radius: 6px;
+            padding: 3px;
+        }
+
+        .card-title {
+            font-weight: 500;
+            line-height: 1.1;
+            color: #343a40;
+            margin-bottom: 0.75rem;
+            text-transform: capitalize;
+            font-size: 1.125rem;
+            margin-bottom: 12px;
+            margin-top: 0;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        #pageFooter:after {
+            counter-increment: page;
+            content: counter(page);
+        }
+
+        .danger-diff {
+            color: red;
+        }
+
+        .success-diff {
+            color: green;
+        }
+
+        .a4-page {
+            page-break-inside: avoid; /* Prevent page breaks inside this element */
+        }
+    </style>
+
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Chewy|Quattrocento+Sans|Kaushan+Script|Comfortaa|Lobster+Two|Raleway|Montserrat|Titillium+Web|Josefin+Sans|Pacifico|Orbitron|Josefin+Slab|Satisfy|Economica|Courgette" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js">-->
+    <link rel="stylesheet"
+          href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.2/Chart.bundle.min.js"></script>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://rendro.github.io/easy-pie-chart/javascripts/jquery.easy-pie-chart.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+            integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+</head>
+
+<body>
+    <!--<div  class="a4-page" style="background-color: _headerBgColor_; color: _headerTextColor_; height: 50px; visibility: _showHeader_; font-family: _font_;">
+        <div style="height: 100%; padding: 0px 20px; display: flex; flex-direction: row; align-items: center; justify-content: space-between">-->
+    <!--<span><img src=_headerImage1_ alt="CompanyLogo" width="30" height="30" style=" visibility: _showImg1_;"></span>
+    <span style="color: _headerTextColor_;">_headerText_</span>
+    <span><img src=_headerImage_ alt="campaignLogo" width="30" height="30" style=" visibility: _showImg2_;"></span>-->
+    <!--<span>_campaignName_</span>
+            <span>_reportDateRange_</span>
+        </div>
+    </div>-->
+    <!--organic traffic and conversion-->
+    <div class="col-md-12 a4-page">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="content-header-style-cust mb-3 mt-3 ml-2" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                    <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Google Analytics4: Organic Sessions</h2>
+                </div>
+
+
+            </div>
+            <div class="col-md-12">
+                <div class="card card-body" style="max-height:400px">
+                    <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                        <span>Organic Sessions</span>
+                        <span id="trafficDiff" style="font-size: 14px; font-weight:500; color:_trafficdiffcolor_; ">_trafficDifference_</span>
+                    </h4>
+                    <div style="display: flex; justify-content: center;">
+                        <canvas id="chartJSContainer"
+                                style="display: block; box-sizing: border-box; height: 250px;"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="content-header-style-cust mb-3 mt-3" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                    <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Google Analytics4: Organic Conversions</h2>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card card-body" style="max-height:400px">
+
+                    <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                        <span>Organic Conversions</span>
+                        <span id="conDiff" style="font-size: 14px;font-weight:500;color:_condiffcolor_;">_conDifference_</span>
+                    </h4>
+                    <div style="display: flex; justify-content: center;">
+                        <canvas id="chartJSContainer1"
+                                style="display: block; box-sizing: border-box; height: 250px;"></canvas>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--user aquisition-->
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3 ml-2" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Organic Conversions: New User Acquisition</h2>
+            </div>
+        </div>
+        <div class="col-md-12 flex-style">
+            <div class="col-md-12">
+                <div class="card card-body" style="max-height:400px">
+                    <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                        <span>New User Acquisition</span>
+                    </h4>
+                    <div style="display: flex; justify-content: center;">
+                        <canvas id="chartJSContainer2"
+                                style="display: block; box-sizing: border-box; height:250px;"></canvas>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--<div class="col-md-12 flex-style pt-2 a4-page">
+        <div class="col-md-12">
+            <div class="card card-body">
+
+                <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                    <span>NEW USER ACQUISITION</span>
+                    <span id="conDiff" style="font-size: 14px; font-weight: 500; color: _userAquaDiffColor_; ">_userAquaDiff_</span>
+                </h4>
+                <canvas id="chartJSContainer3"
+                        style="display: block; box-sizing: border-box; height:250px;"></canvas>
+            </div>
+        </div>
+
+    </div>-->
+
+    </div>
+
+    <!--user aquisition-->
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3 ml-2" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Organic Conversions: User Aquisition</h2>
+            </div>
+        </div>
+
+        <div class="col-md-12 flex-style pt-2 a4-page">
+            <div class="col-md-12">
+                <div class="card card-body" style="max-height: \400px">
+
+                    <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                        <span>User Aquisition</span>
+                        <span id="conDiff" style="font-size: 14px; font-weight: 500; color: _userAquaDiffColor_; ">_userAquaDiff_</span>
+                    </h4>
+                    <div style="display: flex; justify-content:center;">
+                        <canvas id="chartJSContainer3"
+                                style="display: block; box-sizing:border-box; height:250px;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--traffic aquisition-->
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3 ml-2" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Organic Conversions: Traffic Aquisition</h2>
+            </div>
+        </div>
+        <div class="col-md-12 flex-style">
+            <div class="col-md-12">
+                <div class="card card-body style=" max-height:400px"">
+
+                    <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                        <span>Traffic Aquisition</span>
+                    </h4>
+                    <div style="display: flex; justify-content:center;">
+                        <canvas id="chartJSContainer4"
+                                style="display: block; box-sizing:border-box;height:250px;"></canvas>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3 ml-2" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Organic Conversions: Traffic Aquisition</h2>
+            </div>
+        </div>
+
+        <div class="col-md-12 flex-style pt-2">
+            <div class="col-md-12">
+                <div class="card card-body" style="max-height:400px;">
+
+                    <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                        <span>Traffic Aquisition</span>
+                        <span id="conDiff" style="font-size: 14px; font-weight: 500; color: _trafficAquaDiffColor_;">_trafficAquaDiff_</span>
+                    </h4>
+                    <div style="display: flex;justify-content:center;">
+                        <canvas id="chartJSContainer5"
+                                style="display: block; box-sizing:border-box;height:250px;"></canvas>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--ecommerce purchase-->
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3 ml-2" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Google Analytics4: ECommerce Purchase</h2>
+            </div>
+        </div>
+
+        <div class="col-md-12 flex-style">
+            <div class="col-md-12">
+                <div class="card card-body ml-2 mr-2" style="max-height:400px">
+
+                    <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                        <span>Ecommerce Item Purchased</span>
+
+                    </h4>
+                    <div style="display:flex;justify-content:center;">
+                        <canvas id="chartJSContainer6"
+                                style="display: block;box-sizing:border-box; height:250px;"></canvas>
+                    </div>                   
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3 ml-2" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Google Analytics4: ECommerce Purchase</h2>
+            </div>
+        </div>
+
+        <div class="col-md-12 flex-style pt-2" >
+            <div class="col-md-12">
+                <div class="card Card-body" style="max-height:400px;">
+                    <table id="ecomPurchase">
+                        <thead>
+                            <tr>
+                                <th class="p-1">Item Name</th>
+                                <th class="p-1">Items purchased</th>
+                                <th class="p-1">Item revenue</th>
+                            </tr>
+                        </thead>
+                        <tbody class="p-1">
+
+                            <!--<tr>
+                                <td class="p-1">Mono Carton - New</td>
+                                <td class="p-1">1218</td>
+                                <td class="p-1">33</td>
+                                <td class="p-1">13018</td>
+                                <td class="p-1">7.24</td>
+                            </tr>-->
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--user purchase journey-->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3 ml-2" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Google Analytics4: User Purchase Journey</h2>
+            </div>
+        </div>
+        <div class="col-md-12 a4-page">
+            <div class="card card-body" style="max-height:400px">
+                <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                    <span>User Purchase Journey</span>
+                    <span id="conDiff" style="font-size: 14px;font-weight:500;"></span>
+                </h4>
+                <div style="display: flex; justify-content:center;">
+                    <canvas id="chartJSContainer7"
+                            style="display: block; box-sizing:border-box; height:250px;"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--<div class="a4-page">
+        <footer class="footer" style="background-color: _headerBgColor_; color: _headerTextColor_; height: 50px; visibility: _showFooter_; font-family: _font_;">
+            <div style="height: 100%; padding: 0px 20px; display: flex; flex-direction: row; align-items: center; justify-content: center">
+                <span>Prepared By -</span><span>&nbsp;_companyName_</span>-->
+    <!--<span style="color: _headerTextColor_; text-align: center;">_footerText_</span>
+    <span style="color: _headerTextColor_;visibility: _showPageNumber_; ">_pageNumber_</span>-->
+    <!--</div>
+        </footer>
+    </div>-->
+
+
+    <script>
+
+
+        //traffic and conversion
+
+        var options = {
+            type: 'line',
+            data: {
+                labels: [_1gaOrganicTrafficLables1_],
+                datasets: [{
+                    fill: false,
+                    label: "Current Period",
+                    data: [_1gaOrganicTrafficData1_],
+                    backgroundColor: "rgb(108 60 179)",
+                    borderColor: "rgb(108 60 179)",
+                    borderWidth: 1,
+                    pointRadius: 2
+                },
+                {
+                    fill: false,
+                    label: "Previous Period",
+                    data: [_2gaOrganicTrafficData2_],
+                    backgroundColor: "rgb(250 117 117)",
+                    borderColor: "rgb(250 117 117)",
+                    borderWidth: 1,
+                    pointRadius: 2
+                }],
+
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            //fontSize: 14
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            //fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)'
+
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: "top",
+                    },
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            //fontSize: 14
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            //fontSize: 14
+                        }
+                    }]
+                }
+            }
+        }
+
+        var options1 = {
+            type: 'line',
+            data: {
+                labels: [_1gaConverionLabels1_],
+                datasets: [{
+                    fill: false,
+                    label: "This Period",
+                    data: [_1gaConverionData1_],
+                    backgroundColor: "rgb(108 60 179)",
+                    borderColor: "rgb(108 60 179)",
+                    borderWidth: 1,
+                    pointRadius: 2
+                },
+                {
+                    fill: false,
+                    label: "Previous Period",
+                    data: [_2gaConverionData2_],
+                    backgroundColor: "rgb(250 117 117)",
+                    borderColor: "rgb(250 117 117)",
+                    borderWidth: 1,
+                    pointRadius: 2,
+
+                }],
+
+            },
+            options: {
+
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)'
+                    }
+                },
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: "top",
+                    },
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            //fontSize: 14
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            //fontSize: 14
+                        }
+                    }]
+                }
+            }
+        }
+
+        //User Aquisition
+        var options2 = {
+            type: 'line',
+            data: {
+                labels: [_1gaConverionLabels1_],
+                datasets: [{
+                    fill: false,
+                    data: [_dataset1Data_],
+                    label: "Direct",
+                    backgroundColor: 'rgb(8, 120, 179)',
+                    borderColor: 'rgb(8, 120, 179)',
+                    borderWidth: 1,
+                    pointRadius: 2
+                },
+                {
+                    fill: false,
+                    data: [_dataset2Data_],
+                    label: "Organic Search",
+                    backgroundColor: 'rgb(71, 71, 235)',
+                    borderColor: 'rgb(71, 71, 235)',
+                    borderWidth: 1,
+                    pointRadius: 2
+                },
+                {
+                    fill: false,
+                    data: [_dataset3Data_],
+                    label: "Organic Social",
+                    backgroundColor: 'rgb(24, 107, 216)',
+                    borderColor: 'rgb(24, 107, 216)',
+                    borderWidth: 1,
+                    pointRadius: 2
+                },
+                {
+                    fill: false,
+                    data: [_dataset4Data_],
+                    label: "Referral",
+                    backgroundColor: 'rgb(107, 47, 190)',
+                    borderColor: 'rgb(107, 47, 190)',
+                    borderWidth: 1,
+                    pointRadius: 2
+                },
+                {
+                    fill: false,
+                    data: [_dataset5Data_],
+                    label: "Unassigned",
+                    backgroundColor: 'rgb(107, 11, 142)',
+                    borderColor: 'rgb(107, 11, 142)',
+                    borderWidth: 1,
+                    pointRadius: 2
+                }]
+
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: "top",
+                    },
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            //fontSize: 14
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            //fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+
+                    }
+                },
+            }
+        }
+        var options3 = {
+            type: 'bar',
+            data: {
+                labels: ["Direct", "Organic Search", "Organic Social", "Referral", "Unassigned"],
+                datasets: [{
+                    fill: false,
+                    data: [_userAquDataCurrent_],
+                    label: "Current Period",
+                    backgroundColor: "rgb(108 60 179)",
+                },
+                {
+                    fill: false,
+                    data: [_userAquDataPrev_],
+                    label: "Previous Period",
+                    backgroundColor: "rgb(250 117 117)",
+
+                },],
+
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: "top",
+                    },
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            //fontSize: 14
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            //fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)'
+
+                    }
+                },
+            }
+        }
+
+        //Traffic Aquisition
+        var options4 = {
+            type: 'line',
+            data: {
+                labels: [_1gaConverionLabels1_],
+                datasets: [{
+                    fill: false,
+                    data: [_dataset1TrafficData_],
+                    label: "Direct",
+                    backgroundColor: 'rgb(8, 120, 179)',
+                    borderColor: 'rgb(8, 120, 179)',
+                    borderWidth: 1,
+                    pointRadius: 2
+                },
+                {
+                    fill: false,
+                    data: [_dataset2TrafficData_],
+                    label: "Organic Search",
+                    backgroundColor: 'rgb(71, 71, 235)',
+                    borderColor: 'rgb(71, 71, 235)',
+                    borderWidth: 1,
+                    pointRadius: 2
+                },
+                {
+                    fill: false,
+                    data: [_dataset3TrafficData_],
+                    label: "Organic Social",
+                    backgroundColor: 'rgb(24, 107, 216)',
+                    borderColor: 'rgb(24, 107, 216)',
+                    borderWidth: 1,
+                    pointRadius: 2
+                },
+                {
+                    fill: false,
+                    data: [_dataset4TrafficData_],
+                    label: "Referral",
+                    backgroundColor: 'rgb(107, 47, 190)',
+                    borderColor: 'rgb(107, 47, 190)',
+                    borderWidth: 1,
+                    pointRadius: 2
+                },
+                {
+                    fill: false,
+                    data: [_dataset5TrafficData_],
+                    label: "Unassigned",
+                    backgroundColor: 'rgb(107, 11, 142)',
+                    borderColor: 'rgb(107, 11, 142)',
+                    borderWidth: 1,
+                    pointRadius: 2
+                }]
+
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: "top",
+                    },
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            //fontSize: 14
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            //fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)'
+
+                    }
+                },
+            }
+        }
+        var options5 = {
+            type: 'bar',
+            data: {
+                labels: ["Direct", "Organic Search", "Organic Social", "Referral", "Unassigned"],
+                datasets: [{
+                    fill: false,
+                    data: [_trafficAquDataCurrent_],
+                    label: "Current Period",
+                    backgroundColor: "rgb(108 60 179)",
+                },
+                {
+                    fill: false,
+                    data: [_trafficAquDataPrev_],
+                    label: "Previous Period",
+                    backgroundColor: "rgb(250 117 117)",
+
+                },],
+
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: "top",
+                    },
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            //fontSize: 14
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            //fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)'
+
+                    }
+                },
+            }
+        }
+
+        //Ecom chart and Table
+        var options6 = {
+            type: 'line',
+            data: {
+                labels: [_1gaConverionLabels1_],
+                datasets: _ecomPurchaseData_
+
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: "top",
+                    },
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            //fontSize: 14
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            //fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)'
+
+                    }
+                },
+            }
+        }
+
+        //Purchase journey
+        var options7 = {
+            type: 'bar',
+            data: {
+                labels: ["Session start", "View product", "Add to cart", "Begin checkout", "Purchase"],
+                datasets: [{
+                    fill: false,
+                    data: [_purchaseData_],
+                    label: "User Purchase",
+                    backgroundColor: "rgb(154 85 255)"
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: "top",
+                        datalabels: {
+                            anchor: "end",
+                            align: "top",
+                            formatter: function (value) {
+                                return value; // Show the actual value as the label
+                            }
+                        }
+                    },
+                    
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            //fontSize: 14
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            //fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)'
+
+                    }
+                },
+
+            }
+        }
+
+        var ctx = document.getElementById('chartJSContainer').getContext('2d');
+        new Chart(ctx, options);
+        var ctx = document.getElementById('chartJSContainer1').getContext('2d');
+        new Chart(ctx, options1);
+        var ctx = document.getElementById('chartJSContainer2').getContext('2d');
+        new Chart(ctx, options2);
+
+
+        var ctx = document.getElementById('chartJSContainer3').getContext('2d');
+        new Chart(ctx, options3);
+        var ctx = document.getElementById('chartJSContainer4').getContext('2d');
+        new Chart(ctx, options4);
+        var ctx = document.getElementById('chartJSContainer5').getContext('2d');
+        new Chart(ctx, options5);
+        var ctx = document.getElementById('chartJSContainer6').getContext('2d');
+        new Chart(ctx, options6);
+        var ctx = document.getElementById('chartJSContainer7').getContext('2d');
+        new Chart(ctx, options7);
+
+
+        var tableArray = _ecomtableArrayList_;
+        var table = document.getElementById("ecomPurchase").getElementsByTagName('tbody')[0];
+        for (var i = 0; i < tableArray.length; i++) {
+            var row = table.insertRow(i);
+            row.classList.add('text-align-start');
+            var cell1 = row.insertCell(0);
+            cell1.innerHTML = tableArray[i].ItemName;
+            var cell2 = row.insertCell(1);
+            cell2.innerHTML = tableArray[i].TotalPurchased;
+            var cell3 = row.insertCell(2);
+            cell3.innerHTML = tableArray[i].TotalRevenue;
+        }
+
+    </script>
+</body>
+</html>

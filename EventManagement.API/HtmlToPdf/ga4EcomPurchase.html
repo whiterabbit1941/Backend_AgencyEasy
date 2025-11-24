@@ -1,0 +1,135 @@
+﻿
+<body>
+
+    <!--ecommerce purchase-->
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Google Analytics4: Ecommerce Purchase</h2>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px">
+
+                <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                    <span style="font-weight:bold;">Ecommerce Item Purchased</span>
+
+                </h4>
+                <div style="display:flex;justify-content:center;">
+                    <canvas id="ga4EcomChart"
+                            style="display: block; box-sizing: border-box; height: 250px; height: 300px; width: 100%"></canvas>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Google Analytics4: Ecommerce Purchase</h2>
+            </div>
+        </div>
+
+
+        <div class="col-md-12">
+            <div class="card Card-body px-4" style="max-height:400px;">
+                <table id="ecomPurchase">
+                    <thead>
+                        <tr>
+                            <th class="p-1">Item Name</th>
+                            <th class="p-1">Items purchased</th>
+                            <th class="p-1">Item revenue</th>
+                        </tr>
+                    </thead>
+                    <tbody class="p-1">
+
+                        <!--<tr>
+                            <td class="p-1">Mono Carton - New</td>
+                            <td class="p-1">1218</td>
+                            <td class="p-1">33</td>
+                            <td class="p-1">13018</td>
+                            <td class="p-1">7.24</td>
+                        </tr>-->
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var labelnterval = _labelInterval_;
+
+        //Ecom chart and Table
+        var options6 = {
+            type: 'line',
+            data: {
+                labels: [_1gaConverionLabels1_],
+                datasets: _ecomPurchaseData_
+
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: "top"
+
+                    },
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14,
+                            maxRotation: 0,
+                            minRotation: 0,
+                            autoSkip: false,
+                            callback: function (value, index, values) {
+
+                                return index % labelnterval === 0 ? value : '';
+                            }
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        usePointStyle: true,
+                        fontSize: 14
+
+                    }
+                },
+            }
+        }
+
+        var ctx = document.getElementById('ga4EcomChart').getContext('2d');
+        new Chart(ctx, options6);
+
+        var tableArray = _ecomtableArrayList_;
+        var table = document.getElementById("ecomPurchase").getElementsByTagName('tbody')[0];
+        for (var i = 0; i < tableArray.length; i++) {
+            var row = table.insertRow(i);
+            row.classList.add('text-align-start');
+            var cell1 = row.insertCell(0);
+            cell1.innerHTML = tableArray[i].ItemName;
+            var cell2 = row.insertCell(1);
+            cell2.innerHTML = tableArray[i].TotalPurchased;
+            var cell3 = row.insertCell(2);
+            cell3.innerHTML = tableArray[i].TotalRevenue;
+        }
+
+    </script>
+</body>

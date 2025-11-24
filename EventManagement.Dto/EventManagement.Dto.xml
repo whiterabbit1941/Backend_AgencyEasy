@@ -1,0 +1,863 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EventManagement.Dto</name>
+    </assembly>
+    <members>
+        <member name="P:EventManagement.Dto.AppsumoPlanAbstractBase.Id">
+            <summary>
+            AppsumoPlan Id.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.AppsumoPlanAbstractBase.Name">
+            <summary>
+            AppsumoPlan Name.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.AppsumoPlanDto">
+            <summary>
+            AppsumoPlan Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.AppsumoPlanForUpdate">
+            <summary>
+            AppsumoPlan Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.AspUserAbstractBase.Id">
+            <summary>
+            AspUser Id.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.AspUserAbstractBase.Name">
+            <summary>
+            AspUser Name.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.AspUserDto">
+            <summary>
+            AspUser Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.AspUserForUpdate">
+            <summary>
+            AspUser Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.AuditsAbstractBase.Id">
+            <summary>
+            Audits Id.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.AuditsDto">
+            <summary>
+            Audits Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.AuditsForUpdate">
+            <summary>
+            Audits Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.CampaignCallRailAbstractBase.Id">
+            <summary>
+            CampaignCallRail Id.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignCallRailDto">
+            <summary>
+            CampaignCallRail Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignCallRailForUpdate">
+            <summary>
+            CampaignCallRail Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.CampaignFacebookAdsAbstractBase.Id">
+            <summary>
+            CampaignFacebookAds Id.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignFacebookAdsDto">
+            <summary>
+            CampaignFacebookAds Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignFacebookAdsForUpdate">
+            <summary>
+            CampaignFacebookAds Update Model.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignFacebookDto">
+            <summary>
+            CampaignFacebook Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignFacebookForUpdate">
+            <summary>
+            CampaignFacebook Update Model.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignGBPDto">
+            <summary>
+            CampaignGBP Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignGBPForUpdate">
+            <summary>
+            CampaignGBP Update Model.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignGoogleAdsDto">
+            <summary>
+            CampaignGoogleAds Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignGoogleAdsForUpdate">
+            <summary>
+            CampaignGoogleAds Update Model.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignGoogleAnalyticsDto">
+            <summary>
+            CampaignGoogleAnalytics Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignGoogleAnalyticsForUpdate">
+            <summary>
+            CampaignGoogleAnalytics Update Model.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignGoogleSheetDto">
+            <summary>
+            CampaignGoogleSheet Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignGoogleSheetForUpdate">
+            <summary>
+            CampaignGoogleSheet Update Model.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignGSCDto">
+            <summary>
+            CampaignGSC Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignGSCForUpdate">
+            <summary>
+            CampaignGSC Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.CampaignInstagramAbstractBase.Id">
+            <summary>
+            CampaignInstagram Id.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignInstagramDto">
+            <summary>
+            CampaignInstagram Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignInstagramForUpdate">
+            <summary>
+            CampaignInstagram Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.CampaignLinkedinAbstractBase.Id">
+            <summary>
+            CampaignLinkedin Id.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignLinkedinDto">
+            <summary>
+            CampaignLinkedin Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignLinkedinForUpdate">
+            <summary>
+            CampaignLinkedin Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.CampaignMailchimpAbstractBase.Id">
+            <summary>
+            CampaignMailchimp Id.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignMailchimpDto">
+            <summary>
+            CampaignMailchimp Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignMailchimpForUpdate">
+            <summary>
+            CampaignMailchimp Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.CampaignMicrosoftAdAbstractBase.Id">
+            <summary>
+            CampaignMicrosoftAd Id.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignMicrosoftAdDto">
+            <summary>
+            CampaignMicrosoftAd Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignMicrosoftAdForUpdate">
+            <summary>
+            CampaignMicrosoftAd Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.CampaignUserAbstractBase.Id">
+            <summary>
+            CampaignUser Id.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.CampaignUserAbstractBase.Name">
+            <summary>
+            CampaignUser Name.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignUserDto">
+            <summary>
+            CampaignUser Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignUserForUpdate">
+            <summary>
+            CampaignUser Update Model.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignWooCommerceDto">
+            <summary>
+            CampaignWooCommerce Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignWooCommerceForUpdate">
+            <summary>
+            CampaignWooCommerce Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.CampaignAbstractBase.Id">
+            <summary>
+            Campaign Id.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.CampaignAbstractBase.Name">
+            <summary>
+            Campaign Name.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.CampaignAbstractBase.WebUrl">
+            <summary>
+            Campaign WebUrl.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.CampaignAbstractBase.MoreTraffic">
+            <summary>
+            Campaign MoreTraffic.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.CampaignAbstractBase.Sales">
+            <summary>
+            Campaign Sales.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.CampaignAbstractBase.LeadGeneration">
+            <summary>
+            Campaign LeadGeneration.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.CampaignAbstractBase.CompanyID">
+            <summary>
+            CompanyID
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignDto">
+            <summary>
+            Campaign Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CampaignForUpdate">
+            <summary>
+            Campaign Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.CancellationReasonAbstractBase.Id">
+            <summary>
+            CancellationReason Id.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CancellationReasonDto">
+            <summary>
+            CancellationReason Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CancellationReasonForUpdate">
+            <summary>
+            CancellationReason Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.ChatGptReportAbstractBase.Id">
+            <summary>
+            ChatGptReport Id.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.ChatGptReportAbstractBase.Name">
+            <summary>
+            ChatGptReport Name.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.ChatGptReportDto">
+            <summary>
+            ChatGptReport Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.ChatGptReportForUpdate">
+            <summary>
+            ChatGptReport Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.ClientPostLogoutRedirectUriAbstractBase.Id">
+            <summary>
+            ClientPostLogoutRedirectUri Id.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.ClientPostLogoutRedirectUriAbstractBase.Name">
+            <summary>
+            ClientPostLogoutRedirectUri Name.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.ClientPostLogoutRedirectUriDto">
+            <summary>
+            ClientPostLogoutRedirectUri Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.ClientPostLogoutRedirectUriForUpdate">
+            <summary>
+            ClientPostLogoutRedirectUri Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.ClientRedirectUriAbstractBase.Id">
+            <summary>
+            ClientRedirectUri Id.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.ClientRedirectUriAbstractBase.Name">
+            <summary>
+            ClientRedirectUri Name.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.ClientRedirectUriDto">
+            <summary>
+            ClientRedirectUri Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.ClientRedirectUriForUpdate">
+            <summary>
+            ClientRedirectUri Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.CompanyPlanAbstractBase.Id">
+            <summary>
+            CompanyPlan Id.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.CompanyPlanAbstractBase.CompanyId">
+            <summary>
+            CompanyPlan Name.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CompanyPlanDto">
+            <summary>
+            CompanyPlan Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CompanyPlanForUpdate">
+            <summary>
+            CompanyPlan Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.CompanyUserAbstractBase.Id">
+            <summary>
+            CompanyUser Id.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.CompanyUserAbstractBase.Name">
+            <summary>
+            CompanyUser Name.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CompanyUserDto">
+            <summary>
+            CompanyUser Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CompanyUserForUpdate">
+            <summary>
+            CompanyUser Update Model.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CompanyDto">
+            <summary>
+            Company Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.CompanyForUpdate">
+            <summary>
+            Company Update Model.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.WhiteLabelImageDto">
+            <summary>
+            Company Model
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.DefaultPlanAbstractBase.Id">
+            <summary>
+            DefaultPlan Id.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.DefaultPlanAbstractBase.Name">
+            <summary>
+            DefaultPlan Name.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.DefaultPlanDto">
+            <summary>
+            DefaultPlan Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.DefaultPlanForUpdate">
+            <summary>
+            DefaultPlan Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.DomainWhitelabelAbstractBase.Id">
+            <summary>
+            DomainWhitelabel Id.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.DomainWhitelabelDto">
+            <summary>
+            DomainWhitelabel Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.DomainWhitelabelForUpdate">
+            <summary>
+            DomainWhitelabel Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.EmailSettingAbstractBase.Id">
+            <summary>
+            EmailSetting Id.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.EmailSettingAbstractBase.Name">
+            <summary>
+            EmailSetting Name.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.EmailSettingDto">
+            <summary>
+            EmailSetting Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.EmailSettingForUpdate">
+            <summary>
+            EmailSetting Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.EmailWhitelabelAbstractBase.Id">
+            <summary>
+            EmailWhitelabel Id.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.EmailWhitelabelAbstractBase.Name">
+            <summary>
+            EmailWhitelabel Name.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.EmailWhitelabelDto">
+            <summary>
+            EmailWhitelabel Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.EmailWhitelabelForUpdate">
+            <summary>
+            EmailWhitelabel Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.EventAbstractBase.Id">
+            <summary>
+            Event Id.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.EventAbstractBase.Name">
+            <summary>
+            Event Name.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.EventDto">
+            <summary>
+            Event Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.EventForUpdate">
+            <summary>
+            Event Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.FeatureAbstractBase.Id">
+            <summary>
+            Feature Id.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.FeatureAbstractBase.Descriptions">
+            <summary>
+            Feature Name.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.FeatureDto">
+            <summary>
+            Feature Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.FeatureForUpdate">
+            <summary>
+            Feature Update Model.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.FilterOptionsModel">
+            <summary>
+            Fitler Model
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.FilterOptionsModel.PageNumber">
+            <summary>
+            Page Number.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.FilterOptionsModel.PageSize">
+            <summary>
+            Page Size.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.FilterOptionsModel.SearchQuery">
+            <summary>
+            Filter Criteria
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.FilterOptionsModel.OrderBy">
+            <summary>
+            Order By Criteria.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.FilterOptionsModel.Fields">
+            <summary>
+            Fields to select.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.GoogleAccountSetupAbstractBase.Id">
+            <summary>
+            GoogleAccountSetup Id.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.GoogleAccountSetupAbstractBase.Name">
+            <summary>
+            GoogleAccountSetup Name.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.GoogleAccountSetupDto">
+            <summary>
+            GoogleAccountSetup Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.GoogleAccountSetupForUpdate">
+            <summary>
+            GoogleAccountSetup Update Model.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.GoogleAdsSummaryDto">
+            <summary>
+            GoogleAdsSummary Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.GoogleAdsSummaryForUpdate">
+            <summary>
+            GoogleAdsSummary Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.GoogleAnalyticsAccountAbstractBase.Id">
+            <summary>
+            GoogleAnalyticsAccount Id.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.GoogleAnalyticsAccountDto">
+            <summary>
+            GoogleAnalyticsAccount Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.GoogleAnalyticsAccountForUpdate">
+            <summary>
+            GoogleAnalyticsAccount Update Model.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.GscSummaryDto">
+            <summary>
+            GscSummary Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.GscSummaryForUpdate">
+            <summary>
+            GscSummary Update Model.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.LinkedinAdDto">
+            <summary>
+            LinkedinAd Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.LinkedinAdForUpdate">
+            <summary>
+            LinkedinAd Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.PlanDetailAbstractBase.Id">
+            <summary>
+            PlanDetail Id.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.PlanDetailAbstractBase.PlanId">
+            <summary>
+            PlanDetail Name.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.PlanDetailDto">
+            <summary>
+            PlanDetail Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.PlanDetailForUpdate">
+            <summary>
+            PlanDetail Update Model.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.PlanDto">
+            <summary>
+            Plan Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.PlanForUpdate">
+            <summary>
+            Plan Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.ProductAbstractBase.Id">
+            <summary>
+            Product Id.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.ProductAbstractBase.Name">
+            <summary>
+            Product Name.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.ProductDto">
+            <summary>
+            Product Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.ProductForUpdate">
+            <summary>
+            Product Update Model.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.RankingGraphDto">
+            <summary>
+            RankingGraph Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.RankingGraphForUpdate">
+            <summary>
+            RankingGraph Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.ReportSchedulingAbstractBase.Id">
+            <summary>
+            ReportScheduling Id.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.ReportSchedulingAbstractBase.Name">
+            <summary>
+            ReportScheduling Name.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.ReportSchedulingAbstractBase.ScheduleDateAndTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.ReportSchedulingAbstractBase.EmaildIds">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.ReportSchedulingAbstractBase.Subject">
+            <summary>
+            Subject of report
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.ReportSchedulingAbstractBase.ReportSetting">
+            <summary>
+            Report Setting
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.ReportSchedulingAbstractBase.ReportId">
+            <summary>
+            Report Id
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.ReportSchedulingDto">
+            <summary>
+            ReportScheduling Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.ReportSchedulingForUpdate">
+            <summary>
+            ReportScheduling Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.ReportSettingAbstractBase.Id">
+            <summary>
+            ReportSetting Id.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.ReportSettingAbstractBase.Name">
+            <summary>
+            ReportSetting Name.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.ReportSettingDto">
+            <summary>
+            ReportSetting Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.ReportSettingForUpdate">
+            <summary>
+            ReportSetting Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.SerpAbstractBase.Id">
+            <summary>
+            Serp Id.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.SerpDto">
+            <summary>
+            Serp Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.SerpForUpdate">
+            <summary>
+            Serp Update Model.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.SocialMediaSUmmmaryDto">
+            <summary>
+            SocialMediaSUmmmary Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.SocialMediaSUmmmaryForUpdate">
+            <summary>
+            SocialMediaSUmmmary Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.StripeCouponAbstractBase.Id">
+            <summary>
+            StripeCoupon Id.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.StripeCouponDto">
+            <summary>
+            StripeCoupon Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.StripeCouponForUpdate">
+            <summary>
+            StripeCoupon Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.StripePaymentAbstractBase.Id">
+            <summary>
+            StripePayment Id.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.StripePaymentAbstractBase.Name">
+            <summary>
+            StripePayment Name.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.StripePaymentDto">
+            <summary>
+            StripePayment Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.StripePaymentForUpdate">
+            <summary>
+            StripePayment Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.TemplateSettingAbstractBase.Id">
+            <summary>
+            TemplateSetting Id.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.TemplateSettingAbstractBase.Name">
+            <summary>
+            TemplateSetting Name.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.TemplateSettingDto">
+            <summary>
+            TemplateSetting Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.TemplateSettingForUpdate">
+            <summary>
+            TemplateSetting Update Model.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.TrafficSummaryDto">
+            <summary>
+            TrafficSummary Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.TrafficSummaryForUpdate">
+            <summary>
+            TrafficSummary Update Model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.WhiteLabelAbstractBase.Id">
+            <summary>
+            WhiteLabel Id.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Dto.WhiteLabelAbstractBase.Name">
+            <summary>
+            WhiteLabel Name.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.WhiteLabelDto">
+            <summary>
+            WhiteLabel Model
+            </summary>
+        </member>
+        <member name="T:EventManagement.Dto.WhiteLabelForUpdate">
+            <summary>
+            WhiteLabel Update Model.
+            </summary>
+        </member>
+    </members>
+</doc>

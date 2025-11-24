@@ -1,0 +1,47 @@
+﻿<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body text-center" style="max-height:400px">
+            <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                <span style="font-weight:bold;">_gsTableTitle_</span>
+            </h4>
+            <table class="table" id="gsTableData">
+                <thead>
+                    <tr class="fontsizesmall table-cell-height" style="font-weight:bold;" id="tableHeaderRow">
+                        <!-- Header columns will be dynamically added here -->
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Rows will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    var gsTableData = _gsDataTable1_;
+
+    var wctable = document.getElementById("gsTableData");
+
+    // Add columns to the table header
+    var headerRow = wctable.tHead.insertRow();
+    gsTableData.Columns.forEach(function (column) {
+        var headerCell = headerRow.insertCell();
+        headerCell.textContent = column.Name;
+        headerCell.style.fontWeight = "bold";
+    });
+
+
+
+    // Add rows to the table body
+    for (var i = 0; i < gsTableData.Columns[0].Values.length; i++) {
+        var tableRow = document.createElement("tr");
+        gsTableData.Columns.forEach(function (column) {
+            var cell = document.createElement("td");
+            cell.textContent = column.Values[i];
+            tableRow.appendChild(cell);
+        });
+        tableBody.appendChild(tableRow);
+    }
+
+</script>

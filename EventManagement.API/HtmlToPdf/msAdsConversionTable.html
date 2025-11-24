@@ -1,0 +1,48 @@
+﻿<!--Number of Keywords-->
+<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body text-center">
+            <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                <span style="font-weight:bold;">Microsoft Conversions Table</span>
+            </h4>
+            <table class="table table-bordered" id="_msAdsConversionTableId_">
+                <thead>
+                    <tr class="fontsizesmall font-weight-bold table-cell-height">
+                        <td class="table-zone td-col-text-style">GOAL</td>
+                        <td class="table-zone td-col-text-style">CAMPAGIN</td>
+                        <td class="table-zone td-col-text-style">CONVERSIONS</td>
+                        <td class="table-zone td-col-text-style">REVENUE</td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <tbody class="p-1">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var _msAdsConversionTable_Array = _msAdsConvTableData_;
+
+    var wctable1 = document.getElementById("_msAdsConversionTableId_").getElementsByTagName('tbody')[0];
+    for (var i = 0; i < _msAdsConversionTable_Array.length; i++) {
+        var row = wctable1.insertRow(i);
+        row.classList.add('text-align-start');
+
+        var cell1 = row.insertCell(0);
+        cell1.innerHTML = _msAdsConversionTable_Array[i].Goal;
+
+        var cell2 = row.insertCell(1);
+        cell2.innerHTML = _msAdsConversionTable_Array[i].CampaignName;
+
+        var cell3 = row.insertCell(2);
+        cell3.innerHTML = _msAdsConversionTable_Array[i].Conversions;
+
+        var cell4 = row.insertCell(3);
+        cell4.innerHTML = _msAdsConversionTable_Array[i].Revenue;
+
+    }
+</script>

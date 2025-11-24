@@ -1,0 +1,317 @@
+﻿<body>
+
+    <div class="row a4-page">
+        <div class="col-md-6">
+            <div class="content-header-style-cust mb-3 mt-3" style="background-color: _themeBgColor_; color: _themeTextColor_;">
+                <h2 class="content-text-style" style="padding-top: 10px; padding-left: 10px;">Linkedin: Impression Summary</h2>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px">
+                <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                    <span style="font-weight:bold;">Followers</span>
+
+                </h4>
+                <div style="display: flex; justify-content: center;">
+                    <canvas id="chartJSLFollow"
+                            style="display: block; box-sizing: border-box; height: 300px; width: 100%"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row a4-page mt-3">
+
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px">
+                <h4 class="card-title pt-2" style="display: flex;justify-content: space-between;">
+                    <span style="font-weight:bold;">Organic vs Paid Reach</span>
+
+                </h4>
+                <div style="display: flex; justify-content:center;">
+                    <canvas id="chartJSLOrganic"
+                            style="display: block; box-sizing:border-box; height: 300px;"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row a4-page mt-3">
+
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px;">
+                <h4 class="card-title pt-2" style="display: flex;justify-content:space-between;">
+                    <span style="font-weight:bold;">Clicks</span>
+
+                </h4>
+                <div style="display: flex; justify-content:center;">
+                    <canvas id="chartJSLClick"
+                            style="display: block; box-sizing:border-box;height: 300px; width: 100%"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row a4-page mt-3">
+        <div class="col-md-12">
+            <div class="card card-body" style="max-height:400px;">
+                <h4 class="card-title pt-2" style="display: flex;justify-content:space-between;">
+                    <span style="font-weight:bold;">Impressions</span>
+
+                </h4>
+                <div style="display: flex; justify-content:center;">
+                    <canvas id="chartJSLImpression"
+                            style="display: block;box-sizing:border-box; height: 300px; width: 100%"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        var labelnterval = _labelInterval_;
+
+        var options = {
+            type: 'line',
+            data: {
+                //labels: ["12-09","13-09","14-09","15-09","16-09","17-09","18-09","19-09","20-09","21-09","22-09","23-09","24-09","25-09","26-09","27-09","28-09","29-09","30-09","01-10","02-10","03-10","04-10","05-10","06-10","07-10","08-10","09-10","10-10","11-10",],
+                labels: [_1firstLineChartLabels1],
+                datasets: [{
+                    label: 'Organic',
+                    /*data: [110,235,114,179,536,410,173,1956,229,256,2100,2323,1756,2489,2756,1100,1823,1956,2589,2556,2100,3423,1156,1189,1156,10,723,546,189,156],*/
+                    data: [_1firstLineChartData1],
+                    fill: false,
+                    backgroundColor: "rgba(53, 162, 235, 0.5)",
+                    borderColor: "rgb(53, 162, 235)",
+                    borderWidth: 2,
+                    pointRadius: 2
+                },
+                {
+                    label: 'Lost',
+                    /*data: [-12,245,2114,179,536,410,123,1356,219,256,21,223,156,289,256,100,183,1956,2589,2556,2100,3423,1156,1189,1156,10,723,546,189,156],*/
+                    data: [_2FirstLineChartData2],
+                    fill: false,
+                    backgroundColor: "rgba(255, 103, 135, 0.5)",
+                    borderColor: "rgb(255 103 135)",
+                    borderWidth: 2,
+                    pointRadius: 2
+                },
+                {
+                    label: 'Paid',
+                    /*data: [1010,2345,1114,19,5536,4100,1723,1956,2219,2456,2100,2323,1756,2489,2756,1100,1823,1956,2589,2556,2100,3423,1156,1189,1156,10,723,546,189,156],*/
+                    data: [_3FirstLineChartData3],
+                    fill: false,
+                    backgroundColor: "rgb(236 161 75)",
+                    borderColor: "rgb(231 139 32)",
+                    borderWidth: 2,
+                    pointRadius: 2
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14,
+                            maxRotation: 0,
+                            minRotation: 0,
+                            autoSkip: false,
+                            callback: function (value, index, values) {
+
+                                return index % labelnterval === 0 ? value : '';
+                            }
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        usePointStyle: true,
+                        fontSize: 14
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: "top",
+                    },
+                },
+            }
+        }
+
+        var options2 = {
+            type: 'line',
+            data: {
+                //labels: ["12-09","13-09","14-09","15-09","16-09","17-09","18-09","19-09","20-09","21-09","22-09","23-09","24-09","25-09","26-09","27-09","28-09","29-09","30-09","01-10","02-10","03-10","04-10","05-10","06-10","07-10","08-10","09-10","10-10","11-10",],
+                labels: [_1firstLineChartLabels1],
+                datasets: [
+                    {
+                        label: 'Clicks',
+                        /*data: [1010,2345,1114,19,5536,4100,1723,1956,2219,2456,2100,2323,1756,2489,2756,1100,1823,1956,2589,2556,2100,3423,1156,1189,1156,10,723,546,189,156],*/
+                        data: [_2secondLineChartData2],
+                        lineTension: 0, legend: true, fill: true,
+                        borderWidth: 1,
+                        borderColor: '#35a2eb',
+                        backgroundColor: '#99d0f5',
+                        pointHoverBackgroundColor: '#2D9EE2',
+                        pointHoverBorderColor: 'white',
+                        fontSize: 10,
+                        usePointStyle: true,
+                        barPercentage: 0.5,
+                        barThickness: 6,
+                    }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14,
+                            maxRotation: 0,
+                            minRotation: 0,
+                            autoSkip: false,
+                            callback: function (value, index, values) {
+
+                                return index % labelnterval === 0 ? value : '';
+                            }
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        usePointStyle: true,
+                        fontSize: 14
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: "top",
+                    },
+                },
+            }
+        }
+
+        var options3 = {
+            type: 'line',
+            data: {
+                //labels: ["12-09","13-09","14-09","15-09","16-09","17-09","18-09","19-09","20-09","21-09","22-09","23-09","24-09","25-09","26-09","27-09","28-09","29-09","30-09","01-10","02-10","03-10","04-10","05-10","06-10","07-10","08-10","09-10","10-10","11-10",],
+                labels: [_1firstLineChartLabels1],
+                datasets: [{
+                    label: 'Impressions',
+                    /*data: [110,235,114,179,536,410,173,1956,229,256,2100,2323,1756,2489,2756,1100,1823,1956,2589,2556,2100,3423,1156,1189,1156,10,723,546,189,156],*/
+                    data: [_3thirdLineChartData3],
+                   /* lineTension: 0,*/
+                    legend: true, fill: true,
+                    borderWidth: 1,
+                    borderColor: '#e78b20',
+                    backgroundColor: '#eca14b',
+                    pointHoverBackgroundColor: '#2D9EE2',
+                    pointHoverBorderColor: 'white',
+                    fontSize: 14,
+                    /*usePointStyle: true,*/
+                    barPercentage: 0.5,
+                    barThickness: 6,
+                },
+                ]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14,
+                            maxRotation: 0,
+                            minRotation: 0,
+                            autoSkip: false,
+                            callback: function (value, index, values) {
+
+                                return index % labelnterval === 0 ? value : '';
+                            }
+                        }
+                    }],
+                    yAxes: [{
+
+                        ticks: {
+                            fontColor: 'rgb(0,0,0)',
+                            fontSize: 14
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        usePointStyle: true,
+                        fontSize: 14
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: "top",
+                    },
+                },
+            }
+        }
+
+      
+
+        var options1 = {
+            type: 'pie',
+            data: {
+                labels: ["Organic", "Paid"],
+                datasets: [{
+
+                    data: [_7pieChartData7, _8pieChartData8],
+                    legend: false, fill: true,
+
+                    backgroundColor: ['#ffa096', '#9a55ff'],
+                    pointHoverBackgroundColor: '#2D9EE2',
+                    pointHoverBorderColor: 'white',
+
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+
+                legend: {
+                    labels: {
+                        fontColor: 'rgb(0,0,0)',
+                        fontSize: 14,
+                        usePointStyle: true
+                    }
+                },
+                responsive: true,
+            }
+        }
+        var ctx = document.getElementById('chartJSLFollow').getContext('2d');
+        new Chart(ctx, options);
+        var ctx = document.getElementById('chartJSLOrganic').getContext('2d');
+        new Chart(ctx, options1);
+        var ctx = document.getElementById('chartJSLClick').getContext('2d');
+        new Chart(ctx, options2);
+        var ctx = document.getElementById('chartJSLImpression').getContext('2d');
+        new Chart(ctx, options3);
+    </script>
+
+</body>

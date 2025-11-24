@@ -1,0 +1,110 @@
+﻿<!--Number of Sales-->
+<div class="row a4-page mt-3">
+    <div class="col-md-12">
+        <div class="card card-body text-center">
+            <h4 class="card-title pt-2" style="display: flex; justify-content: space-between;">
+                <span style="font-weight:bold;">Call Rail Details</span>
+            </h4>
+            <table class="table table-bordered" id="crTable">
+                <thead>
+                    <tr class="fontsizesmall font-weight-bold table-cell-height">
+                        <td class="table-zone td-col-text-style">DATE</td>
+                        <td class="table-zone td-col-text-style">NAME</td>
+                        <td class="table-zone td-col-text-style">SOU...</td>
+                        <td class="table-zone td-col-text-style">SOU...</td>
+                        <td class="table-zone td-col-text-style">PHONE...</td>
+                        <td class="table-zone td-col-text-style">DUR...</td>
+                        <td class="table-zone td-col-text-style">LOC...</td>
+                        <td class="table-zone td-col-text-style">ANS...</td>
+                        <td class="table-zone td-col-text-style">FIR...</td>
+                        <td class="table-zone td-col-text-style">LAN...</td>
+                        <td class="table-zone td-col-text-style">DEV...</td>
+                        <td class="table-zone td-col-text-style">LEA...</td>
+
+                        <td class="table-zone td-col-text-style">TAG...</td>
+                        <td class="table-zone td-col-text-style">KEY...</td>
+                        <td class="table-zone td-col-text-style">CAM...</td>
+                        <!--<td class="table-zone td-col-text-style">REC...</td>-->
+                        <td class="table-zone td-col-text-style">COM...</td>
+                      
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <tbody class="p-1">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+
+        var wcTableArray = _crDataTable1_;       
+
+        var wctable1 = document.getElementById("crTable").getElementsByTagName('tbody')[0];
+        for (var i = 0; i < wcTableArray.length; i++) {
+            var row = wctable1.insertRow(i);
+            row.classList.add('text-align-start');
+
+            var cell1 = row.insertCell(0);
+            cell1.innerHTML = wcTableArray[i].formattedCreatedAt;
+
+            var cell2 = row.insertCell(1);
+            cell2.innerHTML = wcTableArray[i].customer_name;
+
+            var cell3 = row.insertCell(2);
+            cell3.innerHTML = wcTableArray[i].source_name;
+
+            var cell4 = row.insertCell(3);
+            cell4.innerHTML = wcTableArray[i].source ? wcTableArray[i].source.substring(0, 3) + "..." : "-";;
+
+            var cell5 = row.insertCell(4);
+            cell5.innerHTML = wcTableArray[i].customer_phone_number;
+
+            var cell6 = row.insertCell(5);
+            cell6.innerHTML = wcTableArray[i].formattedDuration;
+
+            var cell7 = row.insertCell(6);
+            cell7.innerHTML = wcTableArray[i].customer_city;
+
+            var cell8 = row.insertCell(7);
+            if (wcTableArray[i].answered) {
+                cell8.innerHTML = '<button class="btn btn-sm  text-sm btn-success">Yes</button>';
+            } else {
+                cell8.innerHTML = '<button class="btn btn-sm  text-sm btn-danger">No</button>';
+            }
+
+            var cell9 = row.insertCell(8);
+            if (wcTableArray[i].first_call) {
+                cell9.innerHTML = '<button class="btn btn-sm text-sm btn-success">Yes</button>';
+            } else {
+                cell9.innerHTML = '<button class="btn btn-sm text-sm btn-danger">No</button>';
+            }
+
+            var cell10 = row.insertCell(9);
+            cell10.innerHTML = wcTableArray[i].landing_page_url ? wcTableArray[i].landing_page_url.substring(0, 3) + "..."  :  "-";
+            
+
+            var cell11 = row.insertCell(10);
+            cell11.innerHTML = wcTableArray[i].device_type;
+
+            var cell12 = row.insertCell(11);
+            cell12.innerHTML = wcTableArray[i].lead_status;
+
+            var cell13 = row.insertCell(12);
+            cell13.innerHTML = Array.isArray(wcTableArray[i].tags) && wcTableArray[i].tags.length > 0 ? wcTableArray[i].tags.join(', ') : "-";
+
+            var cell14 = row.insertCell(13);
+            cell14.innerHTML = wcTableArray[i].keywords ? wcTableArray[i].keywords.substring(0, 3) + "..."  :  "-";
+
+            var cell15 = row.insertCell(14);
+            cell15.innerHTML = wcTableArray[i].campaign ? wcTableArray[i].campaign.substring(0, 3) + "..." : "-";  
+
+            //var cell14 = row.insertCell(14);
+            //cell14.innerHTML = wcTableArray[i].recording;
+
+            var cell16 = row.insertCell(15);
+            cell16.innerHTML = wcTableArray[i].company_name;
+        }
+</script>
